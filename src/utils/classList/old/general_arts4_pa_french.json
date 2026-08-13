@@ -1,0 +1,71 @@
+[
+  {
+    "CassRefID": "250010105163",
+    "Name": "AMUZU SAMUEL ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2011-05-15",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2e2",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e5"
+    ]
+  },
+  {
+    "CassRefID": "25001010515B",
+    "Name": "ADDY COLLINS ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2009-05-31",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2e2",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e5",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0"
+    ]
+  },
+  {
+    "CassRefID": "250010105162",
+    "Name": "AMEYAW JNR KOFI DONYINA ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2011-03-18",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2e2",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e5",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4"
+    ]
+  }
+]

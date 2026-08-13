@@ -1,0 +1,140 @@
+[
+  {
+    "CassRefID": "25001010515A",
+    "Name": "ADDO GIFTAN CHRISTIAN KPAKPO ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2010-08-24",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0"
+    ]
+  },
+  {
+    "CassRefID": "25001010515F",
+    "Name": "AKRONG ANGEL NII ODOTEI ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2009-07-10",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1"
+    ]
+  },
+  {
+    "CassRefID": "250010105171",
+    "Name": "LAMPTEY DESMOND ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2009-09-24",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0"
+    ]
+  },
+  {
+    "CassRefID": "25001010516E",
+    "Name": "HATSU MICHAEL ELIKPLIM ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2009-07-17",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf"
+    ]
+  },
+  {
+    "CassRefID": "250010105178",
+    "Name": "OBODAI JUDE NII TORGBOR JUNIOR ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2010-04-03",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0",
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4"
+    ]
+  },
+  {
+    "CassRefID": "25001010517A",
+    "Name": "OKYERE GODSERVANT ",
+    "ProgramName": "GENERAL ART",
+    "NatID": "",
+    "Gender": "MALE",
+    "Disability": "NORMAL",
+    "CanReadBraille": false,
+    "DateOfBirth": "2009-07-20",
+    "classId": "67bc53ef4ee174b1681cc472",
+    "subs": [
+      "685a7d5f0ea9f65999c2ebab",
+      "685441de72cf3cd5e517c2e4",
+      "685441de72cf3cd5e517c2df",
+      "685441de72cf3cd5e517c2d0",
+      "685a7d410ea9f65999c2ebaa",
+      "685441de72cf3cd5e517c2cf",
+      "685441de72cf3cd5e517c2ce",
+      "685441de72cf3cd5e517c2d1",
+      "685441de72cf3cd5e517c2e0",
+      "69fb403652c8b0d7039328e0"
+    ]
+  }
+]

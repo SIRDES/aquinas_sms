@@ -1,0 +1,5969 @@
+[
+  {
+    "studentId": "AGR/24/032",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "ABDUL",
+    "otherNames": "HAMID HUSSAIN",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105114"
+  },
+  {
+    "studentId": "AGR/24/042",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "ABUBAKAR",
+    "otherNames": "MABRUCK SIDIKU",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105115"
+  },
+  {
+    "studentId": "AGR/24/029",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "AMARTEY",
+    "otherNames": "SAMPSON BENEDICT NII OKANKWE",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105116"
+  },
+  {
+    "studentId": "AGR/24/037",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "ASANTE",
+    "otherNames": "JOSHUA",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105117"
+  },
+  {
+    "studentId": "AGR/24/041",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "ASMAH",
+    "otherNames": "GODFRED KOFI",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105118"
+  },
+  {
+    "studentId": "AGR/24/045",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "AZARIAH",
+    "otherNames": "AMOAH ANTWI",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105119"
+  },
+  {
+    "studentId": "AGR/24/043",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "BULKMAN",
+    "otherNames": "KELVIN",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511A"
+  },
+  {
+    "studentId": "AGR/24/039",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "FYNN",
+    "otherNames": "ERIC",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511B"
+  },
+  {
+    "studentId": "AGR/24/033",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "HUSSAIN",
+    "otherNames": "MOHAMMED BARRY",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511C"
+  },
+  {
+    "studentId": "AGR/24/034",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "IDDRISU",
+    "otherNames": "MUBARAK",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511D"
+  },
+  {
+    "studentId": "AGR/24/028",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "KETENI",
+    "otherNames": "ELVIS EYRAM",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511E"
+  },
+  {
+    "studentId": "AGR/24/036",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "KUSI",
+    "otherNames": "RICHARD ASIEDU",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "24001010511F"
+  },
+  {
+    "studentId": "AGR/24/035",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "LAWAL",
+    "otherNames": "ABDUL RAHEEM AKIM",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105120"
+  },
+  {
+    "studentId": "AGR/24/026",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "MIDODZI",
+    "otherNames": "NICHOLAS KWABLA",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105121"
+  },
+  {
+    "studentId": "AGR/24/046",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "MUMINI",
+    "otherNames": "SALMAN",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105122"
+  },
+  {
+    "studentId": "AGR/24/038",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "ODOI",
+    "otherNames": "MOSES QUARSHIE",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105123"
+  },
+  {
+    "studentId": "AGR/24/030",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "OMAR",
+    "otherNames": "SADIQ ABUBAKAR",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105124"
+  },
+  {
+    "studentId": "AGR/24/044",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "OSEI",
+    "otherNames": "GEORGE",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105125"
+  },
+  {
+    "studentId": "AGR/24/040",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "SULEMAN",
+    "otherNames": "MAHFUOZ",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105126"
+  },
+  {
+    "studentId": "AGR/24/027",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "TORGBOR",
+    "otherNames": "HASSAN OBODAI",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105127"
+  },
+  {
+    "studentId": "AGR/24/031",
+    "programme": "AGRICULTURAL SCIENCE",
+    "surName": "YAKUB",
+    "otherNames": "MOHAMMED MUHYIDEEN",
+    "gender": "NA",
+    "studentClass": "2 AGRIC",
+    "stpId": "240010105128"
+  },
+  {
+    "studentId": "BUS/24/206",
+    "programme": "BUSINESS",
+    "surName": "ABDUL",
+    "otherNames": "HAKEEM MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105039"
+  },
+  {
+    "studentId": "BUS/24/198",
+    "programme": "BUSINESS",
+    "surName": "ABUBAKAR",
+    "otherNames": "ADAMS FAWAZ",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503A"
+  },
+  {
+    "studentId": "BUS/24/177",
+    "programme": "BUSINESS",
+    "surName": "AGYARE",
+    "otherNames": "MARTIN NANA KWESI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503B"
+  },
+  {
+    "studentId": "BUS/24/199",
+    "programme": "BUSINESS",
+    "surName": "AGYEKUM",
+    "otherNames": "RONIEL NANA KWAME",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503C"
+  },
+  {
+    "studentId": "BUS/24/194",
+    "programme": "BUSINESS",
+    "surName": "AIKINS",
+    "otherNames": "PAUL AKYEN",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503D"
+  },
+  {
+    "studentId": "BUS/24/207",
+    "programme": "BUSINESS",
+    "surName": "AKEY",
+    "otherNames": "EUGENE NYAME-ADOM",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503E"
+  },
+  {
+    "studentId": "BUS/24/196",
+    "programme": "BUSINESS",
+    "surName": "AMUZU",
+    "otherNames": "RICHARD",
+    "gender": "MALE",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010503F"
+  },
+  {
+    "studentId": "BUS/24/187",
+    "programme": "BUSINESS",
+    "surName": "ANUM",
+    "otherNames": "FERDINAND NII ODOI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105040"
+  },
+  {
+    "studentId": "BUS/24/186",
+    "programme": "BUSINESS",
+    "surName": "ARMAH",
+    "otherNames": "CALBERT NII ARMAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105041"
+  },
+  {
+    "studentId": "BUS/24/179",
+    "programme": "BUSINESS",
+    "surName": "AYENSU",
+    "otherNames": "OBED OSEI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105042"
+  },
+  {
+    "studentId": "BUS/24/202",
+    "programme": "BUSINESS",
+    "surName": "BAAH-AMARTEIFIO",
+    "otherNames": "KHALEB N. NHYIRABA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105043"
+  },
+  {
+    "studentId": "BUS/24/180",
+    "programme": "BUSINESS",
+    "surName": "BAFFOUR-FRIMPONG",
+    "otherNames": "KWAKU KYEI AMPOFO",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105044"
+  },
+  {
+    "studentId": "BUS/24/193",
+    "programme": "BUSINESS",
+    "surName": "BISSUE",
+    "otherNames": "LAUREN KWAKU ATTA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105045"
+  },
+  {
+    "studentId": "BUS/24/191",
+    "programme": "BUSINESS",
+    "surName": "COFFIE",
+    "otherNames": "JOSHUA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105046"
+  },
+  {
+    "studentId": "BUS/24/200",
+    "programme": "BUSINESS",
+    "surName": "DAMPSON",
+    "otherNames": "GIDEON KOJO NHYIRABA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105047"
+  },
+  {
+    "studentId": "BUS/24/197",
+    "programme": "BUSINESS",
+    "surName": "JIMBAH",
+    "otherNames": "MUBARAK AMINU",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105048"
+  },
+  {
+    "studentId": "BUS/24/189",
+    "programme": "BUSINESS",
+    "surName": "KABRAH",
+    "otherNames": "NENE PRINCE",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105049"
+  },
+  {
+    "studentId": "BUS/24/182",
+    "programme": "BUSINESS",
+    "surName": "KOFFIE",
+    "otherNames": "RANDELL KAMAL LEBENE",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504A"
+  },
+  {
+    "studentId": "BUS/24/201",
+    "programme": "BUSINESS",
+    "surName": "KWARTENG",
+    "otherNames": "GABRIEL NANA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504B"
+  },
+  {
+    "studentId": "BUS/24/174",
+    "programme": "BUSINESS",
+    "surName": "LAMPTEY",
+    "otherNames": "JOSEPH NII LANTEI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504C"
+  },
+  {
+    "studentId": "BUS/24/181",
+    "programme": "BUSINESS",
+    "surName": "LARYEA",
+    "otherNames": "ENOCH ODOI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504D"
+  },
+  {
+    "studentId": "BUS/24/185",
+    "programme": "BUSINESS",
+    "surName": "MEMBLE",
+    "otherNames": "EMMANUEL ROOTLAND",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504E"
+  },
+  {
+    "studentId": "BUS/24/204",
+    "programme": "BUSINESS",
+    "surName": "MORO",
+    "otherNames": "ABDUL RAMAN",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010504F"
+  },
+  {
+    "studentId": "BUS/24/183",
+    "programme": "BUSINESS",
+    "surName": "NAI",
+    "otherNames": "BRIAN MARLEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105050"
+  },
+  {
+    "studentId": "BUS/24/192",
+    "programme": "BUSINESS",
+    "surName": "NANOR",
+    "otherNames": "EMMANUEL NARTEY TEI",
+    "gender": "MALE",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105051"
+  },
+  {
+    "studentId": "BUS/24/190",
+    "programme": "BUSINESS",
+    "surName": "NSIAH",
+    "otherNames": "GODFRED NII OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105052"
+  },
+  {
+    "studentId": "BUS/24/176",
+    "programme": "BUSINESS",
+    "surName": "NTOLI",
+    "otherNames": "EMMANUEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105053"
+  },
+  {
+    "studentId": "BUS/24/188",
+    "programme": "BUSINESS",
+    "surName": "OCANSEY",
+    "otherNames": "HAYFORD TEYE",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105054"
+  },
+  {
+    "studentId": "BUS/24/184",
+    "programme": "BUSINESS",
+    "surName": "OLLETEY",
+    "otherNames": "GODWIN",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105055"
+  },
+  {
+    "studentId": "BUS/24/175",
+    "programme": "BUSINESS",
+    "surName": "OSABUTEY",
+    "otherNames": "LAUD LISTOWELL KWEI",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105056"
+  },
+  {
+    "studentId": "BUS/24/205",
+    "programme": "BUSINESS",
+    "surName": "OSEI",
+    "otherNames": "ADDO NANA YAW O.",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105057"
+  },
+  {
+    "studentId": "BUS/24/195",
+    "programme": "BUSINESS",
+    "surName": "OWUSU",
+    "otherNames": "EMMANUEL KWAKU",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105058"
+  },
+  {
+    "studentId": "BUS/24/178",
+    "programme": "BUSINESS",
+    "surName": "OWUSU-ANSAH",
+    "otherNames": "ANGELO NANA",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "240010105059"
+  },
+  {
+    "studentId": "BUS/25/004",
+    "programme": "BUSINESS",
+    "surName": "TETTEH",
+    "otherNames": "CALVIN",
+    "gender": "MALE",
+    "studentClass": "2 BUS 1",
+    "stpId": "2400101052E7"
+  },
+  {
+    "studentId": "BUS/24/203",
+    "programme": "BUSINESS",
+    "surName": "WIREM",
+    "otherNames": "PROSPER",
+    "gender": "NA",
+    "studentClass": "2 BUS 1",
+    "stpId": "24001010505A"
+  },
+  {
+    "studentId": "BUS/24/214",
+    "programme": "BUSINESS",
+    "surName": "ANSAH",
+    "otherNames": "EDWIN NANA KWESI ENNIN",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010505C"
+  },
+  {
+    "studentId": "BUS/24/210",
+    "programme": "BUSINESS",
+    "surName": "ANUM",
+    "otherNames": "DESMOND ADJEI OKOE",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010505D"
+  },
+  {
+    "studentId": "BUS/24/222",
+    "programme": "BUSINESS",
+    "surName": "ASANTE",
+    "otherNames": "MICHAEL CHIEF",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010505E"
+  },
+  {
+    "studentId": "BUS/24/228",
+    "programme": "BUSINESS",
+    "surName": "ASHIDAM",
+    "otherNames": "TERRIS CYRILNIIAMARH",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010505F"
+  },
+  {
+    "studentId": "BUS/24/225",
+    "programme": "BUSINESS",
+    "surName": "DJANGMAH",
+    "otherNames": "DAVID NARH",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105060"
+  },
+  {
+    "studentId": "BUS/24/217",
+    "programme": "BUSINESS",
+    "surName": "HUSEIN",
+    "otherNames": "SALMAN",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105061"
+  },
+  {
+    "studentId": "BUS/24/226",
+    "programme": "BUSINESS",
+    "surName": "IBRAHIM",
+    "otherNames": "MOHAMMED-SIRRULLAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105062"
+  },
+  {
+    "studentId": "BUS/24/209",
+    "programme": "BUSINESS",
+    "surName": "INUSAH",
+    "otherNames": "ABDUL DRAMANI",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105063"
+  },
+  {
+    "studentId": "BUS/24/220",
+    "programme": "BUSINESS",
+    "surName": "KHALID",
+    "otherNames": "ABDUL RAHMAN",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105064"
+  },
+  {
+    "studentId": "BUS/24/224",
+    "programme": "BUSINESS",
+    "surName": "LARYEA",
+    "otherNames": "BENJAMIN TETTEH",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105065"
+  },
+  {
+    "studentId": "BUS/24/218",
+    "programme": "BUSINESS",
+    "surName": "LOKKO",
+    "otherNames": "VALENTINE",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105066"
+  },
+  {
+    "studentId": "BUS/24/212",
+    "programme": "BUSINESS",
+    "surName": "MAHMOUD",
+    "otherNames": "SULEMAN",
+    "gender": "MALE",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105067"
+  },
+  {
+    "studentId": "BUS/24/219",
+    "programme": "BUSINESS",
+    "surName": "MOHAMMED",
+    "otherNames": "FUDAILU",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105068"
+  },
+  {
+    "studentId": "BUS/24/227",
+    "programme": "BUSINESS",
+    "surName": "MORGAN",
+    "otherNames": "JESHURUN",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105069"
+  },
+  {
+    "studentId": "BUS/24/211",
+    "programme": "BUSINESS",
+    "surName": "NIZAR",
+    "otherNames": "ABDUL BASIT",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506A"
+  },
+  {
+    "studentId": "BUS/24/208",
+    "programme": "BUSINESS",
+    "surName": "NTIM",
+    "otherNames": "KELVIN SAMUEL KWABENA",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506B"
+  },
+  {
+    "studentId": "BUS/24/221",
+    "programme": "BUSINESS",
+    "surName": "NURUDEEN",
+    "otherNames": "AWAL MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506C"
+  },
+  {
+    "studentId": "BUS/24/223",
+    "programme": "BUSINESS",
+    "surName": "OFOSU-AMAAH",
+    "otherNames": "SYLVESTER PAPAA",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506D"
+  },
+  {
+    "studentId": "BUS/24/213",
+    "programme": "BUSINESS",
+    "surName": "OSEI",
+    "otherNames": "REINDOLPH GYAN",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506E"
+  },
+  {
+    "studentId": "BUS/24/215",
+    "programme": "BUSINESS",
+    "surName": "OTTO",
+    "otherNames": "RUTHERFORD MENSAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "24001010506F"
+  },
+  {
+    "studentId": "BUS/24/216",
+    "programme": "BUSINESS",
+    "surName": "SULEIMAN",
+    "otherNames": "SHERIFF",
+    "gender": "NA",
+    "studentClass": "2 BUS 2",
+    "stpId": "240010105070"
+  },
+  {
+    "studentId": "BUS/24/255",
+    "programme": "BUSINESS",
+    "surName": "ABOAGYE",
+    "otherNames": "GRAHAM YEBOAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105071"
+  },
+  {
+    "studentId": "BUS/24/251",
+    "programme": "BUSINESS",
+    "surName": "ADAMNOR",
+    "otherNames": "GABRIEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105072"
+  },
+  {
+    "studentId": "BUS/24/261",
+    "programme": "BUSINESS",
+    "surName": "ADDY",
+    "otherNames": "DANIEL NII",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105073"
+  },
+  {
+    "studentId": "BUS/24/232",
+    "programme": "BUSINESS",
+    "surName": "ADJEI",
+    "otherNames": "BRIGHT DAVID ADJETEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105074"
+  },
+  {
+    "studentId": "BUS/24/246",
+    "programme": "BUSINESS",
+    "surName": "ADJEI",
+    "otherNames": "DANIEL KELVIN",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105075"
+  },
+  {
+    "studentId": "BUS/24/243",
+    "programme": "BUSINESS",
+    "surName": "ADJEI",
+    "otherNames": "HENRY ANYETEI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105076"
+  },
+  {
+    "studentId": "BUS/24/250",
+    "programme": "BUSINESS",
+    "surName": "ADJEI",
+    "otherNames": "TIMOTHY TETTEH",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105077"
+  },
+  {
+    "studentId": "BUS/24/254",
+    "programme": "BUSINESS",
+    "surName": "ADU",
+    "otherNames": "GEORGE AMPONSAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105078"
+  },
+  {
+    "studentId": "BUS/24/263",
+    "programme": "BUSINESS",
+    "surName": "AGYARE",
+    "otherNames": "JEREMIAH KWESI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105079"
+  },
+  {
+    "studentId": "SCI/24/265",
+    "programme": "BUSINESS",
+    "surName": "AGYEI",
+    "otherNames": "TENKORANG PRINCE",
+    "gender": "MALE",
+    "studentClass": "2 BUS 3",
+    "stpId": "NA"
+  },
+  {
+    "studentId": "BUS/24/252",
+    "programme": "BUSINESS",
+    "surName": "AMARTEIFIO",
+    "otherNames": "AMARKAI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507A"
+  },
+  {
+    "studentId": "BUS/24/231",
+    "programme": "BUSINESS",
+    "surName": "ANABA",
+    "otherNames": "KINGSFORD",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507B"
+  },
+  {
+    "studentId": "BUS/24/247",
+    "programme": "BUSINESS",
+    "surName": "ANANGFIO",
+    "otherNames": "ONISEMUS NII LARYEA",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507C"
+  },
+  {
+    "studentId": "BUS/24/237",
+    "programme": "BUSINESS",
+    "surName": "ANKRAH",
+    "otherNames": "EMMANUEL NII BORKETEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507D"
+  },
+  {
+    "studentId": "BUS/24/235",
+    "programme": "BUSINESS",
+    "surName": "APPIAH",
+    "otherNames": "SHADRACK",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507E"
+  },
+  {
+    "studentId": "BUS/24/230",
+    "programme": "BUSINESS",
+    "surName": "BOTCHWAY",
+    "otherNames": "MICHAEL NII TSEIKU",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010507F"
+  },
+  {
+    "studentId": "BUS/24/242",
+    "programme": "BUSINESS",
+    "surName": "COKER",
+    "otherNames": "RYAN FIFII MANU",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105080"
+  },
+  {
+    "studentId": "BUS/24/256",
+    "programme": "BUSINESS",
+    "surName": "DARTEH",
+    "otherNames": "LEVI KORKU AMEMAKALOR",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105081"
+  },
+  {
+    "studentId": "BUS/24/260",
+    "programme": "BUSINESS",
+    "surName": "DOE",
+    "otherNames": "EDEM MOSES",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105082"
+  },
+  {
+    "studentId": "BUS/24/240",
+    "programme": "BUSINESS",
+    "surName": "DOGBO",
+    "otherNames": "RONALD KEKELI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105083"
+  },
+  {
+    "studentId": "BUS/24/248",
+    "programme": "BUSINESS",
+    "surName": "HABADA",
+    "otherNames": "EVANS",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105084"
+  },
+  {
+    "studentId": "BUS/24/245",
+    "programme": "BUSINESS",
+    "surName": "HAMMOND",
+    "otherNames": "LIWALL KOJO",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105085"
+  },
+  {
+    "studentId": "BUS/24/253",
+    "programme": "BUSINESS",
+    "surName": "KISSEIH",
+    "otherNames": "INNOCENT MAWUENA",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105086"
+  },
+  {
+    "studentId": "BUS/24/234",
+    "programme": "BUSINESS",
+    "surName": "LAMPTEY",
+    "otherNames": "DENNIS AYITEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105088"
+  },
+  {
+    "studentId": "BUS/24/249",
+    "programme": "BUSINESS",
+    "surName": "LARTEY",
+    "otherNames": "ALLEN NII LAATE",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105089"
+  },
+  {
+    "studentId": "BUS/24/262",
+    "programme": "BUSINESS",
+    "surName": "MENSAH",
+    "otherNames": "CEDRIC ADJETEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508A"
+  },
+  {
+    "studentId": "BUS/24/244",
+    "programme": "BUSINESS",
+    "surName": "MENSAH",
+    "otherNames": "CHRISTIAN OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508B"
+  },
+  {
+    "studentId": "BUS/24/239",
+    "programme": "BUSINESS",
+    "surName": "NETTEY",
+    "otherNames": "CLINTON NII OKAI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508C"
+  },
+  {
+    "studentId": "BUS/24/236",
+    "programme": "BUSINESS",
+    "surName": "NYAABA",
+    "otherNames": "MATHIAS KOFI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508D"
+  },
+  {
+    "studentId": "BUS/24/229",
+    "programme": "BUSINESS",
+    "surName": "OLALEYE",
+    "otherNames": "KING OLAKUNMI DWAMENA",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508E"
+  },
+  {
+    "studentId": "BUS/24/265",
+    "programme": "BUSINESS",
+    "surName": "OLASS",
+    "otherNames": "RAFIQ",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "24001010508F"
+  },
+  {
+    "studentId": "BUS/24/259",
+    "programme": "BUSINESS",
+    "surName": "OSAFO",
+    "otherNames": "STEPHEN",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105090"
+  },
+  {
+    "studentId": "BUS/24/257",
+    "programme": "BUSINESS",
+    "surName": "OTOO",
+    "otherNames": "HAZAEL KOJO ANKOMAH ABOAGYE",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105091"
+  },
+  {
+    "studentId": "BUS/24/264",
+    "programme": "BUSINESS",
+    "surName": "QUAGRINE",
+    "otherNames": "PRINCE",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105092"
+  },
+  {
+    "studentId": "BUS/24/241",
+    "programme": "BUSINESS",
+    "surName": "QUARCOO",
+    "otherNames": "JOEL NII NAI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105093"
+  },
+  {
+    "studentId": "BUS/24/233",
+    "programme": "BUSINESS",
+    "surName": "TANDOH",
+    "otherNames": "JEREMIAH KPANKYI PAA KWESI",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "2400101052E8"
+  },
+  {
+    "studentId": "BUS/24/258",
+    "programme": "BUSINESS",
+    "surName": "WAYO",
+    "otherNames": "JUSTICE TETTEH",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105094"
+  },
+  {
+    "studentId": "BUS/24/238",
+    "programme": "BUSINESS",
+    "surName": "WETTAH",
+    "otherNames": "GABRIEL YAW",
+    "gender": "NA",
+    "studentClass": "2 BUS 3",
+    "stpId": "240010105095"
+  },
+  {
+    "studentId": "BUS/24/298",
+    "programme": "BUSINESS",
+    "surName": "ACQUAH",
+    "otherNames": "ANDREW",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101052E9"
+  },
+  {
+    "studentId": "BUS/24/299",
+    "programme": "BUSINESS",
+    "surName": "AGRO ELORM",
+    "otherNames": "NIGEL",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101052EA"
+  },
+  {
+    "studentId": "BUS/24/282",
+    "programme": "BUSINESS",
+    "surName": "AKOTO",
+    "otherNames": "GILBERT",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "240010105097"
+  },
+  {
+    "studentId": "BUS/24/283",
+    "programme": "BUSINESS",
+    "surName": "ALLOTEY",
+    "otherNames": "RICHARD ADOTEI",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "240010105098"
+  },
+  {
+    "studentId": "BUS/24/280",
+    "programme": "BUSINESS",
+    "surName": "AMEGBE",
+    "otherNames": "EZEKIEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "240010105099"
+  },
+  {
+    "studentId": "BUS/24/270",
+    "programme": "BUSINESS",
+    "surName": "AMPAH",
+    "otherNames": "LAWRENCE",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509A"
+  },
+  {
+    "studentId": "BUS/24/292",
+    "programme": "BUSINESS",
+    "surName": "ANTWI",
+    "otherNames": "PRINCE",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101052EB"
+  },
+  {
+    "studentId": "BUS/24/286",
+    "programme": "BUSINESS",
+    "surName": "ANYETEI",
+    "otherNames": "TAUFIK NUNOO",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509B"
+  },
+  {
+    "studentId": "BUS/24/297",
+    "programme": "BUSINESS",
+    "surName": "ASAMANI",
+    "otherNames": "GERSHON ACQUAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509C"
+  },
+  {
+    "studentId": "BUS/24/273",
+    "programme": "BUSINESS",
+    "surName": "ASHONG",
+    "otherNames": "JOSEPH OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509D"
+  },
+  {
+    "studentId": "BUS/24/276",
+    "programme": "BUSINESS",
+    "surName": "ASIEDU",
+    "otherNames": "EMMANUEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509E"
+  },
+  {
+    "studentId": "BUS/24/289",
+    "programme": "BUSINESS",
+    "surName": "AWUAH",
+    "otherNames": "BERNARD WIREHENE",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "24001010509F"
+  },
+  {
+    "studentId": "BUS/24/277",
+    "programme": "BUSINESS",
+    "surName": "AWUKU",
+    "otherNames": "JOSEPH NII KWEKU",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A0"
+  },
+  {
+    "studentId": "BUS/24/279",
+    "programme": "BUSINESS",
+    "surName": "COFFIE",
+    "otherNames": "DAVID",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A1"
+  },
+  {
+    "studentId": "BUS/24/294",
+    "programme": "BUSINESS",
+    "surName": "COMMEY",
+    "otherNames": "MARVIN",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A2"
+  },
+  {
+    "studentId": "BUS/24/290",
+    "programme": "BUSINESS",
+    "surName": "CUDJOE",
+    "otherNames": "BLESS KWABLA",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A3"
+  },
+  {
+    "studentId": "BUS/24/293",
+    "programme": "BUSINESS",
+    "surName": "DOKU",
+    "otherNames": "EMMANUEL CHARLES",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A4"
+  },
+  {
+    "studentId": "BUS/24/296",
+    "programme": "BUSINESS",
+    "surName": "JAHCO",
+    "otherNames": "JOSEPH ASANTE",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A5"
+  },
+  {
+    "studentId": "BUS/25/003",
+    "programme": "BUSINESS",
+    "surName": "KOFI YEBOAH",
+    "otherNames": "ANNOH JENASMAN",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A6"
+  },
+  {
+    "studentId": "BUS/24/281",
+    "programme": "BUSINESS",
+    "surName": "LAMPTEY",
+    "otherNames": "BENEDICT",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A7"
+  },
+  {
+    "studentId": "BUS/24/268",
+    "programme": "BUSINESS",
+    "surName": "MINGLE",
+    "otherNames": "FRANCIS NII LARTEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A8"
+  },
+  {
+    "studentId": "BUS/24/269",
+    "programme": "BUSINESS",
+    "surName": "MOHAMMED",
+    "otherNames": "SHABAN HARUNA",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050A9"
+  },
+  {
+    "studentId": "BUS/24/291",
+    "programme": "BUSINESS",
+    "surName": "OBIRI",
+    "otherNames": "ALEXANDER KWAME",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AA"
+  },
+  {
+    "studentId": "BUS/24/295",
+    "programme": "BUSINESS",
+    "surName": "OFORI",
+    "otherNames": "AUGUSTINE ADDO",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AB"
+  },
+  {
+    "studentId": "BUS/24/275",
+    "programme": "BUSINESS",
+    "surName": "OKAI",
+    "otherNames": "NATHANIEL NII LARYEA",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AC"
+  },
+  {
+    "studentId": "BUS/24/287",
+    "programme": "BUSINESS",
+    "surName": "PINJO",
+    "otherNames": "MICHAEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AD"
+  },
+  {
+    "studentId": "BUS/24/288",
+    "programme": "BUSINESS",
+    "surName": "POBEE",
+    "otherNames": "EMMANUEL OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AE"
+  },
+  {
+    "studentId": "BUS/24/266",
+    "programme": "BUSINESS",
+    "surName": "QUARTEY",
+    "otherNames": "CALEB",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050AF"
+  },
+  {
+    "studentId": "BUS/24/278",
+    "programme": "BUSINESS",
+    "surName": "QUAYNOR",
+    "otherNames": "JUSTICE NII NARH",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B0"
+  },
+  {
+    "studentId": "BUS/24/284",
+    "programme": "BUSINESS",
+    "surName": "SABEN-FOSU",
+    "otherNames": "KWAME NANA",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B1"
+  },
+  {
+    "studentId": "BUS/24/267",
+    "programme": "BUSINESS",
+    "surName": "SALIFU",
+    "otherNames": "MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B2"
+  },
+  {
+    "studentId": "BUS/24/300",
+    "programme": "BUSINESS",
+    "surName": "SAMANGOME",
+    "otherNames": "ALBERT",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101052EC"
+  },
+  {
+    "studentId": "BUS/24/274",
+    "programme": "BUSINESS",
+    "surName": "SEKYI",
+    "otherNames": "EMMANUEL",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B3"
+  },
+  {
+    "studentId": "BUS/24/285",
+    "programme": "BUSINESS",
+    "surName": "TAKYI",
+    "otherNames": "DERRICK ASAH",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B4"
+  },
+  {
+    "studentId": "BUS/25/006",
+    "programme": "BUSINESS",
+    "surName": "TETTEH",
+    "otherNames": "EMMANUEL",
+    "gender": "MALE",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101052ED"
+  },
+  {
+    "studentId": "BUS/24/271",
+    "programme": "BUSINESS",
+    "surName": "TETTEH",
+    "otherNames": "EMMANUEL OBLITEY",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B5"
+  },
+  {
+    "studentId": "BUS/24/272",
+    "programme": "BUSINESS",
+    "surName": "TORGBOR",
+    "otherNames": "ZERUBBABEL QUAO",
+    "gender": "NA",
+    "studentClass": "2 BUS 4",
+    "stpId": "2400101050B6"
+  },
+  {
+    "studentId": "GEN/24/243",
+    "programme": "GENERAL ARTS",
+    "surName": "ABEKAH",
+    "otherNames": "ANTHONY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512A"
+  },
+  {
+    "studentId": "GEN/24/244",
+    "programme": "GENERAL ARTS",
+    "surName": "ADDO",
+    "otherNames": "JONATHAN NII NARH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512B"
+  },
+  {
+    "studentId": "GEN/24/246",
+    "programme": "GENERAL ARTS",
+    "surName": "AGWU",
+    "otherNames": "ONUOHA IFEANYICHUKWU AJIKE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512C"
+  },
+  {
+    "studentId": "GEN/24/241",
+    "programme": "GENERAL ARTS",
+    "surName": "AMOAH",
+    "otherNames": "AARON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512D"
+  },
+  {
+    "studentId": "GEN/24/240",
+    "programme": "GENERAL ARTS",
+    "surName": "ANTWI",
+    "otherNames": "BOASIAKOH LAVELLE KWAKU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512E"
+  },
+  {
+    "studentId": "GEN/24/249",
+    "programme": "GENERAL ARTS",
+    "surName": "ANUM",
+    "otherNames": "BENJAMIN BLEBO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010512F"
+  },
+  {
+    "studentId": "GEN/24/239",
+    "programme": "GENERAL ARTS",
+    "surName": "ARTHUR",
+    "otherNames": "PRINCE KWABENA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105130"
+  },
+  {
+    "studentId": "GEN/24/253",
+    "programme": "GENERAL ARTS",
+    "surName": "ARYEE",
+    "otherNames": "DANIEL AMARTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105131"
+  },
+  {
+    "studentId": "GEN/24/230",
+    "programme": "GENERAL ARTS",
+    "surName": "ASANTE",
+    "otherNames": "ENOCH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105132"
+  },
+  {
+    "studentId": "GEN/24/250",
+    "programme": "GENERAL ARTS",
+    "surName": "ASIGBEY",
+    "otherNames": "PRINCE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105133"
+  },
+  {
+    "studentId": "GEN/24/247",
+    "programme": "GENERAL ARTS",
+    "surName": "ASOMANI",
+    "otherNames": "ADOM OTCHERE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105134"
+  },
+  {
+    "studentId": "GEN/24/251",
+    "programme": "GENERAL ARTS",
+    "surName": "AYAWGA",
+    "otherNames": "GODSON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105135"
+  },
+  {
+    "studentId": "GEN/24/237",
+    "programme": "GENERAL ARTS",
+    "surName": "AZAMASU",
+    "otherNames": "BROWN CYRIL KWABENA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105136"
+  },
+  {
+    "studentId": "GEN/24/232",
+    "programme": "GENERAL ARTS",
+    "surName": "DZISAH",
+    "otherNames": "JOHNSON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105137"
+  },
+  {
+    "studentId": "GEN/24/234",
+    "programme": "GENERAL ARTS",
+    "surName": "HAVEKLU",
+    "otherNames": "STEPHEN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105138"
+  },
+  {
+    "studentId": "GEN/24/254",
+    "programme": "GENERAL ARTS",
+    "surName": "JOSEPH",
+    "otherNames": "MENSAH NII/JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105139"
+  },
+  {
+    "studentId": "GEN/24/252",
+    "programme": "GENERAL ARTS",
+    "surName": "KENETEY",
+    "otherNames": "SIMON AYETEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513A"
+  },
+  {
+    "studentId": "GEN/24/233",
+    "programme": "GENERAL ARTS",
+    "surName": "KUDZAGBO",
+    "otherNames": "MAWULI KWEKU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513B"
+  },
+  {
+    "studentId": "GEN/24/248",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "ANDREWS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513C"
+  },
+  {
+    "studentId": "GEN/24/236",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "SAEED",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513D"
+  },
+  {
+    "studentId": "GEN/24/242",
+    "programme": "GENERAL ARTS",
+    "surName": "MINKAH",
+    "otherNames": "JOHN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513E"
+  },
+  {
+    "studentId": "GEN/24/231",
+    "programme": "GENERAL ARTS",
+    "surName": "NII-ARMAH",
+    "otherNames": "SAMUEL AYI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "24001010513F"
+  },
+  {
+    "studentId": "GEN/24/235",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "AGYEMANG MACBRIDE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105140"
+  },
+  {
+    "studentId": "GEN/24/238",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "DENNIS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105141"
+  },
+  {
+    "studentId": "GEN/24/245",
+    "programme": "GENERAL ARTS",
+    "surName": "QUAYE",
+    "otherNames": "ROLAND NII NORTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105142"
+  },
+  {
+    "studentId": "GEN/24/255",
+    "programme": "GENERAL ARTS",
+    "surName": "YANKEY",
+    "otherNames": "THOMAS JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 1",
+    "stpId": "240010105143"
+  },
+  {
+    "studentId": "GEN/24/295",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDUL",
+    "otherNames": "RAUF ABDALLAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105144"
+  },
+  {
+    "studentId": "GEN/24/294",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDUL",
+    "otherNames": "SALAM AKENBONA ADOMBILA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105145"
+  },
+  {
+    "studentId": "GEN/24/283",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDUL",
+    "otherNames": "WAHAB MOHAMMED SANI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105146"
+  },
+  {
+    "studentId": "GEN/24/298",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDULLAH",
+    "otherNames": "MARWAN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105147"
+  },
+  {
+    "studentId": "GEN/24/279",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDULLAH",
+    "otherNames": "MOHAMMED LARRY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105148"
+  },
+  {
+    "studentId": "GEN/24/390",
+    "programme": "GENERAL ARTS",
+    "surName": "ABRAHAM",
+    "otherNames": "MOTUNROLAJESU JOSHUA",
+    "gender": "MALE",
+    "studentClass": "2 ARTS 2",
+    "stpId": "NA"
+  },
+  {
+    "studentId": "GEN/24/286",
+    "programme": "GENERAL ARTS",
+    "surName": "ACHEAMPONG",
+    "otherNames": "ISAAC DAPAAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105149"
+  },
+  {
+    "studentId": "GEN/24/282",
+    "programme": "GENERAL ARTS",
+    "surName": "ACQUAH",
+    "otherNames": "CYRIL OHENEBA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514A"
+  },
+  {
+    "studentId": "GEN/24/275",
+    "programme": "GENERAL ARTS",
+    "surName": "ADJEI",
+    "otherNames": "KELVIN ADJETEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514B"
+  },
+  {
+    "studentId": "GEN/24/293",
+    "programme": "GENERAL ARTS",
+    "surName": "AKO-HUSNAH",
+    "otherNames": "ATIF NII SOWAH\t",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514C"
+  },
+  {
+    "studentId": "GEN/24/278",
+    "programme": "GENERAL ARTS",
+    "surName": "AKUFFO",
+    "otherNames": "JEREMIAH NANA DARKO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514D"
+  },
+  {
+    "studentId": "GEN/24/296",
+    "programme": "GENERAL ARTS",
+    "surName": "ALHASSAN",
+    "otherNames": "MUSAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514E"
+  },
+  {
+    "studentId": "GEN/24/263",
+    "programme": "GENERAL ARTS",
+    "surName": "ALLOTEY",
+    "otherNames": "DAMIAN NII KPAKPO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010514F"
+  },
+  {
+    "studentId": "GEN/24/287",
+    "programme": "GENERAL ARTS",
+    "surName": "AMU",
+    "otherNames": "DOMINIC",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105150"
+  },
+  {
+    "studentId": "GEN/24/274",
+    "programme": "GENERAL ARTS",
+    "surName": "ANNANG",
+    "otherNames": "MICHAEL SOWAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105151"
+  },
+  {
+    "studentId": "SCI/24/323",
+    "programme": "GENERAL ARTS",
+    "surName": "APETI",
+    "otherNames": "KELVIN KWABENA",
+    "gender": "MALE",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105231"
+  },
+  {
+    "studentId": "GEN/24/269",
+    "programme": "GENERAL ARTS",
+    "surName": "APPIAH",
+    "otherNames": "NANA KWAKU AGYEI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105152"
+  },
+  {
+    "studentId": "GEN/24/266",
+    "programme": "GENERAL ARTS",
+    "surName": "ARCHER",
+    "otherNames": "DANIEL NANA YAW",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105153"
+  },
+  {
+    "studentId": "GEN/24/270",
+    "programme": "GENERAL ARTS",
+    "surName": "ATTISON",
+    "otherNames": "DESMOND ADEM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105154"
+  },
+  {
+    "studentId": "GEN/24/271",
+    "programme": "GENERAL ARTS",
+    "surName": "ATTUQUAYEFIO",
+    "otherNames": "NII CLOTTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105155"
+  },
+  {
+    "studentId": "GEN/24/265",
+    "programme": "GENERAL ARTS",
+    "surName": "BANSAH",
+    "otherNames": "RICHMOND KOMLA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105156"
+  },
+  {
+    "studentId": "GEN/24/272",
+    "programme": "GENERAL ARTS",
+    "surName": "CEASER",
+    "otherNames": "DENNIS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105157"
+  },
+  {
+    "studentId": "GEN/24/284",
+    "programme": "GENERAL ARTS",
+    "surName": "DJANGMAH",
+    "otherNames": "GIDEON ADDO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105158"
+  },
+  {
+    "studentId": "GEN/24/289",
+    "programme": "GENERAL ARTS",
+    "surName": "ENOS",
+    "otherNames": "DESMOND ASANTE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105159"
+  },
+  {
+    "studentId": "GEN/24/273",
+    "programme": "GENERAL ARTS",
+    "surName": "JOHNSON",
+    "otherNames": "CHRISTIAN JOHANN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515A"
+  },
+  {
+    "studentId": "GEN/24/281",
+    "programme": "GENERAL ARTS",
+    "surName": "KAMIL",
+    "otherNames": "UMAR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515B"
+  },
+  {
+    "studentId": "GEN/24/264",
+    "programme": "GENERAL ARTS",
+    "surName": "KODI",
+    "otherNames": "KINGSFORD NII MARTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515C"
+  },
+  {
+    "studentId": "GEN/24/292",
+    "programme": "GENERAL ARTS",
+    "surName": "KONEY",
+    "otherNames": "HAFEZ",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515D"
+  },
+  {
+    "studentId": "GEN/24/256",
+    "programme": "GENERAL ARTS",
+    "surName": "LAMPTEY",
+    "otherNames": "JONATHAN NII LANTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515E"
+  },
+  {
+    "studentId": "GEN/24/258",
+    "programme": "GENERAL ARTS",
+    "surName": "LOMOTEY",
+    "otherNames": "ALEX TETTEH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010515F"
+  },
+  {
+    "studentId": "GEN/24/260",
+    "programme": "GENERAL ARTS",
+    "surName": "MARMAH",
+    "otherNames": "MARK MARTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105160"
+  },
+  {
+    "studentId": "GEN/24/285",
+    "programme": "GENERAL ARTS",
+    "surName": "MATSRI",
+    "otherNames": "THEOPHILUS SEDEM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "2400101052E4"
+  },
+  {
+    "studentId": "GEN/24/297",
+    "programme": "GENERAL ARTS",
+    "surName": "NTI",
+    "otherNames": "WILLIAM OPOKU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "NA"
+  },
+  {
+    "studentId": "GEN/24/290",
+    "programme": "GENERAL ARTS",
+    "surName": "NYARKOH",
+    "otherNames": "KELVIN OSEI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105162"
+  },
+  {
+    "studentId": "GEN/24/262",
+    "programme": "GENERAL ARTS",
+    "surName": "ODDOYE",
+    "otherNames": "ELIUDE NII ODOI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105163"
+  },
+  {
+    "studentId": "GEN/24/276",
+    "programme": "GENERAL ARTS",
+    "surName": "OTOO",
+    "otherNames": "EZIKIEL ANARBHAR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105164"
+  },
+  {
+    "studentId": "GEN/24/259",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "STEPHEN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105165"
+  },
+  {
+    "studentId": "GEN/24/288",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "STEPHEN KWESI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105166"
+  },
+  {
+    "studentId": "GEN/24/280",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "VINCENT OTU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105167"
+  },
+  {
+    "studentId": "GEN/24/291",
+    "programme": "GENERAL ARTS",
+    "surName": "QUANSAH",
+    "otherNames": "SAMRAJ KUKUU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105168"
+  },
+  {
+    "studentId": "GEN/24/267",
+    "programme": "GENERAL ARTS",
+    "surName": "QUARMYNE",
+    "otherNames": "JEREMIAH OFOE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "240010105169"
+  },
+  {
+    "studentId": "GEN/24/277",
+    "programme": "GENERAL ARTS",
+    "surName": "SOWAH",
+    "otherNames": "REUBEN NII ADJETEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010516A"
+  },
+  {
+    "studentId": "GEN/24/268",
+    "programme": "GENERAL ARTS",
+    "surName": "YAKUBU",
+    "otherNames": "ABDUL RAZAK",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010516B"
+  },
+  {
+    "studentId": "GEN/24/257",
+    "programme": "GENERAL ARTS",
+    "surName": "YAKUBU",
+    "otherNames": "HUSSIEN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010516C"
+  },
+  {
+    "studentId": "GEN/24/261",
+    "programme": "GENERAL ARTS",
+    "surName": "ZALEMA",
+    "otherNames": "DAVID PANSON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 2",
+    "stpId": "24001010516D"
+  },
+  {
+    "studentId": "GEN/24/306",
+    "programme": "GENERAL ARTS",
+    "surName": "ABBEY",
+    "otherNames": "MORDECAI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010516E"
+  },
+  {
+    "studentId": "GEN/24/323",
+    "programme": "GENERAL ARTS",
+    "surName": "ABDUL-MUMIN",
+    "otherNames": "ANFANI MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010516F"
+  },
+  {
+    "studentId": "GEN/24/326",
+    "programme": "GENERAL ARTS",
+    "surName": "ABOAGYE",
+    "otherNames": "GERALD OPOKU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105170"
+  },
+  {
+    "studentId": "GEN/24/322",
+    "programme": "GENERAL ARTS",
+    "surName": "ADIKYERE",
+    "otherNames": "PRINCE KWASI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105171"
+  },
+  {
+    "studentId": "GEN/24/327",
+    "programme": "GENERAL ARTS",
+    "surName": "ADJAH",
+    "otherNames": "GABRIEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105172"
+  },
+  {
+    "studentId": "GEN/24/334",
+    "programme": "GENERAL ARTS",
+    "surName": "ADJEI",
+    "otherNames": "JULIUS ABLORH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105173"
+  },
+  {
+    "studentId": "GEN/24/324",
+    "programme": "GENERAL ARTS",
+    "surName": "ADJEI",
+    "otherNames": "KELVIN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105174"
+  },
+  {
+    "studentId": "GEN/24/318",
+    "programme": "GENERAL ARTS",
+    "surName": "AGBLEWORNU",
+    "otherNames": "DORLAH-MICHAEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105175"
+  },
+  {
+    "studentId": "GEN/24/312",
+    "programme": "GENERAL ARTS",
+    "surName": "AKRONG",
+    "otherNames": "TIMOTHY TAGOE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105176"
+  },
+  {
+    "studentId": "GEN/24/337",
+    "programme": "GENERAL ARTS",
+    "surName": "AMISSAH",
+    "otherNames": "JUSTICE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105177"
+  },
+  {
+    "studentId": "GEN/24/317",
+    "programme": "GENERAL ARTS",
+    "surName": "ANAMSI",
+    "otherNames": "ASIAWEN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105178"
+  },
+  {
+    "studentId": "GEN/24/332",
+    "programme": "GENERAL ARTS",
+    "surName": "ANIAH",
+    "otherNames": "ERNEST",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105179"
+  },
+  {
+    "studentId": "GEN/24/335",
+    "programme": "GENERAL ARTS",
+    "surName": "ARTHUR",
+    "otherNames": "KELVIN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517A"
+  },
+  {
+    "studentId": "GEN/24/307",
+    "programme": "GENERAL ARTS",
+    "surName": "ASANTE",
+    "otherNames": "SAMUEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517B"
+  },
+  {
+    "studentId": "GEN/24/330",
+    "programme": "GENERAL ARTS",
+    "surName": "ASHITEY",
+    "otherNames": "MICHAEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517C"
+  },
+  {
+    "studentId": "GEN/24/314",
+    "programme": "GENERAL ARTS",
+    "surName": "AWUKU",
+    "otherNames": "BRYAN ELIKEM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517D"
+  },
+  {
+    "studentId": "GEN/24/299",
+    "programme": "GENERAL ARTS",
+    "surName": "BENNEH",
+    "otherNames": "FRANCIS ASOMAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517E"
+  },
+  {
+    "studentId": "GEN/24/313",
+    "programme": "GENERAL ARTS",
+    "surName": "BINEY",
+    "otherNames": "SAMUEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010517F"
+  },
+  {
+    "studentId": "GEN/24/325",
+    "programme": "GENERAL ARTS",
+    "surName": "BLEBO",
+    "otherNames": "BISMARK BONNEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105180"
+  },
+  {
+    "studentId": "GEN/24/321",
+    "programme": "GENERAL ARTS",
+    "surName": "BOAHEN",
+    "otherNames": "GODWIN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105181"
+  },
+  {
+    "studentId": "GEN/24/339",
+    "programme": "GENERAL ARTS",
+    "surName": "BOTCHWAY",
+    "otherNames": "BRIGHT MARTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105182"
+  },
+  {
+    "studentId": "GEN/24/304",
+    "programme": "GENERAL ARTS",
+    "surName": "BROWN",
+    "otherNames": "PERCIVAL ADOTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105183"
+  },
+  {
+    "studentId": "GEN/24/301",
+    "programme": "GENERAL ARTS",
+    "surName": "CHARWAY",
+    "otherNames": "KENNEDY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105184"
+  },
+  {
+    "studentId": "GEN/24/310",
+    "programme": "GENERAL ARTS",
+    "surName": "CHARWAY",
+    "otherNames": "TERRY OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105185"
+  },
+  {
+    "studentId": "GEN/24/319",
+    "programme": "GENERAL ARTS",
+    "surName": "CROFFIE",
+    "otherNames": "DAVID SEYRAM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105186"
+  },
+  {
+    "studentId": "GEN/24/320",
+    "programme": "GENERAL ARTS",
+    "surName": "DANSO",
+    "otherNames": "DAVIDSON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105187"
+  },
+  {
+    "studentId": "GEN/24/315",
+    "programme": "GENERAL ARTS",
+    "surName": "DANSO",
+    "otherNames": "MICHAEL KORANTENG",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105188"
+  },
+  {
+    "studentId": "GEN/24/336",
+    "programme": "GENERAL ARTS",
+    "surName": "DERRON",
+    "otherNames": "JUNIOR DELAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105189"
+  },
+  {
+    "studentId": "GEN/24/341",
+    "programme": "GENERAL ARTS",
+    "surName": "GAMMOR",
+    "otherNames": "KWEKUUI SOLOMON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518A"
+  },
+  {
+    "studentId": "GEN/24/311",
+    "programme": "GENERAL ARTS",
+    "surName": "HARRISON",
+    "otherNames": "SEAN-BENJAMIN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518B"
+  },
+  {
+    "studentId": "GEN/24/343",
+    "programme": "GENERAL ARTS",
+    "surName": "KORANKYE",
+    "otherNames": "ERIC",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518C"
+  },
+  {
+    "studentId": "GEN/24/308",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "MARVIN ODOI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518D"
+  },
+  {
+    "studentId": "GEN/24/316",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "RICHARD",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518E"
+  },
+  {
+    "studentId": "GEN/24/303",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "SHEMAIAH ABLORH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010518F"
+  },
+  {
+    "studentId": "GEN/24/302",
+    "programme": "GENERAL ARTS",
+    "surName": "NGUNEKPEKU",
+    "otherNames": "JOSES TETTEH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105190"
+  },
+  {
+    "studentId": "GEN/24/300",
+    "programme": "GENERAL ARTS",
+    "surName": "OCANSEY",
+    "otherNames": "JOHN AHUMAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105191"
+  },
+  {
+    "studentId": "GEN/24/305",
+    "programme": "GENERAL ARTS",
+    "surName": "ODAMTTEN",
+    "otherNames": "BENJAMIN OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105192"
+  },
+  {
+    "studentId": "GEN/24/331",
+    "programme": "GENERAL ARTS",
+    "surName": "OPARE",
+    "otherNames": "JAMES",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105193"
+  },
+  {
+    "studentId": "GEN/24/329",
+    "programme": "GENERAL ARTS",
+    "surName": "OWUSU",
+    "otherNames": "LAWRENCE AGYEKUM\t",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105194"
+  },
+  {
+    "studentId": "GEN/24/342",
+    "programme": "GENERAL ARTS",
+    "surName": "QUIST",
+    "otherNames": "SAMUEL JERRY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105195"
+  },
+  {
+    "studentId": "GEN/24/340",
+    "programme": "GENERAL ARTS",
+    "surName": "SANNI",
+    "otherNames": "ABDULAI HAMZA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105196"
+  },
+  {
+    "studentId": "GEN/24/333",
+    "programme": "GENERAL ARTS",
+    "surName": "SIMON",
+    "otherNames": "AMOAH ANTWI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105197"
+  },
+  {
+    "studentId": "GEN/24/309",
+    "programme": "GENERAL ARTS",
+    "surName": "TAWIAH",
+    "otherNames": "GABRIEL COLLINS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105198"
+  },
+  {
+    "studentId": "GEN/24/328",
+    "programme": "GENERAL ARTS",
+    "surName": "TEBBEY",
+    "otherNames": "ELVIS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "240010105199"
+  },
+  {
+    "studentId": "GEN/24/338",
+    "programme": "GENERAL ARTS",
+    "surName": "WUMPINI",
+    "otherNames": "BASIT UMAR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 3",
+    "stpId": "24001010519A"
+  },
+  {
+    "studentId": "GEN/24/367",
+    "programme": "GENERAL ARTS",
+    "surName": "ADJEI",
+    "otherNames": "RISBERG",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "24001010519B"
+  },
+  {
+    "studentId": "GEN/24/366",
+    "programme": "GENERAL ARTS",
+    "surName": "AMADU",
+    "otherNames": "MAHMUD",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "24001010519C"
+  },
+  {
+    "studentId": "GEN/24/356",
+    "programme": "GENERAL ARTS",
+    "surName": "AMARH",
+    "otherNames": "DANIEL ASHITEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "24001010519D"
+  },
+  {
+    "studentId": "GEN/24/359",
+    "programme": "GENERAL ARTS",
+    "surName": "AMOAH",
+    "otherNames": "ELVIS KOFI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "24001010519E"
+  },
+  {
+    "studentId": "GEN/24/351",
+    "programme": "GENERAL ARTS",
+    "surName": "AMOATEY",
+    "otherNames": "GABRIEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "24001010519F"
+  },
+  {
+    "studentId": "GEN/24/363",
+    "programme": "GENERAL ARTS",
+    "surName": "AMPOFO",
+    "otherNames": "JACKSON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A0"
+  },
+  {
+    "studentId": "GEN/24/371",
+    "programme": "GENERAL ARTS",
+    "surName": "ANDOH",
+    "otherNames": "MICHAEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A1"
+  },
+  {
+    "studentId": "GEN/24/376",
+    "programme": "GENERAL ARTS",
+    "surName": "ANNANG",
+    "otherNames": "SLIMNE NII ODOI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A2"
+  },
+  {
+    "studentId": "GEN/24/379",
+    "programme": "GENERAL ARTS",
+    "surName": "ANTWI",
+    "otherNames": "MUDASSIR PHILIP",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A3"
+  },
+  {
+    "studentId": "GEN/24/370",
+    "programme": "GENERAL ARTS",
+    "surName": "APPIAH",
+    "otherNames": "SAMUEL ADU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A4"
+  },
+  {
+    "studentId": "GEN/24/384",
+    "programme": "GENERAL ARTS",
+    "surName": "ASAMANY",
+    "otherNames": "KEKELI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A5"
+  },
+  {
+    "studentId": "GEN/24/346",
+    "programme": "GENERAL ARTS",
+    "surName": "ASARE",
+    "otherNames": "NATHANIEL KWAME",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A6"
+  },
+  {
+    "studentId": "GEN/24/361",
+    "programme": "GENERAL ARTS",
+    "surName": "ASHIRIFI",
+    "otherNames": "COLLINS OKO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A7"
+  },
+  {
+    "studentId": "GEN/24/349",
+    "programme": "GENERAL ARTS",
+    "surName": "ASOMANI-ADEM",
+    "otherNames": "KWAME ASOMANI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A8"
+  },
+  {
+    "studentId": "GEN/24/365",
+    "programme": "GENERAL ARTS",
+    "surName": "AYUBA",
+    "otherNames": "SAEED",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051A9"
+  },
+  {
+    "studentId": "GEN/24/369",
+    "programme": "GENERAL ARTS",
+    "surName": "BAIDEN",
+    "otherNames": "ISAAC KWESI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AA"
+  },
+  {
+    "studentId": "GEN/24/378",
+    "programme": "GENERAL ARTS",
+    "surName": "BANNERMAN",
+    "otherNames": "GEORGE HENRY NII LANTE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AB"
+  },
+  {
+    "studentId": "GEN/24/375",
+    "programme": "GENERAL ARTS",
+    "surName": "BIENGU",
+    "otherNames": "ROONEY VEBADERIMO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AC"
+  },
+  {
+    "studentId": "GEN/24/382",
+    "programme": "GENERAL ARTS",
+    "surName": "BISMARK",
+    "otherNames": "KOMMEY ASJETEY AKUETTEH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AD"
+  },
+  {
+    "studentId": "GEN/24/362",
+    "programme": "GENERAL ARTS",
+    "surName": "BORTEQUAYE",
+    "otherNames": "PETER ANGENU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AE"
+  },
+  {
+    "studentId": "GEN/24/354",
+    "programme": "GENERAL ARTS",
+    "surName": "BOTCHWAY",
+    "otherNames": "JOSHUA NII OSA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051AF"
+  },
+  {
+    "studentId": "GEN/24/364",
+    "programme": "GENERAL ARTS",
+    "surName": "DANKWAH",
+    "otherNames": "PRINCE MIREKU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B0"
+  },
+  {
+    "studentId": "GEN/24/348",
+    "programme": "GENERAL ARTS",
+    "surName": "DANQUAH",
+    "otherNames": "NELSON TREASURE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "NA"
+  },
+  {
+    "studentId": "GEN/24/383",
+    "programme": "GENERAL ARTS",
+    "surName": "ERIC",
+    "otherNames": "KORANKYE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "NA"
+  },
+  {
+    "studentId": "GEN/24/373",
+    "programme": "GENERAL ARTS",
+    "surName": "INUSAH",
+    "otherNames": "ABUBAKAR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B3"
+  },
+  {
+    "studentId": "GEN/24/350",
+    "programme": "GENERAL ARTS",
+    "surName": "KOOH",
+    "otherNames": "MOSES",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B4"
+  },
+  {
+    "studentId": "GEN/24/347",
+    "programme": "GENERAL ARTS",
+    "surName": "MAWULI",
+    "otherNames": "GIDEON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B5"
+  },
+  {
+    "studentId": "GEN/24/357",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "COLLINS NII OKPOTI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B6"
+  },
+  {
+    "studentId": "GEN/24/381",
+    "programme": "GENERAL ARTS",
+    "surName": "MOSES",
+    "otherNames": "SOWAH BOYE MENSAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B7"
+  },
+  {
+    "studentId": "GEN/24/380",
+    "programme": "GENERAL ARTS",
+    "surName": "MUSTAPHA",
+    "otherNames": "ISSAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B8"
+  },
+  {
+    "studentId": "GEN/24/345",
+    "programme": "GENERAL ARTS",
+    "surName": "NANOR",
+    "otherNames": "DANIEL GMOGMLOTEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051B9"
+  },
+  {
+    "studentId": "GEN/24/372",
+    "programme": "GENERAL ARTS",
+    "surName": "NORTEY",
+    "otherNames": "CURTIS NII NOI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BA"
+  },
+  {
+    "studentId": "GEN/24/368",
+    "programme": "GENERAL ARTS",
+    "surName": "ODAI",
+    "otherNames": "JERRY PALMFORD",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BB"
+  },
+  {
+    "studentId": "GEN/24/355",
+    "programme": "GENERAL ARTS",
+    "surName": "ODOI",
+    "otherNames": "JOSHUA AGO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BC"
+  },
+  {
+    "studentId": "GEN/24/360",
+    "programme": "GENERAL ARTS",
+    "surName": "ODONKOR",
+    "otherNames": "JEPHTER",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BD"
+  },
+  {
+    "studentId": "GEN/24/377",
+    "programme": "GENERAL ARTS",
+    "surName": "OMARI",
+    "otherNames": "KOFI SIKA NYARKO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BE"
+  },
+  {
+    "studentId": "GEN/24/374",
+    "programme": "GENERAL ARTS",
+    "surName": "QUAYE",
+    "otherNames": "JERRON",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051BF"
+  },
+  {
+    "studentId": "GEN/24/352",
+    "programme": "GENERAL ARTS",
+    "surName": "SALAMI",
+    "otherNames": "MARTIN OLUWAROTIMI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051C0"
+  },
+  {
+    "studentId": "GEN/24/344",
+    "programme": "GENERAL ARTS",
+    "surName": "SALIFU",
+    "otherNames": "ABDULRAZAK",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051C1"
+  },
+  {
+    "studentId": "GEN/24/353",
+    "programme": "GENERAL ARTS",
+    "surName": "TAGOE",
+    "otherNames": "BERNARD OKO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051C2"
+  },
+  {
+    "studentId": "GEN/24/358",
+    "programme": "GENERAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "HAFEZ KONNEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 4",
+    "stpId": "2400101051C3"
+  },
+  {
+    "studentId": "GEN/24/409",
+    "programme": "GENERAL ARTS",
+    "surName": "ABBAN",
+    "otherNames": "SAMUEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051C4"
+  },
+  {
+    "studentId": "GEN/24/398",
+    "programme": "GENERAL ARTS",
+    "surName": "AFATORDZI",
+    "otherNames": "KELVIN NAAWMINKUM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051C6"
+  },
+  {
+    "studentId": "GEN/24/391",
+    "programme": "GENERAL ARTS",
+    "surName": "ALHASSAN",
+    "otherNames": "MUSAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051C7"
+  },
+  {
+    "studentId": "GEN/24/412",
+    "programme": "GENERAL ARTS",
+    "surName": "ANYAGRE",
+    "otherNames": "JAFTA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051C8"
+  },
+  {
+    "studentId": "GEN/24/386",
+    "programme": "GENERAL ARTS",
+    "surName": "AWADZI",
+    "otherNames": "JOSHUA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051C9"
+  },
+  {
+    "studentId": "GEN/24/394",
+    "programme": "GENERAL ARTS",
+    "surName": "AWUDU",
+    "otherNames": "ISSAKA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CA"
+  },
+  {
+    "studentId": "GEN/24/396",
+    "programme": "GENERAL ARTS",
+    "surName": "CHEBURE",
+    "otherNames": "BAIDOO PETER",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CB"
+  },
+  {
+    "studentId": "GEN/24/411",
+    "programme": "GENERAL ARTS",
+    "surName": "DESMOND",
+    "otherNames": "OKAI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CC"
+  },
+  {
+    "studentId": "GEN/24/400",
+    "programme": "GENERAL ARTS",
+    "surName": "GARBA",
+    "otherNames": "MOHAMMED AHMED",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CD"
+  },
+  {
+    "studentId": "GEN/24/392",
+    "programme": "GENERAL ARTS",
+    "surName": "IBRAHIM",
+    "otherNames": "HUZAIF",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101052E5"
+  },
+  {
+    "studentId": "GEN/24/407",
+    "programme": "GENERAL ARTS",
+    "surName": "IDDRISU",
+    "otherNames": "ISSAHAKU SUHINI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CE"
+  },
+  {
+    "studentId": "GEN/24/403",
+    "programme": "GENERAL ARTS",
+    "surName": "KAMAL",
+    "otherNames": "MUKAILA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051CF"
+  },
+  {
+    "studentId": "GEN/24/385",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "JOHN NIIASHIRIFIE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D0"
+  },
+  {
+    "studentId": "GEN/24/393",
+    "programme": "GENERAL ARTS",
+    "surName": "MINTAH",
+    "otherNames": "MARON OHENE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D1"
+  },
+  {
+    "studentId": "GEN/24/404",
+    "programme": "GENERAL ARTS",
+    "surName": "MOHAMMED",
+    "otherNames": "IBRAHIM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D2"
+  },
+  {
+    "studentId": "GEN/24/399",
+    "programme": "GENERAL ARTS",
+    "surName": "MOHAMMED",
+    "otherNames": "MUSTAPHA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D3"
+  },
+  {
+    "studentId": "GEN/24/387",
+    "programme": "GENERAL ARTS",
+    "surName": "MORKLI",
+    "otherNames": "CASTRO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D4"
+  },
+  {
+    "studentId": "GEN/24/410",
+    "programme": "GENERAL ARTS",
+    "surName": "MUKAILA",
+    "otherNames": "KAMAL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D5"
+  },
+  {
+    "studentId": "GEN/24/402",
+    "programme": "GENERAL ARTS",
+    "surName": "NARH",
+    "otherNames": "EBENEZER",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D6"
+  },
+  {
+    "studentId": "GEN/25/013",
+    "programme": "GENERAL ARTS",
+    "surName": "NASIRU",
+    "otherNames": "SULLEYMAN",
+    "gender": "MALE",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101052F2"
+  },
+  {
+    "studentId": "GEN/24/405",
+    "programme": "GENERAL ARTS",
+    "surName": "NYAHO",
+    "otherNames": "DANIEL KOMLA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D7"
+  },
+  {
+    "studentId": "GEN/24/406",
+    "programme": "GENERAL ARTS",
+    "surName": "PAPPOE",
+    "otherNames": "KELLY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D8"
+  },
+  {
+    "studentId": "GEN/24/401",
+    "programme": "GENERAL ARTS",
+    "surName": "SALLEY",
+    "otherNames": "YAZED",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051D9"
+  },
+  {
+    "studentId": "GEN/24/408",
+    "programme": "GENERAL ARTS",
+    "surName": "SEPENU",
+    "otherNames": "JACOB YAYRA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051DA"
+  },
+  {
+    "studentId": "GEN/24/388",
+    "programme": "GENERAL ARTS",
+    "surName": "SIAW",
+    "otherNames": "DANIEL ADJEI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101052E6"
+  },
+  {
+    "studentId": "GEN/24/389",
+    "programme": "GENERAL ARTS",
+    "surName": "VIVIE",
+    "otherNames": "CHRIS MAWUNYO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051DB"
+  },
+  {
+    "studentId": "GEN/24/395",
+    "programme": "GENERAL ARTS",
+    "surName": "YAKUBU",
+    "otherNames": "SHAKIR DEMBEILE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051DC"
+  },
+  {
+    "studentId": "GEN/24/397",
+    "programme": "GENERAL ARTS",
+    "surName": "ZIELLEY",
+    "otherNames": "JEFFREY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 5",
+    "stpId": "2400101051DD"
+  },
+  {
+    "studentId": "GEN/24/426",
+    "programme": "GENERAL ARTS",
+    "surName": "ABIATEKUM",
+    "otherNames": "THOMAS AWONAATEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051DE"
+  },
+  {
+    "studentId": "GEN/24/441",
+    "programme": "GENERAL ARTS",
+    "surName": "ADAMS",
+    "otherNames": "EZRA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051DF"
+  },
+  {
+    "studentId": "GEN/24/418",
+    "programme": "GENERAL ARTS",
+    "surName": "ADOM",
+    "otherNames": "JOSHUA NII ADOM",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E0"
+  },
+  {
+    "studentId": "GEN/24/413",
+    "programme": "GENERAL ARTS",
+    "surName": "ADOTEY",
+    "otherNames": "VINCENT",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E1"
+  },
+  {
+    "studentId": "GEN/25/012",
+    "programme": "GENERAL ARTS",
+    "surName": "ALHASSAN",
+    "otherNames": "RAZAK",
+    "gender": "MALE",
+    "studentClass": "2 ARTS 6",
+    "stpId": "240010105300"
+  },
+  {
+    "studentId": "GEN/24/420",
+    "programme": "GENERAL ARTS",
+    "surName": "AMEMASOR",
+    "otherNames": "JONATHAN KWAME MAWUNYO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E2"
+  },
+  {
+    "studentId": "GEN/24/422",
+    "programme": "GENERAL ARTS",
+    "surName": "ANNAN",
+    "otherNames": "JUSTIC",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E4"
+  },
+  {
+    "studentId": "GEN/24/443",
+    "programme": "GENERAL ARTS",
+    "surName": "ANOKWAH",
+    "otherNames": "DESMOND",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E5"
+  },
+  {
+    "studentId": "GEN/24/429",
+    "programme": "GENERAL ARTS",
+    "surName": "ATIVOR",
+    "otherNames": "GIDEON KOFI JOHN",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E6"
+  },
+  {
+    "studentId": "GEN/24/436",
+    "programme": "GENERAL ARTS",
+    "surName": "AVOR",
+    "otherNames": "LESLIE DELA KORBLA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E7"
+  },
+  {
+    "studentId": "GEN/24/425",
+    "programme": "GENERAL ARTS",
+    "surName": "AZIZ",
+    "otherNames": "YAKUBU ABDUL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E8"
+  },
+  {
+    "studentId": "GEN/24/432",
+    "programme": "GENERAL ARTS",
+    "surName": "BIAKUSE",
+    "otherNames": "FRANCIS JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051E9"
+  },
+  {
+    "studentId": "GEN/24/424",
+    "programme": "GENERAL ARTS",
+    "surName": "COMMEY",
+    "otherNames": "SAMUEL KWAME",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051EA"
+  },
+  {
+    "studentId": "GEN/24/439",
+    "programme": "GENERAL ARTS",
+    "surName": "DANNI",
+    "otherNames": "ESMOND HOLALI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051EB"
+  },
+  {
+    "studentId": "GEN/24/438",
+    "programme": "GENERAL ARTS",
+    "surName": "DJABATEY",
+    "otherNames": "EVANS",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051EC"
+  },
+  {
+    "studentId": "GEN/24/417",
+    "programme": "GENERAL ARTS",
+    "surName": "GYAABIN",
+    "otherNames": "AARON TURTILESS JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051ED"
+  },
+  {
+    "studentId": "GEN/24/415",
+    "programme": "GENERAL ARTS",
+    "surName": "HOLM",
+    "otherNames": "ABRAHAM ODARTEY MORASH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051EE"
+  },
+  {
+    "studentId": "GEN/24/428",
+    "programme": "GENERAL ARTS",
+    "surName": "JEREMIAH",
+    "otherNames": "YELBAYA AWEDANA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051EF"
+  },
+  {
+    "studentId": "GEN/24/435",
+    "programme": "GENERAL ARTS",
+    "surName": "JOHN",
+    "otherNames": "ANTWI",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F0"
+  },
+  {
+    "studentId": "GEN/24/430",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "AGYEKUM YAW",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F1"
+  },
+  {
+    "studentId": "GEN/24/442",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "AMISSAH",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F2"
+  },
+  {
+    "studentId": "GEN/24/434",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "DAN-DESMOND NII KLU",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F3"
+  },
+  {
+    "studentId": "GEN/24/440",
+    "programme": "GENERAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "EMMANUEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F4"
+  },
+  {
+    "studentId": "GEN/24/431",
+    "programme": "GENERAL ARTS",
+    "surName": "NYADZOR",
+    "otherNames": "EDWARD",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F5"
+  },
+  {
+    "studentId": "GEN/24/419",
+    "programme": "GENERAL ARTS",
+    "surName": "OKAI",
+    "otherNames": "TYCHICUS NII OKAITEY",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F6"
+  },
+  {
+    "studentId": "GEN/24/421",
+    "programme": "GENERAL ARTS",
+    "surName": "OTENG",
+    "otherNames": "KELVIN NANA",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F7"
+  },
+  {
+    "studentId": "GEN/24/423",
+    "programme": "GENERAL ARTS",
+    "surName": "POBEE",
+    "otherNames": "ISRAEL ELIJAH KOJO",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F8"
+  },
+  {
+    "studentId": "GEN/24/414",
+    "programme": "GENERAL ARTS",
+    "surName": "QUARTEY",
+    "otherNames": "HUMPHREY QUARTE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051F9"
+  },
+  {
+    "studentId": "GEN/24/427",
+    "programme": "GENERAL ARTS",
+    "surName": "REUBEN",
+    "otherNames": "KOTEY NII ASHIE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051FA"
+  },
+  {
+    "studentId": "GEN/24/437",
+    "programme": "GENERAL ARTS",
+    "surName": "TAGOE",
+    "otherNames": "NATHANIEL",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051FB"
+  },
+  {
+    "studentId": "GEN/24/416",
+    "programme": "GENERAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "MCGRANAKY QUAYE DANIEL ADOQUAYE",
+    "gender": "NA",
+    "studentClass": "2 ARTS 6",
+    "stpId": "2400101051FC"
+  },
+  {
+    "studentId": "SCI/24/254",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AARON",
+    "otherNames": "DARKO AGYEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105250"
+  },
+  {
+    "studentId": "SCI/24/244",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABDUL RAZAK",
+    "otherNames": "AKRAM SWALLAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105251"
+  },
+  {
+    "studentId": "SCI/24/270",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABDULAI",
+    "otherNames": "ABDUL-HARDI",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105252"
+  },
+  {
+    "studentId": "SCI/24/276",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADAMSON",
+    "otherNames": "HAYFORD",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105253"
+  },
+  {
+    "studentId": "SCI/24/256",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADJIRI",
+    "otherNames": "PAUL SACKEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105254"
+  },
+  {
+    "studentId": "SCI/24/260",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADOM",
+    "otherNames": "CLEMENT ESHUN",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105255"
+  },
+  {
+    "studentId": "SCI/24/275",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AGBO MCCOFIE",
+    "otherNames": "DYLAN",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526D"
+  },
+  {
+    "studentId": "SCI/25/011",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMOAH PERRYOSCAR",
+    "otherNames": "ADOM",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "2400101052EE"
+  },
+  {
+    "studentId": "SCI/24/259",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANSAH",
+    "otherNames": "IVAN",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105257"
+  },
+  {
+    "studentId": "SCI/24/273",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BAIDEN",
+    "otherNames": "SASHA",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105258"
+  },
+  {
+    "studentId": "SCI/24/249",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BRIAN",
+    "otherNames": "DOKYI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105259"
+  },
+  {
+    "studentId": "SCI/24/253",
+    "programme": "GENERAL SCIENCE",
+    "surName": "CHARLES",
+    "otherNames": "ASARE BONZI GYAN FIIFI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525A"
+  },
+  {
+    "studentId": "SCI/24/246",
+    "programme": "GENERAL SCIENCE",
+    "surName": "CHRIS",
+    "otherNames": "OKYERE ACHEAMPONG",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525B"
+  },
+  {
+    "studentId": "SCI/24/261",
+    "programme": "GENERAL SCIENCE",
+    "surName": "CHRISTIAN",
+    "otherNames": "JOSHUA ADJIRI TETTEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525C"
+  },
+  {
+    "studentId": "SCI/24/243",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DELALI",
+    "otherNames": "CAXTON ANKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525D"
+  },
+  {
+    "studentId": "SCI/24/252",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DENNIS",
+    "otherNames": "NSAKIE",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525E"
+  },
+  {
+    "studentId": "SCI/24/264",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DENNIS",
+    "otherNames": "OKAI LARYEA",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010525F"
+  },
+  {
+    "studentId": "SCI/24/250",
+    "programme": "GENERAL SCIENCE",
+    "surName": "EPIPHANY",
+    "otherNames": "DZIKAH NORKPLIM HLORVOR",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105260"
+  },
+  {
+    "studentId": "SCI/24/269",
+    "programme": "GENERAL SCIENCE",
+    "surName": "EYRAM",
+    "otherNames": "SHADRACK MENSAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105261"
+  },
+  {
+    "studentId": "SCI/24/281",
+    "programme": "GENERAL SCIENCE",
+    "surName": "FREDERICK",
+    "otherNames": "ADJEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105262"
+  },
+  {
+    "studentId": "SCI/24/274",
+    "programme": "GENERAL SCIENCE",
+    "surName": "HAIZEL",
+    "otherNames": "DESLORD",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105263"
+  },
+  {
+    "studentId": "SCI/24/251",
+    "programme": "GENERAL SCIENCE",
+    "surName": "HAKAM",
+    "otherNames": "ABDUL MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105264"
+  },
+  {
+    "studentId": "SCI/24/280",
+    "programme": "GENERAL SCIENCE",
+    "surName": "JIM",
+    "otherNames": "NUERTEY JEPHTHAH ADDO",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105265"
+  },
+  {
+    "studentId": "SCI/24/257",
+    "programme": "GENERAL SCIENCE",
+    "surName": "JOHN",
+    "otherNames": "ANUMEDJO TEKPETEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105266"
+  },
+  {
+    "studentId": "SCI/24/271",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KADZASHIE",
+    "otherNames": "WISDOM",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105267"
+  },
+  {
+    "studentId": "SCI/24/266",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KODOM",
+    "otherNames": "ADDAE NANA KWAME",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105268"
+  },
+  {
+    "studentId": "SCI/24/248",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KOMEY",
+    "otherNames": "EDWIN NII AYITEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105269"
+  },
+  {
+    "studentId": "SCI/24/255",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KWADWO",
+    "otherNames": "WISDOM OFOSU OPOKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526A"
+  },
+  {
+    "studentId": "SCI/24/262",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KWAME",
+    "otherNames": "SOM ASEDA BOYD",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526B"
+  },
+  {
+    "studentId": "SCI/24/258",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MARK",
+    "otherNames": "MENSAH WILLIAM",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526C"
+  },
+  {
+    "studentId": "SCI/24/279",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MORTON",
+    "otherNames": "ROBERT JNR.",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526E"
+  },
+  {
+    "studentId": "SCI/24/247",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NANA",
+    "otherNames": "BONSU MARFO WILFRED",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "24001010526F"
+  },
+  {
+    "studentId": "SCI/24/278",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OHENE",
+    "otherNames": "DANIEL AMPONSAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105270"
+  },
+  {
+    "studentId": "SCI/25/013",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OMANE",
+    "otherNames": "CHRISTOPHER",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "2400101052EF"
+  },
+  {
+    "studentId": "SCI/24/267",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ONYAMEBA",
+    "otherNames": "APPIAH KELLY",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105271"
+  },
+  {
+    "studentId": "SCI/24/277",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OTI",
+    "otherNames": "KELVIN OPOKU",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105272"
+  },
+  {
+    "studentId": "SCI/24/245",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUARSHIE",
+    "otherNames": "STEPHEN K. N.",
+    "gender": "MALE",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105273"
+  },
+  {
+    "studentId": "SCI/24/272",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SELORM",
+    "otherNames": "CHRIS HEMAN MAWUSI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105274"
+  },
+  {
+    "studentId": "SCI/24/263",
+    "programme": "GENERAL SCIENCE",
+    "surName": "TUGBENYO",
+    "otherNames": "FAFALI",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105275"
+  },
+  {
+    "studentId": "SCI/24/268",
+    "programme": "GENERAL SCIENCE",
+    "surName": "WORLANYO",
+    "otherNames": "JUDE JONES",
+    "gender": "NA",
+    "studentClass": "2 SCI 1",
+    "stpId": "240010105276"
+  },
+  {
+    "studentId": "SCI/24/307",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABANDOH",
+    "otherNames": "KOFI NANA",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105223"
+  },
+  {
+    "studentId": "SCI/24/321",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABDUL",
+    "otherNames": "SAHEED",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105224"
+  },
+  {
+    "studentId": "SCI/24/312",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABDULLAH",
+    "otherNames": "MOHAMMED RAJJAB",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105225"
+  },
+  {
+    "studentId": "SCI/24/311",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABUBAKAR",
+    "otherNames": "HARUNA YARO",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105226"
+  },
+  {
+    "studentId": "SCI/24/306",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABUGRI",
+    "otherNames": "KELVIN ADOLWIN",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105227"
+  },
+  {
+    "studentId": "SCI/24/290",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADDAE",
+    "otherNames": "CHRIS KOFI",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105228"
+  },
+  {
+    "studentId": "SCI/24/319",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADJETEY",
+    "otherNames": "FAWAZ",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105229"
+  },
+  {
+    "studentId": "SCI/24/314",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AGBANYO",
+    "otherNames": "ALEXANDER EDEM",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522A"
+  },
+  {
+    "studentId": "SCI/24/295",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AIBI",
+    "otherNames": "ANDREWS",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522B"
+  },
+  {
+    "studentId": "SCI/24/303",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AIDOO",
+    "otherNames": "MICHAEL NHYIRA",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522C"
+  },
+  {
+    "studentId": "SCI/24/304",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AKUAMOAH",
+    "otherNames": "NKUNIM KWEKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522D"
+  },
+  {
+    "studentId": "SCI/24/316",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMENYOR",
+    "otherNames": "SAVIOUR",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522E"
+  },
+  {
+    "studentId": "SCI/24/287",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANNANG",
+    "otherNames": "JAHAZIEL AMARTEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010522F"
+  },
+  {
+    "studentId": "SCI/24/300",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANSONG",
+    "otherNames": "ISAAC KWAKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105230"
+  },
+  {
+    "studentId": "SCI/24/292",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ASHIE",
+    "otherNames": "JAYDEN NEEQUAYE",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105232"
+  },
+  {
+    "studentId": "SCI/24/285",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ASIEDU",
+    "otherNames": "DESMOND TIAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105233"
+  },
+  {
+    "studentId": "SCI/24/289",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AVARICARO",
+    "otherNames": "CHRISTOPHER AWENBODU",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105234"
+  },
+  {
+    "studentId": "SCI/24/310",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BRAKO",
+    "otherNames": "JOHN OFOSU",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105235"
+  },
+  {
+    "studentId": "SCI/24/298",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BURHAN",
+    "otherNames": "MOHAMMED HADI ISMAIL",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105236"
+  },
+  {
+    "studentId": "SCI/24/309",
+    "programme": "GENERAL SCIENCE",
+    "surName": "COMMODORE",
+    "otherNames": "SIM NEE-KORLEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105237"
+  },
+  {
+    "studentId": "SCI/24/282",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DABUO-DERY",
+    "otherNames": "ANGBATAAYELE CARLOS",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105238"
+  },
+  {
+    "studentId": "SCI/24/296",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DEGBLOR",
+    "otherNames": "PAUL NUNANA KOKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105239"
+  },
+  {
+    "studentId": "SCI/24/283",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DZATHOR",
+    "otherNames": "JACOB WORLAKO",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523A"
+  },
+  {
+    "studentId": "SCI/24/317",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DZIWORNU",
+    "otherNames": "DESMOND",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523B"
+  },
+  {
+    "studentId": "SCI/24/288",
+    "programme": "GENERAL SCIENCE",
+    "surName": "FIAWORNU",
+    "otherNames": "JOEL ELIKEM",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523C"
+  },
+  {
+    "studentId": "SCI/24/301",
+    "programme": "GENERAL SCIENCE",
+    "surName": "FUSEINI",
+    "otherNames": "ABDUL-WAHEED INUSAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523D"
+  },
+  {
+    "studentId": "SCI/24/320",
+    "programme": "GENERAL SCIENCE",
+    "surName": "HAMMOND",
+    "otherNames": "JACOB ARTHUR",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523E"
+  },
+  {
+    "studentId": "SCI/24/299",
+    "programme": "GENERAL SCIENCE",
+    "surName": "HOKPE",
+    "otherNames": "JASON NUNYA",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010523F"
+  },
+  {
+    "studentId": "SCI/24/305",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KABA",
+    "otherNames": "ELVIS WEAKEM",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105240"
+  },
+  {
+    "studentId": "SCI/24/313",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KOOMSON",
+    "otherNames": "GODVICK",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105241"
+  },
+  {
+    "studentId": "SCI/24/286",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KWAKWA",
+    "otherNames": "NEWTON KWOFIE ESSUMAN",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105242"
+  },
+  {
+    "studentId": "SCI/24/293",
+    "programme": "GENERAL SCIENCE",
+    "surName": "LARYEA",
+    "otherNames": "ISAAC KONNEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105243"
+  },
+  {
+    "studentId": "SCI/24/315",
+    "programme": "GENERAL SCIENCE",
+    "surName": "LOTSU",
+    "otherNames": "PIOUS KOBLA SENA\t",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105244"
+  },
+  {
+    "studentId": "SCI/24/322",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NICK",
+    "otherNames": "SIMPSON",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105245"
+  },
+  {
+    "studentId": "SCI/24/291",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NORTEY",
+    "otherNames": "NOBLE NII YEBOAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105246"
+  },
+  {
+    "studentId": "SCI/24/284",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ODURO",
+    "otherNames": "JOSHUA ASANTE",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105247"
+  },
+  {
+    "studentId": "SCI/24/308",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OSEI",
+    "otherNames": "GIDEON",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105248"
+  },
+  {
+    "studentId": "SCI/24/302",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUARTEY",
+    "otherNames": "EMMANUEL NII KWATEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "240010105249"
+  },
+  {
+    "studentId": "SCI/24/318",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SALAMAO",
+    "otherNames": "BEA DJAFAR",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010524A"
+  },
+  {
+    "studentId": "SCI/24/294",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SALAMI",
+    "otherNames": "LATIF",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010524B"
+  },
+  {
+    "studentId": "SCI/24/297",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SASU",
+    "otherNames": "KARL NANA ASANTE",
+    "gender": "NA",
+    "studentClass": "2 SCI 2",
+    "stpId": "24001010524C"
+  },
+  {
+    "studentId": "SCI/25/012",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ZANU",
+    "otherNames": "JUDE",
+    "gender": "MALE",
+    "studentClass": "2 SCI 2",
+    "stpId": "2400101052F0"
+  },
+  {
+    "studentId": "SCI/24/351",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADAMAH",
+    "otherNames": "MICHEAL KWEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105278"
+  },
+  {
+    "studentId": "SCI/24/357",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AGYEKUM",
+    "otherNames": "EMMANUEL KOFI AMPADU",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105279"
+  },
+  {
+    "studentId": "SCI/24/338",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AHIABA",
+    "otherNames": "BISMARK",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527A"
+  },
+  {
+    "studentId": "SCI/24/342",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AKWETEY",
+    "otherNames": "KINDRED KARTEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527B"
+  },
+  {
+    "studentId": "SCI/24/345",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMEZAH",
+    "otherNames": "GERSHON K.BOATENG",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527C"
+  },
+  {
+    "studentId": "SCI/24/350",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANABA",
+    "otherNames": "AUSTIN WILLIAM",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527D"
+  },
+  {
+    "studentId": "SCI/24/335",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANTWI",
+    "otherNames": "DENNIS OSAFO",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527E"
+  },
+  {
+    "studentId": "SCI/24/348",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ARTHUR",
+    "otherNames": "STYOUS EBO",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010527F"
+  },
+  {
+    "studentId": "SCI/24/336",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ASSAN",
+    "otherNames": "NATHANIEL NANA KOJO",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105280"
+  },
+  {
+    "studentId": "SCI/24/343",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AWINIBOTA",
+    "otherNames": "CLINTON",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105281"
+  },
+  {
+    "studentId": "SCI/24/325",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AYAGIJUAH",
+    "otherNames": "CECIL",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105282"
+  },
+  {
+    "studentId": "SCI/24/346",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BANAMAH",
+    "otherNames": "EVANS",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105283"
+  },
+  {
+    "studentId": "SCI/24/339",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BASHIR",
+    "otherNames": "ABDUL HAKEEM ABDUL",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105284"
+  },
+  {
+    "studentId": "SCI/24/326",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BOATENG",
+    "otherNames": "ALEXANDER",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105285"
+  },
+  {
+    "studentId": "SCI/24/327",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BOATENG",
+    "otherNames": "NANA YAW OMARI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105286"
+  },
+  {
+    "studentId": "SCI/24/355",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BOATENG",
+    "otherNames": "OWEN",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105287"
+  },
+  {
+    "studentId": "SCI/24/337",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BORSOR",
+    "otherNames": "DONALD ESSINGAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105288"
+  },
+  {
+    "studentId": "SCI/24/333",
+    "programme": "GENERAL SCIENCE",
+    "surName": "CLOTTEY",
+    "otherNames": "SAMUEL OMANI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105289"
+  },
+  {
+    "studentId": "SCI/24/340",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GYAMENAH",
+    "otherNames": "FAROUK SADIQ",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528A"
+  },
+  {
+    "studentId": "SCI/24/354",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GYAMFI",
+    "otherNames": "NANA KOFI ADU",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528B"
+  },
+  {
+    "studentId": "SCI/24/359",
+    "programme": "GENERAL SCIENCE",
+    "surName": "HACKMAN",
+    "otherNames": "JOSEPH KOJO",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528C"
+  },
+  {
+    "studentId": "SCI/24/334",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KPOGO",
+    "otherNames": "IVAN SETOR",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528D"
+  },
+  {
+    "studentId": "SCI/24/332",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KYEI",
+    "otherNames": "JEREMIAH OSEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528E"
+  },
+  {
+    "studentId": "SCI/24/329",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MACLAR",
+    "otherNames": "EUGENE ENTI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010528F"
+  },
+  {
+    "studentId": "SCI/24/328",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MENSAH",
+    "otherNames": "VINCENT NII LARYEA",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105290"
+  },
+  {
+    "studentId": "SCI/24/356",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NEWKING",
+    "otherNames": "JEROME KOFI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105291"
+  },
+  {
+    "studentId": "SCI/24/352",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NII",
+    "otherNames": "ODOI-KPOBI GERALD MILTON",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105292"
+  },
+  {
+    "studentId": "SCI/24/347",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NTIAMOAH",
+    "otherNames": "AKWASI YEBOAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105293"
+  },
+  {
+    "studentId": "SCI/24/330",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ODOI",
+    "otherNames": "REGINALD YEHOWADA ODOTEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105294"
+  },
+  {
+    "studentId": "SCI/24/344",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OKOE",
+    "otherNames": "NII ASHITEI STANLEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105295"
+  },
+  {
+    "studentId": "SCI/24/349",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OTINKORANG",
+    "otherNames": "PRINCE ALHASSAN NII OTOO",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105296"
+  },
+  {
+    "studentId": "SCI/25/010",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OWUSU",
+    "otherNames": "RICHMOND",
+    "gender": "MALE",
+    "studentClass": "2 SCI 3",
+    "stpId": "2400101052F1"
+  },
+  {
+    "studentId": "SCI/24/341",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OWUSU-BUABENG",
+    "otherNames": "NANA AKWASI NHYIRA",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105297"
+  },
+  {
+    "studentId": "SCI/24/331",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUARTEY",
+    "otherNames": "JEROME KWARTEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105298"
+  },
+  {
+    "studentId": "SCI/24/358",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SALIFU",
+    "otherNames": "YAHYA",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "240010105299"
+  },
+  {
+    "studentId": "SCI/24/324",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SEKYERE",
+    "otherNames": "CRENTSIL OWUSU",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010529A"
+  },
+  {
+    "studentId": "SCI/24/353",
+    "programme": "GENERAL SCIENCE",
+    "surName": "TETTEH",
+    "otherNames": "NORMAN",
+    "gender": "NA",
+    "studentClass": "2 SCI 3",
+    "stpId": "24001010529B"
+  },
+  {
+    "studentId": "SCI/24/374",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABDUL",
+    "otherNames": "MAJID JAWAD",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "24001010529C"
+  },
+  {
+    "studentId": "SCI/24/387",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADJEI",
+    "otherNames": "PHILIP PAUL AKWASI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "24001010529D"
+  },
+  {
+    "studentId": "SCI/24/364",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AKUETTEH",
+    "otherNames": "JEFFREY NII ODOI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "24001010529E"
+  },
+  {
+    "studentId": "SCI/24/362",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AKUTTEY",
+    "otherNames": "EDWARD AZU",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "24001010529F"
+  },
+  {
+    "studentId": "SCI/24/386",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMOAKO",
+    "otherNames": "JOSEPH",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A0"
+  },
+  {
+    "studentId": "SCI/24/367",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMOUZOU",
+    "otherNames": "MAURICE-WALTER MAKAFUI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A1"
+  },
+  {
+    "studentId": "SCI/24/369",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ANANG",
+    "otherNames": "DANIEL NII ADJEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A2"
+  },
+  {
+    "studentId": "SCI/24/384",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AYINETOOMA",
+    "otherNames": "GOGISBUND ADELEYINE",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A3"
+  },
+  {
+    "studentId": "SCI/24/379",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BESSEY",
+    "otherNames": "HENRY GRAHAM",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A4"
+  },
+  {
+    "studentId": "SCI/24/375",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BORTEY",
+    "otherNames": "OLIVER BORKETEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A5"
+  },
+  {
+    "studentId": "SCI/24/368",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BULLEY",
+    "otherNames": "MICHAEL AKWEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A6"
+  },
+  {
+    "studentId": "SCI/24/360",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DEMANYA",
+    "otherNames": "FIDEL EWOENAM",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A7"
+  },
+  {
+    "studentId": "SCI/24/373",
+    "programme": "GENERAL SCIENCE",
+    "surName": "FUSEINI",
+    "otherNames": "ABDUL KUDUS",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A8"
+  },
+  {
+    "studentId": "SCI/24/377",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GBANAGLO-WONDERFUL",
+    "otherNames": "EPHRAIM SITSOFE",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052A9"
+  },
+  {
+    "studentId": "SCI/24/388",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GBORMITTAH",
+    "otherNames": "ENOCH EYRAM",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AA"
+  },
+  {
+    "studentId": "SCI/24/366",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KOOMSON",
+    "otherNames": "KINGSLEY EFRUMI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AB"
+  },
+  {
+    "studentId": "SCI/24/371",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KOTEI",
+    "otherNames": "NII AMON",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AC"
+  },
+  {
+    "studentId": "SCI/24/376",
+    "programme": "GENERAL SCIENCE",
+    "surName": "LARBI",
+    "otherNames": "YESMI ERIC KWAKU ABEDI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AD"
+  },
+  {
+    "studentId": "SCI/24/378",
+    "programme": "GENERAL SCIENCE",
+    "surName": "LARYEA",
+    "otherNames": "PHINEHAS NII ODAI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AE"
+  },
+  {
+    "studentId": "SCI/24/365",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MOSHOOD",
+    "otherNames": "EMMANUEL DEMOLA YAW",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052AF"
+  },
+  {
+    "studentId": "SCI/24/383",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OFORI",
+    "otherNames": "TAWIAH GODSON",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B0"
+  },
+  {
+    "studentId": "SCI/24/381",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OFOSU",
+    "otherNames": "KYEREMEH DAVIS",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B1"
+  },
+  {
+    "studentId": "SCI/24/363",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OKORE",
+    "otherNames": "MALLOY AMOAKO",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B2"
+  },
+  {
+    "studentId": "SCI/24/372",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OTOO",
+    "otherNames": "DAVID KUDUS",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B3"
+  },
+  {
+    "studentId": "SCI/24/361",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUARTEY",
+    "otherNames": "NICHOLAS NII KWATELAI",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B4"
+  },
+  {
+    "studentId": "SCI/24/382",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SARPONG",
+    "otherNames": "REGINALD",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B5"
+  },
+  {
+    "studentId": "SCI/24/370",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SOWAH",
+    "otherNames": "JONATHAN ABLORH",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B6"
+  },
+  {
+    "studentId": "SCI/24/380",
+    "programme": "GENERAL SCIENCE",
+    "surName": "TABIRI",
+    "otherNames": "GYAN MICHEAL",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B7"
+  },
+  {
+    "studentId": "SCI/24/389",
+    "programme": "GENERAL SCIENCE",
+    "surName": "TETTEH",
+    "otherNames": "SAMUEL KWAKU",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B8"
+  },
+  {
+    "studentId": "SCI/24/390",
+    "programme": "GENERAL SCIENCE",
+    "surName": "UMEH",
+    "otherNames": "OSCAR EBUBECHUKWU",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052B9"
+  },
+  {
+    "studentId": "SCI/24/385",
+    "programme": "GENERAL SCIENCE",
+    "surName": "YEBOAH",
+    "otherNames": "JOSHUA NKWADA",
+    "gender": "NA",
+    "studentClass": "2 SCI 4",
+    "stpId": "2400101052BA"
+  },
+  {
+    "studentId": "SCI/24/408",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABBAM",
+    "otherNames": "TREASURE ASOMDWOE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052BB"
+  },
+  {
+    "studentId": "SCI/24/397",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ABBI",
+    "otherNames": "AMASIE ANANG",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052BC"
+  },
+  {
+    "studentId": "SCI/24/403",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ADDAE",
+    "otherNames": "MAXWELL",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052BD"
+  },
+  {
+    "studentId": "SCI/24/394",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AMPADU",
+    "otherNames": "EBENEZER OHENE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052BE"
+  },
+  {
+    "studentId": "SCI/24/429",
+    "programme": "GENERAL SCIENCE",
+    "surName": "APLERH-DOKU",
+    "otherNames": "JERED JUDE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052BF"
+  },
+  {
+    "studentId": "SCI/24/411",
+    "programme": "GENERAL SCIENCE",
+    "surName": "ASANTE",
+    "otherNames": "YAW",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C0"
+  },
+  {
+    "studentId": "SCI/24/416",
+    "programme": "GENERAL SCIENCE",
+    "surName": "AZUSIYINE",
+    "otherNames": "CORNELIUS AYINGURA",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C1"
+  },
+  {
+    "studentId": "SCI/24/412",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BANAFOE",
+    "otherNames": "EDISON NII SARPEI",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C2"
+  },
+  {
+    "studentId": "SCI/24/424",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BIOH",
+    "otherNames": "ATTA NANA",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C3"
+  },
+  {
+    "studentId": "SCI/24/421",
+    "programme": "GENERAL SCIENCE",
+    "surName": "BORTEY",
+    "otherNames": "JACOB",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C4"
+  },
+  {
+    "studentId": "SCI/24/415",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DAANKO",
+    "otherNames": "BENEDICT NAAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C5"
+  },
+  {
+    "studentId": "SCI/24/391",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DOAMEKPOR",
+    "otherNames": "DAVIDANIEL ELIKEM",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C6"
+  },
+  {
+    "studentId": "SCI/24/401",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DOKBIRE",
+    "otherNames": "DANIEL TII",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C7"
+  },
+  {
+    "studentId": "SCI/24/400",
+    "programme": "GENERAL SCIENCE",
+    "surName": "DOSU",
+    "otherNames": "GERALD FAFANYO",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C8"
+  },
+  {
+    "studentId": "SCI/24/417",
+    "programme": "GENERAL SCIENCE",
+    "surName": "FRENCH",
+    "otherNames": "RIDWAN",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052C9"
+  },
+  {
+    "studentId": "SCI/24/409",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GANA",
+    "otherNames": "GERALD ELIKPLIM KORMI",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CA"
+  },
+  {
+    "studentId": "SCI/24/393",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GBANDE",
+    "otherNames": "BASIL KONENBE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CB"
+  },
+  {
+    "studentId": "SCI/24/419",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GYANDU",
+    "otherNames": "XORLALI",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CC"
+  },
+  {
+    "studentId": "SCI/24/406",
+    "programme": "GENERAL SCIENCE",
+    "surName": "GYEDUA",
+    "otherNames": "HUBERT ANTHONY",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CD"
+  },
+  {
+    "studentId": "SCI/24/426",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KAKATECHE",
+    "otherNames": "NATHANIEL TACHE UFALAMBA",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CE"
+  },
+  {
+    "studentId": "SCI/24/402",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KAMIL",
+    "otherNames": "ABDUL MUMIN",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052CF"
+  },
+  {
+    "studentId": "SCI/24/392",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KOTEY",
+    "otherNames": "NII AMON",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D0"
+  },
+  {
+    "studentId": "SCI/24/422",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KUPLER",
+    "otherNames": "ROWLAND LANGMATEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D1"
+  },
+  {
+    "studentId": "SCI/24/398",
+    "programme": "GENERAL SCIENCE",
+    "surName": "KWAMIKUMAH",
+    "otherNames": "NATHANIEL SENA",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D2"
+  },
+  {
+    "studentId": "SCI/24/395",
+    "programme": "GENERAL SCIENCE",
+    "surName": "LARYEA",
+    "otherNames": "JOSHUA NII MENSAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D3"
+  },
+  {
+    "studentId": "SCI/24/407",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MORLTY",
+    "otherNames": "BLESS",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D4"
+  },
+  {
+    "studentId": "SCI/24/404",
+    "programme": "GENERAL SCIENCE",
+    "surName": "MUSTAPHA",
+    "otherNames": "UMAR AZURE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D5"
+  },
+  {
+    "studentId": "SCI/24/430",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NARH",
+    "otherNames": "EMMANUEL AMANKWAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D6"
+  },
+  {
+    "studentId": "SCI/24/410",
+    "programme": "GENERAL SCIENCE",
+    "surName": "NII-MOI",
+    "otherNames": "NAPHTALI AKUETE",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D7"
+  },
+  {
+    "studentId": "SCI/24/425",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OKAE",
+    "otherNames": "ALEXANDER ADU-POKU JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D8"
+  },
+  {
+    "studentId": "SCI/24/399",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OKRAKU",
+    "otherNames": "JEREMY KWABENA NYARKOR",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052D9"
+  },
+  {
+    "studentId": "SCI/24/427",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OPOKU",
+    "otherNames": "HENRY AHENKORAH",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DA"
+  },
+  {
+    "studentId": "SCI/24/418",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OSEI",
+    "otherNames": "DESMOND KWAME",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DB"
+  },
+  {
+    "studentId": "SCI/24/414",
+    "programme": "GENERAL SCIENCE",
+    "surName": "OWUSU",
+    "otherNames": "ANTHONY",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DC"
+  },
+  {
+    "studentId": "SCI/24/396",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUAYE",
+    "otherNames": "CHRIS AFOTEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DD"
+  },
+  {
+    "studentId": "SCI/24/405",
+    "programme": "GENERAL SCIENCE",
+    "surName": "QUAYEFIO",
+    "otherNames": "EBENEZER NII TETTEH OKRAMPO",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DE"
+  },
+  {
+    "studentId": "SCI/24/423",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SEWOVI",
+    "otherNames": "EVANS KOFI",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052DF"
+  },
+  {
+    "studentId": "SCI/24/413",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SHAIBU",
+    "otherNames": "YAZEED",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052E0"
+  },
+  {
+    "studentId": "SCI/24/428",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SISSUH",
+    "otherNames": "LOKKO SITU",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052E1"
+  },
+  {
+    "studentId": "SCI/24/420",
+    "programme": "GENERAL SCIENCE",
+    "surName": "SOWAH",
+    "otherNames": "DANIEL ADJETEY",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052E2"
+  },
+  {
+    "studentId": "SCI/24/431",
+    "programme": "GENERAL SCIENCE",
+    "surName": "TETTEH",
+    "otherNames": "NII DENNIS",
+    "gender": "NA",
+    "studentClass": "2 SCI 5",
+    "stpId": "2400101052E3"
+  },
+  {
+    "studentId": "VIS/25/006",
+    "programme": "VISUAL ARTS",
+    "surName": "ABRAHAM",
+    "otherNames": "TAGOE",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052FD"
+  },
+  {
+    "studentId": "VIS/24/179",
+    "programme": "VISUAL ARTS",
+    "surName": "ABUBAKA",
+    "otherNames": "JABIRU",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050B7"
+  },
+  {
+    "studentId": "VIS/25/008",
+    "programme": "VISUAL ARTS",
+    "surName": "ABUBAKAR OHENE",
+    "otherNames": "SADIC",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F3"
+  },
+  {
+    "studentId": "VIS/24/131",
+    "programme": "VISUAL ARTS",
+    "surName": "ACQUAH",
+    "otherNames": "ELVIS EKOW",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050B8"
+  },
+  {
+    "studentId": "VIS/24/123",
+    "programme": "VISUAL ARTS",
+    "surName": "ADDY",
+    "otherNames": "MOSES NII KPANI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050B9"
+  },
+  {
+    "studentId": "VIS/24/162",
+    "programme": "VISUAL ARTS",
+    "surName": "ADJEKU",
+    "otherNames": "EVANS OHENE JUNIOR",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BA"
+  },
+  {
+    "studentId": "VIS/24/174",
+    "programme": "VISUAL ARTS",
+    "surName": "ADOM",
+    "otherNames": "PETE-MORRIS NII",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BB"
+  },
+  {
+    "studentId": "VIS/24/172",
+    "programme": "VISUAL ARTS",
+    "surName": "AGBESI",
+    "otherNames": "BERNARD TETTEH",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BC"
+  },
+  {
+    "studentId": "VIS/25/012",
+    "programme": "VISUAL ARTS",
+    "surName": "ALART MENSAH",
+    "otherNames": "CYRIL",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F7"
+  },
+  {
+    "studentId": "VIS/24/145",
+    "programme": "VISUAL ARTS",
+    "surName": "AMANKWAH",
+    "otherNames": "JIREH KOBBY",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BD"
+  },
+  {
+    "studentId": "VIS/24/141",
+    "programme": "VISUAL ARTS",
+    "surName": "AMPONFI",
+    "otherNames": "KENNETH KWABENA",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BE"
+  },
+  {
+    "studentId": "VIS/24/138",
+    "programme": "VISUAL ARTS",
+    "surName": "ANDOH",
+    "otherNames": "BLESSING KWAME",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050BF"
+  },
+  {
+    "studentId": "VIS/24/160",
+    "programme": "VISUAL ARTS",
+    "surName": "ANLOGAH",
+    "otherNames": "BLESS JOSHUA",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C0"
+  },
+  {
+    "studentId": "VIS/24/124",
+    "programme": "VISUAL ARTS",
+    "surName": "ANSAH",
+    "otherNames": "JEFFERY ADDO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C1"
+  },
+  {
+    "studentId": "VIS/24/140",
+    "programme": "VISUAL ARTS",
+    "surName": "ARMAH",
+    "otherNames": "ALEXIS ASHITEY",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C2"
+  },
+  {
+    "studentId": "VIS/24/166",
+    "programme": "VISUAL ARTS",
+    "surName": "ASARE",
+    "otherNames": "RICHMOND NANA KWAME",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C3"
+  },
+  {
+    "studentId": "VIS/24/168",
+    "programme": "VISUAL ARTS",
+    "surName": "ASHIABI",
+    "otherNames": "JULIUS KWAKU",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C4"
+  },
+  {
+    "studentId": "VIS/24/175",
+    "programme": "VISUAL ARTS",
+    "surName": "AYITTEY",
+    "otherNames": "CLIFORD NII AYI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C5"
+  },
+  {
+    "studentId": "VIS/24/147",
+    "programme": "VISUAL ARTS",
+    "surName": "BANDAN",
+    "otherNames": "JOSHUA TAMME",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C6"
+  },
+  {
+    "studentId": "VIS/24/155",
+    "programme": "VISUAL ARTS",
+    "surName": "BEDIAKO",
+    "otherNames": "RAYMOND ASEIDU",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C7"
+  },
+  {
+    "studentId": "VIS/24/128",
+    "programme": "VISUAL ARTS",
+    "surName": "BELLO",
+    "otherNames": "SWABIR",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C8"
+  },
+  {
+    "studentId": "VIS/24/154",
+    "programme": "VISUAL ARTS",
+    "surName": "BORKETEY",
+    "otherNames": "EZEKIEL AMOAKO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050C9"
+  },
+  {
+    "studentId": "VIS/24/161",
+    "programme": "VISUAL ARTS",
+    "surName": "CHARWAY",
+    "otherNames": "GIOVANNI NII ODOI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CA"
+  },
+  {
+    "studentId": "VIS/24/178",
+    "programme": "VISUAL ARTS",
+    "surName": "CLASSPETEBS",
+    "otherNames": "KHALID ABDUL",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CB"
+  },
+  {
+    "studentId": "VIS/24/126",
+    "programme": "VISUAL ARTS",
+    "surName": "DARKWAH",
+    "otherNames": "BERNARD ASAMOAH",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CC"
+  },
+  {
+    "studentId": "VIS/24/158",
+    "programme": "VISUAL ARTS",
+    "surName": "DAWUDU",
+    "otherNames": "ABDUL SAMED",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CD"
+  },
+  {
+    "studentId": "VIS/24/137",
+    "programme": "VISUAL ARTS",
+    "surName": "DJANIE",
+    "otherNames": "ANGELO NII ASHIE",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CE"
+  },
+  {
+    "studentId": "VIS/24/132",
+    "programme": "VISUAL ARTS",
+    "surName": "FORSON",
+    "otherNames": "PRINCE KOJO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050CF"
+  },
+  {
+    "studentId": "VIS/25/010",
+    "programme": "VISUAL ARTS",
+    "surName": "INUSAH",
+    "otherNames": "YUSSIF",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F4"
+  },
+  {
+    "studentId": "VIS/24/218",
+    "programme": "VISUAL ARTS",
+    "surName": "JAWHAR",
+    "otherNames": "MORO",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F5"
+  },
+  {
+    "studentId": "VIS/24/127",
+    "programme": "VISUAL ARTS",
+    "surName": "KANTON",
+    "otherNames": "BADZOE SAMIULAI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D0"
+  },
+  {
+    "studentId": "VIS/24/157",
+    "programme": "VISUAL ARTS",
+    "surName": "KESSE",
+    "otherNames": "RAYMOND",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D1"
+  },
+  {
+    "studentId": "VIS/24/176",
+    "programme": "VISUAL ARTS",
+    "surName": "KOMMEY",
+    "otherNames": "BISMARK ADJETEY AKUETER",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D2"
+  },
+  {
+    "studentId": "VIS/24/135",
+    "programme": "VISUAL ARTS",
+    "surName": "KUDEDOR",
+    "otherNames": "CARL DZIWORNU MAWULI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D3"
+  },
+  {
+    "studentId": "VIS/24/153",
+    "programme": "VISUAL ARTS",
+    "surName": "MASOPERH",
+    "otherNames": "CHRISTOPHER NII AMARTEY",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D4"
+  },
+  {
+    "studentId": "VIS/25/011",
+    "programme": "VISUAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "CALEB",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F6"
+  },
+  {
+    "studentId": "VIS/24/156",
+    "programme": "VISUAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "HELGA",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D5"
+  },
+  {
+    "studentId": "VIS/24/165",
+    "programme": "VISUAL ARTS",
+    "surName": "MOHAMMED",
+    "otherNames": "IS-HAQ",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D6"
+  },
+  {
+    "studentId": "VIS/24/142",
+    "programme": "VISUAL ARTS",
+    "surName": "MOHAMMED",
+    "otherNames": "POLYCARP MAWUENAM",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D7"
+  },
+  {
+    "studentId": "VIS/25/009",
+    "programme": "VISUAL ARTS",
+    "surName": "MUSAH NASIRU",
+    "otherNames": "MOHAMMED",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052F8"
+  },
+  {
+    "studentId": "VIS/24/177",
+    "programme": "VISUAL ARTS",
+    "surName": "MUTARI",
+    "otherNames": "ISSAKA MOHAMMED",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D8"
+  },
+  {
+    "studentId": "VIS/24/143",
+    "programme": "VISUAL ARTS",
+    "surName": "NOI",
+    "otherNames": "SAMUEL NOITEY",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050D9"
+  },
+  {
+    "studentId": "VIS/24/159",
+    "programme": "VISUAL ARTS",
+    "surName": "OBENG",
+    "otherNames": "AARON",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DA"
+  },
+  {
+    "studentId": "VIS/24/133",
+    "programme": "VISUAL ARTS",
+    "surName": "OFORI",
+    "otherNames": "KELVIN KWABENA",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DB"
+  },
+  {
+    "studentId": "VIS/24/134",
+    "programme": "VISUAL ARTS",
+    "surName": "OFORI",
+    "otherNames": "KENNETH KWAME",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DC"
+  },
+  {
+    "studentId": "VIS/24/164",
+    "programme": "VISUAL ARTS",
+    "surName": "OMARI",
+    "otherNames": "ADJEI GERRARD",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "240010105277"
+  },
+  {
+    "studentId": "VIS/24/151",
+    "programme": "VISUAL ARTS",
+    "surName": "OPOKU",
+    "otherNames": "JEREMIAH AGYARKO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DD"
+  },
+  {
+    "studentId": "VIS/24/139",
+    "programme": "VISUAL ARTS",
+    "surName": "OSEI",
+    "otherNames": "MICHAEL KOFI NIMO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DE"
+  },
+  {
+    "studentId": "VIS/24/129",
+    "programme": "VISUAL ARTS",
+    "surName": "OSEI",
+    "otherNames": "STEPHEN NANA",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050DF"
+  },
+  {
+    "studentId": "VIS/24/167",
+    "programme": "VISUAL ARTS",
+    "surName": "OTOO",
+    "otherNames": "EDWARD NII OKWEI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E0"
+  },
+  {
+    "studentId": "VIS/24/217",
+    "programme": "VISUAL ARTS",
+    "surName": "OWUSU ANSAH",
+    "otherNames": "DACOSTA",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052FA"
+  },
+  {
+    "studentId": "VIS/25/007",
+    "programme": "VISUAL ARTS",
+    "surName": "RHAMAN",
+    "otherNames": "LAMIN ABDUL",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052FB"
+  },
+  {
+    "studentId": "VIS/24/150",
+    "programme": "VISUAL ARTS",
+    "surName": "SAAH",
+    "otherNames": "ISAAC KOJO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E1"
+  },
+  {
+    "studentId": "VIS/24/125",
+    "programme": "VISUAL ARTS",
+    "surName": "SACKEY",
+    "otherNames": "SOLOMON QUARCOPOME",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E2"
+  },
+  {
+    "studentId": "VIS/24/216",
+    "programme": "VISUAL ARTS",
+    "surName": "SALAMU",
+    "otherNames": "KOFI",
+    "gender": "MALE",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101052FC"
+  },
+  {
+    "studentId": "VIS/24/144",
+    "programme": "VISUAL ARTS",
+    "surName": "SALISU",
+    "otherNames": "BAAKO ALHASSAN",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E3"
+  },
+  {
+    "studentId": "VIS/24/148",
+    "programme": "VISUAL ARTS",
+    "surName": "SHAIBU",
+    "otherNames": "YASSIR",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E4"
+  },
+  {
+    "studentId": "VIS/24/146",
+    "programme": "VISUAL ARTS",
+    "surName": "SOGLO-KPOGO",
+    "otherNames": "RAPHAEL DAVID YAO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E5"
+  },
+  {
+    "studentId": "VIS/24/169",
+    "programme": "VISUAL ARTS",
+    "surName": "TAGBOR",
+    "otherNames": "EZEKIEL KOFI MENSAH LUMOR",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E6"
+  },
+  {
+    "studentId": "VIS/24/163",
+    "programme": "VISUAL ARTS",
+    "surName": "TAGOE",
+    "otherNames": "KESTER NII AYITEY DROMO",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E7"
+  },
+  {
+    "studentId": "VIS/24/149",
+    "programme": "VISUAL ARTS",
+    "surName": "TANKO",
+    "otherNames": "FADHLUR RAHMAN",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E8"
+  },
+  {
+    "studentId": "VIS/24/130",
+    "programme": "VISUAL ARTS",
+    "surName": "TASSON",
+    "otherNames": "EMMANUEL",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050E9"
+  },
+  {
+    "studentId": "VIS/24/170",
+    "programme": "VISUAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "DANIEL",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050EA"
+  },
+  {
+    "studentId": "VIS/24/136",
+    "programme": "VISUAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "DENNIS NII AYERTEI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050EB"
+  },
+  {
+    "studentId": "VIS/24/173",
+    "programme": "VISUAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "DESMOND",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050EC"
+  },
+  {
+    "studentId": "VIS/24/152",
+    "programme": "VISUAL ARTS",
+    "surName": "YATES",
+    "otherNames": "HENRY PAA KWESI",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050ED"
+  },
+  {
+    "studentId": "VIS/24/171",
+    "programme": "VISUAL ARTS",
+    "surName": "YUNUS",
+    "otherNames": "ABDUL HAKEEM",
+    "gender": "NA",
+    "studentClass": "2 VA 1",
+    "stpId": "2400101050EE"
+  },
+  {
+    "studentId": "VIS/24/182",
+    "programme": "VISUAL ARTS",
+    "surName": "ACQUAH",
+    "otherNames": "CLEMENT",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F0"
+  },
+  {
+    "studentId": "VIS/24/189",
+    "programme": "VISUAL ARTS",
+    "surName": "ADDO",
+    "otherNames": "MELCHIZEDEK NII ANKAMAH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F1"
+  },
+  {
+    "studentId": "VIS/24/204",
+    "programme": "VISUAL ARTS",
+    "surName": "ADDY",
+    "otherNames": "DANIEL",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F2"
+  },
+  {
+    "studentId": "VIS/25/004",
+    "programme": "VISUAL ARTS",
+    "surName": "ADJEI ANNAN",
+    "otherNames": "NII GODFRED",
+    "gender": "MALE",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101052FE"
+  },
+  {
+    "studentId": "VIS/24/199",
+    "programme": "VISUAL ARTS",
+    "surName": "ADJOKATSE",
+    "otherNames": "PETER MAWUTOR",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F3"
+  },
+  {
+    "studentId": "VIS/24/196",
+    "programme": "VISUAL ARTS",
+    "surName": "ADOLEHOUME",
+    "otherNames": "GODWIN SEDRICK",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F4"
+  },
+  {
+    "studentId": "VIS/24/198",
+    "programme": "VISUAL ARTS",
+    "surName": "ALIU",
+    "otherNames": "SHERIF DANLAD",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F6"
+  },
+  {
+    "studentId": "VIS/25/013",
+    "programme": "VISUAL ARTS",
+    "surName": "AMANKWAH",
+    "otherNames": "PRINCE",
+    "gender": "MALE",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105301"
+  },
+  {
+    "studentId": "VIS/24/190",
+    "programme": "VISUAL ARTS",
+    "surName": "AMARTEY",
+    "otherNames": "FELIX KELVIN KORLEY",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F7"
+  },
+  {
+    "studentId": "VIS/24/211",
+    "programme": "VISUAL ARTS",
+    "surName": "AMPONG",
+    "otherNames": "BRIGHT KWAKU DZIDEFO",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F8"
+  },
+  {
+    "studentId": "VIS/25/005",
+    "programme": "VISUAL ARTS",
+    "surName": "AMPONSAH KOFI",
+    "otherNames": "APREKU DAVID",
+    "gender": "MALE",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101052FF"
+  },
+  {
+    "studentId": "VIS/24/183",
+    "programme": "VISUAL ARTS",
+    "surName": "ANUM",
+    "otherNames": "ENOCH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050F9"
+  },
+  {
+    "studentId": "VIS/24/210",
+    "programme": "VISUAL ARTS",
+    "surName": "ARMAH",
+    "otherNames": "JOSEPH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FA"
+  },
+  {
+    "studentId": "VIS/24/213",
+    "programme": "VISUAL ARTS",
+    "surName": "ARMAH",
+    "otherNames": "JULIUS AYITEY",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FB"
+  },
+  {
+    "studentId": "VIS/24/208",
+    "programme": "VISUAL ARTS",
+    "surName": "ATITSOGBEI",
+    "otherNames": "JOSEPH SONN",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FC"
+  },
+  {
+    "studentId": "VIS/24/203",
+    "programme": "VISUAL ARTS",
+    "surName": "BAMIEH",
+    "otherNames": "LAMMEH WONONUO YESSEH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FD"
+  },
+  {
+    "studentId": "VIS/24/188",
+    "programme": "VISUAL ARTS",
+    "surName": "BOTCHWAY",
+    "otherNames": "BRIGHT OBOUBI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FE"
+  },
+  {
+    "studentId": "VIS/24/185",
+    "programme": "VISUAL ARTS",
+    "surName": "DANSO",
+    "otherNames": "GEORGE NII OFEI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "2400101050FF"
+  },
+  {
+    "studentId": "VIS/24/205",
+    "programme": "VISUAL ARTS",
+    "surName": "DE-LOVE",
+    "otherNames": "LEWIS NII ADJAH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105100"
+  },
+  {
+    "studentId": "VIS/24/201",
+    "programme": "VISUAL ARTS",
+    "surName": "DONTOH",
+    "otherNames": "BERNARD",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105101"
+  },
+  {
+    "studentId": "VIS/24/209",
+    "programme": "VISUAL ARTS",
+    "surName": "GIDEON",
+    "otherNames": "NORTEY NORTEI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105102"
+  },
+  {
+    "studentId": "VIS/24/200",
+    "programme": "VISUAL ARTS",
+    "surName": "HAMMOND",
+    "otherNames": "NIGEL ADJEI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105103"
+  },
+  {
+    "studentId": "VIS/24/197",
+    "programme": "VISUAL ARTS",
+    "surName": "KETTOR",
+    "otherNames": "PRINCE KWAME",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105104"
+  },
+  {
+    "studentId": "VIS/24/191",
+    "programme": "VISUAL ARTS",
+    "surName": "KONNEY",
+    "otherNames": "JEREMIAH LARYEA",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105105"
+  },
+  {
+    "studentId": "VIS/24/181",
+    "programme": "VISUAL ARTS",
+    "surName": "KUMAH",
+    "otherNames": "SAMUEL NEWTON",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105106"
+  },
+  {
+    "studentId": "VIS/24/180",
+    "programme": "VISUAL ARTS",
+    "surName": "LAMPTEY",
+    "otherNames": "GIDEON NII LANTE",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105107"
+  },
+  {
+    "studentId": "VIS/24/186",
+    "programme": "VISUAL ARTS",
+    "surName": "LARYEA",
+    "otherNames": "JOEL NII YARTEY",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105108"
+  },
+  {
+    "studentId": "VIS/24/214",
+    "programme": "VISUAL ARTS",
+    "surName": "MENSAH",
+    "otherNames": "BENJAMIN OSA",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105109"
+  },
+  {
+    "studentId": "VIS/24/187",
+    "programme": "VISUAL ARTS",
+    "surName": "NAI",
+    "otherNames": "HENRY ANYETEI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510A"
+  },
+  {
+    "studentId": "VIS/24/193",
+    "programme": "VISUAL ARTS",
+    "surName": "OPPONG",
+    "otherNames": "STEPHEN",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510B"
+  },
+  {
+    "studentId": "VIS/24/212",
+    "programme": "VISUAL ARTS",
+    "surName": "OSEI",
+    "otherNames": "GODFRED OFORI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510C"
+  },
+  {
+    "studentId": "VIS/24/192",
+    "programme": "VISUAL ARTS",
+    "surName": "QUARSHIE",
+    "otherNames": "SAMUEL ODOI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510D"
+  },
+  {
+    "studentId": "VIS/24/206",
+    "programme": "VISUAL ARTS",
+    "surName": "SALLAH",
+    "otherNames": "SYLVESTER",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510E"
+  },
+  {
+    "studentId": "VIS/24/202",
+    "programme": "VISUAL ARTS",
+    "surName": "SORKPOR",
+    "otherNames": "EMMANUEL MAWULI",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "24001010510F"
+  },
+  {
+    "studentId": "VIS/24/184",
+    "programme": "VISUAL ARTS",
+    "surName": "SOWAH",
+    "otherNames": "EMMANUEL NII AKO",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105110"
+  },
+  {
+    "studentId": "VIS/24/194",
+    "programme": "VISUAL ARTS",
+    "surName": "TETTEH",
+    "otherNames": "ENOCH",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105111"
+  },
+  {
+    "studentId": "VIS/24/195",
+    "programme": "VISUAL ARTS",
+    "surName": "TWENEBOA-KODUA",
+    "otherNames": "JOSIE",
+    "gender": "NA",
+    "studentClass": "2 VA 2",
+    "stpId": "240010105112"
+  }
+]
