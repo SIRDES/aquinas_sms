@@ -77,7 +77,8 @@ function UploadResultsCSV({
     if (
       fileExtension !== "csv" &&
       fileExtension !== "xlsx" &&
-      fileExtension !== "xls"
+      fileExtension !== "xls" &&
+      fileExtension !== "xlsm"
     ) {
       return {
         code: "file-type",

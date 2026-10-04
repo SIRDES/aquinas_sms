@@ -263,7 +263,7 @@ const AttendanceSettings: React.FC = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Box>
       <LoadingAlert open={loading} />
       <Box
         sx={{
@@ -330,8 +330,8 @@ const AttendanceSettings: React.FC = () => {
                     {holiday.duration === "morning"
                       ? "Morning Only"
                       : holiday.duration === "afternoon"
-                      ? "Afternoon Only"
-                      : "Full Day"}
+                        ? "Afternoon Only"
+                        : "Full Day"}
                   </TableCell>
                   <TableCell>
                     <PermissionGuard requiredPermission={USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_UPDATE}>

@@ -17,6 +17,7 @@ import {
   Button,
 } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
+import Link from "next/link";
 import { styled } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import { SnackbarType } from "@/types/commonTypes";
@@ -142,82 +143,116 @@ export default function Dashboard() {
           </Grid>
           <Grid item container spacing={2} xs={12} md={8}>
             <Grid item xs={12} md={4}>
-              <StyledCard>
-                <Typography
-                  variant="body1"
-                  gutterBottom
+              <Link href="/students/1" style={{ textDecoration: "none" }}>
+                <StyledCard
                   sx={{
-                    fontWeight: 700,
-                    lineHeight: "23px",
+                    cursor: "pointer",
+                    "&:hover .form1-label": {
+                      textDecoration: "underline",
+                    },
                   }}
                 >
-                  Form 1
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  {loadingStudents ? (
-                    <Skeleton variant="text" width={40} height={20} />
-                  ) : (
-                    numberOfStudents?.numOfForm1Student || 0
-                  )}
-                </Typography>
-              </StyledCard>
+                  <Typography
+                    className="form1-label"
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      fontWeight: 700,
+                      lineHeight: "23px",
+                    }}
+                  >
+                    Form 1
+                  </Typography>
+                  <Typography
+                    className="form-label"
+                    variant="body2"
+                    sx={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {loadingStudents ? (
+                      <Skeleton variant="text" width={40} height={20} />
+                    ) : (
+                      numberOfStudents?.numOfForm1Student || 0
+                    )}
+                  </Typography>
+                </StyledCard>
+              </Link>
             </Grid>
             <Grid item xs={12} md={4}>
-              <StyledCard>
-                <Typography
-                  variant="body1"
-                  gutterBottom
+              <Link href="/students/2" style={{ textDecoration: "none" }}>
+                <StyledCard
                   sx={{
-                    fontWeight: 700,
-                    lineHeight: "23px",
+                    cursor: "pointer",
+                    "&:hover .form2-label": {
+                      textDecoration: "underline",
+                    },
                   }}
                 >
-                  Form 2
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  {loadingStudents ? (
-                    <Skeleton variant="text" width={40} height={20} />
-                  ) : (
-                    numberOfStudents?.numOfForm2Student || 0
-                  )}
-                </Typography>
-              </StyledCard>
+                  <Typography
+                    className="form2-label"
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      fontWeight: 700,
+                      lineHeight: "23px",
+                    }}
+                  >
+                    Form 2
+                  </Typography>
+                  <Typography
+                    className="form2-label"
+                    variant="body2"
+                    sx={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {loadingStudents ? (
+                      <Skeleton variant="text" width={40} height={20} />
+                    ) : (
+                      numberOfStudents?.numOfForm2Student || 0
+                    )}
+                  </Typography>
+                </StyledCard>
+              </Link>
             </Grid>
             <Grid item xs={12} md={4}>
-              <StyledCard>
-                <Typography
-                  variant="body1"
-                  gutterBottom
+              <Link href="/students/3" style={{ textDecoration: "none" }}>
+                <StyledCard
                   sx={{
-                    fontWeight: 700,
-                    lineHeight: "23px",
+                    cursor: "pointer",
+                    "&:hover .form3-label": {
+                      textDecoration: "underline",
+                    },
                   }}
                 >
-                  Form 3
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: "bold",
-                  }}
-                >
-                  {loadingStudents ? (
-                    <Skeleton variant="text" width={40} height={20} />
-                  ) : (
-                    numberOfStudents?.numOfForm3Student || 0
-                  )}
-                </Typography>
-              </StyledCard>
+                  <Typography
+                    className="form3-label"
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      fontWeight: 700,
+                      lineHeight: "23px",
+                    }}
+                  >
+                    Form 3
+                  </Typography>
+                  <Typography
+                    className="form-label"
+                    variant="body2"
+                    sx={{
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {loadingStudents ? (
+                      <Skeleton variant="text" width={40} height={20} />
+                    ) : (
+                      numberOfStudents?.numOfForm3Student || 0
+                    )}
+                  </Typography>
+                </StyledCard>
+              </Link>
+
             </Grid>
           </Grid>
         </Grid>

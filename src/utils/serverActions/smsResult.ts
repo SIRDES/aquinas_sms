@@ -9,6 +9,7 @@ export const addSMSResult = async (
   data: Array<{
     sms_id: string;
     phoneNumber: string;
+    smsProvider: string;
     message: string;
     status: string;
   }>,
@@ -18,10 +19,11 @@ export const addSMSResult = async (
     if (!data || data.length === 0) {
       return { success: false, message: "No data provided" };
     }
-    const smsData = data.map(({ sms_id, status, message, phoneNumber }) => ({
+    const smsData = data.map(({ sms_id, status, message, phoneNumber, smsProvider }) => ({
       sms_id: sms_id,
       status: status.toLowerCase(),
       message,
+      smsProvider,
       phoneNumber,
     }));
 

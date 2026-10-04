@@ -406,16 +406,16 @@ export default function Students({
         >
           Students
         </Typography>
-        <Divider />
+        {/* <Divider /> */}
         <Grid
           container
-          spacing={2}
+          spacing={{ xs: 1, sm: 2 }}
           alignItems="center"
           mb={2}
-          mt={2}
+          // mt={2}
           px={{ xs: 1, sm: 2, md: 3 }}
         >
-          <Grid item container xs={12} sm={12} md={10.5} spacing={2}>
+          <Grid item container xs={12} sm={12} md={10.5} spacing={1}>
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
@@ -431,7 +431,7 @@ export default function Students({
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={3.5}>
+            <Grid item xs={6} sm={6} md={3.5}>
               <Autocomplete
                 id="filter-by-programme"
                 fullWidth
@@ -445,7 +445,7 @@ export default function Students({
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={2}>
+            <Grid item xs={6} sm={6} md={2}>
               <Autocomplete
                 id="filter-by-class"
                 fullWidth
@@ -526,11 +526,11 @@ export default function Students({
           </Grid>
         </Grid>
         <Divider />
-        <Box mt={2} px={{ xs: 1, sm: 2, md: 3 }} mb={4}>
+        <Box mt={1} px={{ xs: 1, sm: 2, md: 3 }} mb={4}>
           <TableContainer
             component={Paper}
             sx={{
-              maxHeight: "calc(100vh - 200px)", // Adjust this value based on your layout
+              maxHeight: "calc(100vh - 160px)", // Adjust this value based on your layout
               overflow: "auto",
               // "& .MuiTable-stickyHeader": {
               //   "& th": {

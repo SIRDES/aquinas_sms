@@ -24,7 +24,7 @@ export const assessmentModes: { name: string, value: AssessmentModesType, percen
         percent: 10,
     },
     {
-        name: "Group Projects, Research, or Case Studies, Practical/Lab work, Workshops, Performances, Presentations (Out of Class)",
+        name: "Individual Projects, Research, or Case Studies, Practical/Lab work, Workshops, Performances, Presentations (Out of Class)",
         value: "groupWork",
         percent: 20,
     },
@@ -55,7 +55,7 @@ export const userPermissions = [
     "SMS_RESULTS:VIEW", "SMS_RESULTS:RESEND",
 
     // settings permissions
-    "SETTINGS:VIEW_ALL", "SETTINGS:EXAMS_VIEW_DETAILS", "SETTINGS:EXAMS_CREATE", "SETTINGS:EXAMS_UPDATE", "SETTINGS:MAKE_PROMOTION", "SETTINGS:ATTENDANCE_HOLIDAY_CREATE", "SETTINGS:ATTENDANCE_HOLIDAY_UPDATE", "SETTINGS:ATTENDANCE_HOLIDAY_DELETE",
+    "SETTINGS:VIEW_ALL", "SETTINGS:EXAMS_VIEW_DETAILS", "SETTINGS:EXAMS_CREATE", "SETTINGS:EXAMS_UPDATE", "SETTINGS:MAKE_PROMOTION", "SETTINGS:ATTENDANCE_HOLIDAY_CREATE", "SETTINGS:ATTENDANCE_HOLIDAY_UPDATE", "SETTINGS:ATTENDANCE_HOLIDAY_DELETE", "SETTINGS:GENERAL_VIEW", "SETTINGS:SMS_PROVIDER_UPDATE",
 
     // audit logs permissions
     "AUDIT_LOGS:VIEW_ALL",

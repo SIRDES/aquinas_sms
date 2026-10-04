@@ -5,15 +5,14 @@ import { useEffect } from "react";
 
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ExamSettings from "@/components/settings/ExamSettings";
 import PromotionSettings from "@/components/settings/PromotionSettings";
 import AwardsSettings from "@/components/settings/AwardsSettings";
 import AttendanceSettings from "@/components/settings/AttendanceSettings";
 import AuditLogsSettings from "@/components/settings/AuditLogsSettings";
+import GeneralSettings from "@/components/settings/GeneralSettings";
+import { Typography } from "@mui/material";
 interface TabPanelProps {
   children?: React.ReactNode;
   dir?: string;
@@ -64,22 +63,59 @@ export default function FullWidthTabs() {
 
   return (
     <>
-      <Box mb={1} sx={{ height: "100%" }}>
-        <AppBar position="static">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            // indicatorColor="secondary"
-            textColor="inherit"
-          // variant="fullWidth"
-          >
-            <Tab label="Exams" {...a11yProps(0)} />
-            <Tab label="Promotions" {...a11yProps(1)} />
-            <Tab label="Attendance" {...a11yProps(2)} />
-            <Tab label="Audit Logs" {...a11yProps(3)} />
-            {/* <Tab label="Awards" {...a11yProps(3)} /> */}
-          </Tabs>
-        </AppBar>
+      <Box mb={1} sx={{ height: "100%", p: 3 }}>
+        <Typography variant="h4" fontWeight={700} gutterBottom>
+          Settings
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+          Manage system settings and preferences
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            gap: 1,
+            flexWrap: "wrap",
+            mb: 2,
+          }}
+        >
+          {["Exams", "Promotions", "Attendance", "Audit Logs", "General"].map(
+            (label, index) => (
+              <Box
+                key={label}
+                role="tab"
+                {...a11yProps(index)}
+                onClick={(e: React.MouseEvent) => handleChange(e, index)}
+                sx={{
+                  px: 2.5,
+                  py: 1,
+                  borderRadius: "999px",
+                  cursor: "pointer",
+                  fontSize: "0.875rem",
+                  fontWeight: 500,
+                  transition: "all 0.2s ease",
+                  userSelect: "none",
+                  ...(value === index
+                    ? {
+                        bgcolor: "primary.main",
+                        color: "#fff",
+                        border: "1px solid primary.main",
+                      }
+                    : {
+                        bgcolor: "transparent",
+                        color: "text.primary",
+                        border: "1px solid",
+                        borderColor: "divider",
+                        "&:hover": {
+                          bgcolor: "action.hover",
+                        },
+                      }),
+                }}
+              >
+                {label}
+              </Box>
+            )
+          )}
+        </Box>
         <TabPanel value={value} index={0} dir={theme.direction}>
           <ExamSettings />
         </TabPanel>
@@ -91,6 +127,9 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           <AuditLogsSettings />
+        </TabPanel>
+        <TabPanel value={value} index={4} dir={theme.direction}>
+          <GeneralSettings />
         </TabPanel>
         {/* <TabPanel value={value} index={3} dir={theme.direction}>
           <AwardsSettings />

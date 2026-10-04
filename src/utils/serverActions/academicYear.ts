@@ -12,7 +12,7 @@ export const addAcademicYear = async () => {
         ];
         await connectDB();
         const result = await AcademicYear.insertMany(batch);
-        return { success: true, message: "Batch added successfully" };
+        return { success: true, message: "Academic year added successfully" };
     } catch (err: any) {
         console.log(err);
         return { success: false, message: err?.message || "An error occurred" };

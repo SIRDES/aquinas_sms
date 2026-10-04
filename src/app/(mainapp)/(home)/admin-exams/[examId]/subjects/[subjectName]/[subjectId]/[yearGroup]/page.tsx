@@ -776,23 +776,14 @@ export default function AdminExamsStudentsScores({
           <TableContainer
             component={Paper}
             sx={{
-              maxHeight: "calc(100vh - 200px)", // Adjust this value based on your layout
+              maxHeight: "calc(100vh - 200px)",
               overflow: "auto",
-              // "& .MuiTable-stickyHeader": {
-              //   "& th": {
-              //     zIndex: 1,
-              //   },
-              // },
             }}
           >
             <Table
               stickyHeader
               sx={{
                 minWidth: 650,
-                // "& .MuiTableCell-stickyHeader": {
-                //   // backgroundColor: "#f5f5f5", // Match your theme's header background
-                //   zIndex: 1,
-                // },
               }}
               aria-label="students table"
             >
@@ -818,29 +809,23 @@ export default function AdminExamsStudentsScores({
                     </Tooltip>
                   </StyledTableCell>
                   <StyledTableCell>Name</StyledTableCell>
-                  {/* <StyledTableCell>Phone</StyledTableCell> */}
-                  {/* <StyledTableCell>Class</StyledTableCell> */}
-                  {/* <StyledTableCell>Marks</StyledTableCell> */}
                   {(selectedBatch?.isSemester === true && selectedBatch?.isNewCurriculum) && (
                     <>
-                      <StyledTableCell align="center">Individual Claass Assessment</StyledTableCell>
-                      <StyledTableCell align="center">Mid-Sem</StyledTableCell>
-                      <StyledTableCell align="center">Practical or Portfolio</StyledTableCell>
-                      <StyledTableCell align="center">Group Projects, Research, or Case Studies</StyledTableCell>
+                      <StyledTableCell align="center">Individual Claass Assessment (15%)</StyledTableCell>
+                      <StyledTableCell align="center">Mid-Sem (15%)</StyledTableCell>
+                      <StyledTableCell align="center">Practical or Portfolio (10%)</StyledTableCell>
+                      <StyledTableCell align="center">Individual Projects, Research, or Case Studies (20%)</StyledTableCell>
                     </>
                   )}
                   {selectedBatch?.isSemester === true ? (
                     <>
-                      <StyledTableCell align="center">Class Score</StyledTableCell>
-                      <StyledTableCell align="center">{selectedBatch?.isNewCurriculum ? "Supervised Individual Termly" : "Exam Score"}</StyledTableCell>
-                      <StyledTableCell align="center">Total Score</StyledTableCell>
+                      <StyledTableCell align="center">{selectedBatch?.isNewCurriculum ? "Class Score (60%)" : "Class Score"}</StyledTableCell>
+                      <StyledTableCell align="center">{selectedBatch?.isNewCurriculum ? "Supervised Individual Termly (40%)" : "Exam Score"}</StyledTableCell>
+                      <StyledTableCell align="center">{selectedBatch?.isNewCurriculum ? "Total Score (100%)" : "Total Score"}</StyledTableCell>
                     </>
                   ) : (
                     <StyledTableCell align="center">Marks</StyledTableCell>
                   )}
-                  {/* <StyledTableCell>Grade</StyledTableCell> */}
-                  {/* <StyledTableCell>Remarks</StyledTableCell> */}
-                  {/* <StyledTableCell></StyledTableCell> */}
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -865,12 +850,7 @@ export default function AdminExamsStudentsScores({
                         <StyledTableCell>
                           {student?.student?.name?.toUpperCase()}
                         </StyledTableCell>
-                        {/* <StyledTableCell>
-                          {student?.student?.parentPhoneNumber}
-                        </StyledTableCell> */}
-                        {/* <StyledTableCell>
-                          {`${student?.student?.class?.form} ${student?.student?.class?.name}`?.toUpperCase()}
-                        </StyledTableCell> */}
+
                         {(selectedBatch?.isSemester === true && selectedBatch?.isNewCurriculum) && (
                           <>
                             <StyledTableCell align="center">{student?.individualClassScore || 0}</StyledTableCell>
@@ -959,62 +939,7 @@ export default function AdminExamsStudentsScores({
                             </Typography>
                           </StyledTableCell>
                         )}
-                        {/* <StyledTableCell>{student?.grade}</StyledTableCell> */}
-                        {/* <StyledTableCell>{student?.remarks}</StyledTableCell> */}
-                        {/* <StyledTableCell align="center">
-                          {editAll ? (
-                            <Button
-                              variant="contained"
-                              size="small"
-                              color="success"
-                              disabled={
-                                student?.marks === "" || student?.marks === null
-                              }
-                              onClick={() => handleSaveOne(student)}
-                            >
-                              save
-                            </Button>
-                          ) : editOne?.includes(student?._id) ? (
-                            <Box
-                              display={"flex"}
-                              gap={1}
-                              alignItems={"center"}
-                              justifyContent={"center"}
-                            >
-                              <Button
-                                variant="contained"
-                                size="small"
-                                color="success"
-                                disabled={
-                                  student?.marks === "" ||
-                                  student?.marks === null
-                                }
-                                onClick={() => handleSaveOne(student)}
-                              >
-                                save
-                              </Button>
-                              <Button
-                                size="small"
-                                variant="outlined"
-                                disabled={
-                                  student?.marks === "" ||
-                                  student?.marks === null
-                                }
-                                onClick={() =>
-                                  handleCancelEditOne(student?._id)
-                                }
-                              >
-                                cancel
-                              </Button>
-                            </Box>
-                          ) : (
-                            <Button
-                              onClick={() => handleEditOne(student, index)}
-                            >
-                              edit
-                            </Button>
-                          )}
-                        </StyledTableCell> */}
+
                       </StyledTableRow>
                     ))}
               </TableBody>

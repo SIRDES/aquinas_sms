@@ -86,8 +86,8 @@ const ExamSettings: React.FC = () => {
     form: "",
     examType: "",
     status: "Active",
-    isSemester: false,
-    isNewCurriculum: false,
+    isSemester: true,
+    isNewCurriculum: true,
     yearGroup: "",
     subjects: [],
   });
@@ -99,8 +99,8 @@ const ExamSettings: React.FC = () => {
       form: "",
       examType: "",
       status: "Active",
-      isSemester: false,
-      isNewCurriculum: false,
+      isSemester: true,
+      isNewCurriculum: true,
       yearGroup: "",
       subjects: [],
     });
@@ -291,7 +291,7 @@ const ExamSettings: React.FC = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Box>
       <Box
         sx={{
           display: "flex",

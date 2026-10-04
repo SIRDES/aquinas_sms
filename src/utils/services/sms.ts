@@ -19,6 +19,8 @@ const headers = {
   // "Content-Type": "application/json",
 };
 
+
+
 // Function to send SMS
 const sendSms = async (body: SmsPayload) => {
   const data = {
@@ -34,6 +36,25 @@ const sendSms = async (body: SmsPayload) => {
     url: "https://sms.arkesel.com/api/v2/sms/send",
     headers,
     data,
+  };
+
+
+  const naloData = {
+    // username: "AquinasSHS",
+    // password: "[PASSWORD]",
+    key: ")wcav5guzevjl)0)1w3gh(ehg2d4x0(#ih7jkmk2gpi987)6530xadkyjxlgzi",
+    msisdn: body.recipients.join(","),
+    message: body.message,
+    sender_id: SMS_SENDER
+  };
+
+  const naloConfig: AxiosRequestConfig = {
+    method: "post",
+    url: "https://sms.nalosolutions.com/smsbackend/Resl_Nalo/send-message/",
+    // headers: {
+    //   Accept: "application/json",
+    // },
+    data: JSON.stringify(naloData),
   };
 
   const mnofityData = {
@@ -56,17 +77,21 @@ const sendSms = async (body: SmsPayload) => {
   try {
     const adminSettings = await getAdminSetting();
     // console.log("adminSettings", adminSettings);
+    const smsProvider = adminSettings?.data?.smsProvider || "ARKESEL";
     let response;
-    if (adminSettings?.data?.smsProvider === "MNOTIFY") {
+    if (smsProvider === "MNOTIFY") {
       response = await axios(mnotifyConfig);
+    } else if (smsProvider === "NALO") {
+      response = await axios(naloConfig);
     } else {
       response = await axios(config);
     }
 
-    if (response?.data?.status?.toLowerCase() === "success") {
+    if (response?.data?.status?.toLowerCase() === "success" || response?.data?.status === "1701") {
       await addSMSResult([
         {
-          sms_id: response?.data?.data?.[0]?.id || "",
+          sms_id: smsProvider === "NALO" ? response?.data?.job_id || "" : response?.data?.data?.[0]?.id || "",
+          smsProvider,
           phoneNumber: body.recipients[0],
           message: body.message,
           status: "pending",

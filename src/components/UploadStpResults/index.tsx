@@ -67,9 +67,10 @@ function UploadStpResultsCSV({
     maxFiles: 20,
     validator: nameLengthValidator,
     accept: {
-      "text/csv": [],
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [],
-      "application/vnd.ms-excel": [],
+      "text/csv": [".csv"],
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+      "application/vnd.ms-excel": [".xls"],
+      "application/vnd.ms-excel.sheet.macroEnabled.12": [".xlsm"],
     },
   });
   function nameLengthValidator(file: File) {
@@ -77,12 +78,13 @@ function UploadStpResultsCSV({
     if (
       fileExtension !== "csv" &&
       fileExtension !== "xlsx" &&
+      fileExtension !== "xlsm" &&
       fileExtension !== "xls"
     ) {
       return {
         code: "file-type",
         message:
-          "File type not accepted. Accepts only csv, xlsx, and xls files",
+          "File type not accepted. Accepts only csv, xlsx, xlsm, and xls files",
       };
     }
     return null;

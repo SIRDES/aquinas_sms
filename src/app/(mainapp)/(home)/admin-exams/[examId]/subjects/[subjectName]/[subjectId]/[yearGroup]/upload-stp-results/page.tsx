@@ -194,7 +194,8 @@ export default function AdminExamsUploadResults({
         severity: "success",
         text: "Students' marks have been recorded successfully",
         handleConfirmButtonClick: () => {
-          router.back();
+          // router.back();
+          setAssessmentMode("");
         },
       });
     } catch (error: any) {
@@ -218,8 +219,8 @@ export default function AdminExamsUploadResults({
         <Typography variant="h6">{`${decodedSubjectName?.toUpperCase()} - ${selectedBatch?.name?.toUpperCase()}`}</Typography>
       </Box>
       <Divider />
-      <Box px={{ xs: 1, sm: 2, md: 3 }} pt={{ xs: 2, sm: 3, md: 4 }}>
-        <Typography variant="h5" gutterBottom align="center">
+      <Box px={{ xs: 1, sm: 2, md: 3 }} pt={{ xs: 1, sm: 2, md: 2 }}>
+        <Typography variant="h6" gutterBottom align="center">
           UPLOAD STUDENTS RESULTS FROM STP
         </Typography>
 
@@ -277,7 +278,7 @@ export default function AdminExamsUploadResults({
             sx={{ width: "120px" }}
             onClick={() => router.back()}
           >
-            Cancel
+            Back
           </Button>
         </Box>
       </Box>

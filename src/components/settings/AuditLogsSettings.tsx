@@ -134,7 +134,7 @@ const AuditLogsSettings: React.FC = () => {
 
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Box>
       <LoadingAlert open={loading} />
       <Box
         sx={{
