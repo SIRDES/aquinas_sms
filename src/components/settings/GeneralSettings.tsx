@@ -135,7 +135,7 @@ const GeneralSettings: React.FC = () => {
                   Select SMS Provider
                 </MenuItem>
                 {smsProviders.map((provider) => (
-                  <MenuItem key={provider} value={provider}>
+                  <MenuItem key={provider} value={provider} disabled={provider !== 'ARKESEL'}>
                     {provider}
                   </MenuItem>
                 ))}

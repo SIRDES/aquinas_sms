@@ -64,10 +64,10 @@ export default function FullWidthTabs() {
   return (
     <>
       <Box mb={1} sx={{ height: "100%", p: 3 }}>
-        <Typography variant="h4" fontWeight={700} gutterBottom>
+        <Typography variant="body2" fontWeight={700} gutterBottom>
           Settings
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
           Manage system settings and preferences
         </Typography>
         <Box
@@ -75,7 +75,6 @@ export default function FullWidthTabs() {
             display: "flex",
             gap: 1,
             flexWrap: "wrap",
-            mb: 2,
           }}
         >
           {["Exams", "Promotions", "Attendance", "Audit Logs", "General"].map(
