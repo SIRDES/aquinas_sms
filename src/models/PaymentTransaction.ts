@@ -9,6 +9,7 @@ export type IPaymentTransactions = mongoose.Document & {
   examType: string;
   student: Types.ObjectId;
   batchId: Types.ObjectId;
+  amount: string;
   msisdn: string;
   network: string;
   isDeleted: boolean;
@@ -24,6 +25,7 @@ const paymentTransactionSchema = new mongoose.Schema(
     examType: { type: String, require: true },
     status: { type: String, require: true },
     batchId: { type: Types.ObjectId, required: true },
+    amount: { type: String, required: true },
     msisdn: { type: String, required: true },
     network: { type: String, required: true },
     isDeleted: {

@@ -7,6 +7,9 @@ import AcademicYear from "@/models/AcademicYear";
 import Counter from "@/models/Counter";
 import { getCurrentServerUser } from "@/utils/services/serverUserAuth";
 import { USER_PERMISSIONS } from "@/utils/common";
+import bcrypt from "bcryptjs";
+
+const saltRounds = parseInt(process.env.BCRYPT_SALT as string, 10) || 10;
 
 export const POST = async (request: NextRequest) => {
   if (!request.body) {
@@ -73,6 +76,9 @@ export const POST = async (request: NextRequest) => {
 
       const studentId = `${classInfo.name.split(" ")[0]}/${(nextIdNumber++).toString().padStart(3, "0")}/${yearOfAdmission}`;
 
+
+      const hashedPassword = await bcrypt.hash("student@123", saltRounds);
+
       studentsToInsert.push({
         firstName: firstName.toUpperCase().trim(),
         lastName: lastName?.toUpperCase()?.trim() || "",
@@ -87,7 +93,7 @@ export const POST = async (request: NextRequest) => {
         classId,
         yearOfAdmission: yearOfAdmission.toString(),
         yearGroup: (Number(yearOfAdmission) + 3).toString(),
-        password: "student@123",
+        password: hashedPassword,
       });
     }
 

@@ -1,7 +1,6 @@
 "use server";
 import { connectDB } from "@/lib/mongodb";
 // import Student from "@/models/Student";
-// import PaymentTransaction from "@/models/PaymentTransaction";
 // import mongoose from "mongoose";
 // import { contactNumbers } from "@/utils/services/utils";
 import PlacedStudent, { IPlacedStudent } from "@/models/PlacedStudent";

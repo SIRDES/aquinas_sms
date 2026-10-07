@@ -26,6 +26,7 @@ export const POST = async (request: NextRequest) => {
       code: randomCode,
       student: studentId,
       batchId: batchId,
+      amount: amount,
       numberOfTimesUsed: 0,
       responseMessage: "",
       msisdn: `+${msisdn}`,
