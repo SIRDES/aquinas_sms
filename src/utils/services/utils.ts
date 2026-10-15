@@ -1,5 +1,4 @@
-import axios from "axios";
-import jwt from "jsonwebtoken";
+
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -185,7 +184,7 @@ export const getBest6Aggregate = (exams: Array<any>) => {
     (core.length === 4 && electives.length === 2);
 
   if (!isValid) {
-    return "**";
+    return "***";
   }
 
   let sortedExams: any[] = [];
@@ -206,6 +205,83 @@ export const getBest6Aggregate = (exams: Array<any>) => {
   }
 
   let total = 0;
+  // console.log("Sorted Exams:", sortedExams);
+  for (let i = 0; i < sortedExams.length; i++) {
+    const grade = sortedExams[i].grade;
+    total += gradeValue[grade as keyof typeof gradeValue] || 0; // Add the grade value based on gradeValue
+  }
+
+  return total;
+};
+
+
+export const getAggregate = (exams: Array<any>) => {
+  if (!exams || exams?.length === 0 || exams?.length < 6) {
+    return "***2";
+  }
+  const electives: any[] = [];
+  const core: any[] = [];
+  exams?.forEach((exam) => {
+    if (
+      exam.grade?.toLowerCase() !== "ic" &&
+      (gradeCoreSubjects.includes(exam.subjectDetails._id) ||
+        exam.subjectDetails._id === generalScienceSubjectId)
+    ) {
+      core.push(exam);
+      return;
+    }
+    if (
+      exam?.grade?.toLowerCase() !== "ic" &&
+      exam?.subjectDetails.type === "elective"
+    ) {
+      electives.push(exam);
+    }
+  });
+
+  const isValid =
+    (core.length >= 3 && electives.length >= 3) ||
+    (core.length === 4 && electives.length === 2);
+
+  if (!isValid) {
+    return "***I";
+  }
+
+  let sortedExams: any[] = [];
+
+  if (electives.length === 2) {
+    sortedExams = [...electives, ...core]
+      .sort((a: any, b: any) => b.totalScore - a.totalScore)
+      .slice(0, 6);
+  } else {
+    const topElectives = electives
+      .sort((a: any, b: any) => b.totalScore - a.totalScore)
+      .slice(0, 3);
+    const topCore = core
+      .sort((a: any, b: any) => b.totalScore - a.totalScore)
+      .slice(0, 3);
+
+    sortedExams = [...topElectives, ...topCore];
+  }
+
+
+
+  const sortedA1Count =
+    sortedExams?.filter(
+      (exam: any) => exam?.grade?.trim()?.toUpperCase() === "A1",
+    )?.length || 0;
+
+  if (sortedA1Count >= 6) {
+    const a1Count =
+      exams?.filter(
+        (exam: any) =>
+          exam?.grade?.trim()?.toUpperCase() === "A1" &&
+          !exam?.subjectDetails?.isNoneScoring,
+      )?.length || 0;
+    return `${a1Count}As`;
+  }
+
+  let total = 0;
+
   // console.log("Sorted Exams:", sortedExams);
   for (let i = 0; i < sortedExams.length; i++) {
     const grade = sortedExams[i].grade;

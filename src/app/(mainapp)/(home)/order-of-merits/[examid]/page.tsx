@@ -48,7 +48,8 @@ import {
 } from "@/utils/serverActions/fridayTestScore";
 import { showAlert } from "@/components/Alerts";
 import { getAllSubjects } from "@/utils/serverActions/subject";
-import { generalScienceSubjectId, getBest6Aggregate } from "@/utils/services/utils";
+import { generalScienceSubjectId, getAggregate, getBest6Aggregate } from "@/utils/services/utils";
+import { getRankedTestScoresForAYearGroup } from "@/utils/serverActions/fridayTestScore";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   padding: "9px 8px",
@@ -97,7 +98,7 @@ export default function ExamOrderOfMerits({
   const [downloadAnchorEl, setDownloadAnchorEl] = useState<null | HTMLElement>(
     null,
   );
-  const [filterBy, setFilterBy] = useState("class");
+  const [filterBy, setFilterBy] = useState("yearGroup");
   const [selectedClass, setSelectedClass] = useState<any>(null);
   const [selectedSubject, setSelectedSubject] = useState<any>(null);
   const [classes, setClasses] = useState<Array<any>>([]);
@@ -163,9 +164,14 @@ export default function ExamOrderOfMerits({
           fridayTestBatchId: selectedExam?._id,
           yearGroup: selectedExam?.yearGroup,
         });
-      } else {
+      } else if (filterBy === 'class') {
         response = await getRankedTestScoresForAClass({
           className: selectedClass?.name,
+          fridayTestBatchId: selectedExam?._id,
+          yearGroup: selectedExam?.yearGroup,
+        });
+      } else {
+        response = await getRankedTestScoresForAYearGroup({
           fridayTestBatchId: selectedExam?._id,
           yearGroup: selectedExam?.yearGroup,
         });
@@ -190,7 +196,7 @@ export default function ExamOrderOfMerits({
           ? response?.data || []
           : response?.data?.students || [],
       );
-      if (filterBy === 'class') {
+      if (filterBy === 'class' || filterBy === 'yearGroup') {
         setSubjectsInClass(response?.data?.subjectsInClass?.sort((a: any, b: any) => a.name?.localeCompare(b.name)) || []);
       }
     } catch (error: any) {
@@ -376,6 +382,7 @@ export default function ExamOrderOfMerits({
     //   );
     // }
   }, [students]);
+
   const handleExcelClick = () => {
     handleDownloadClose();
     let ws: any;
@@ -395,6 +402,7 @@ export default function ExamOrderOfMerits({
       // Headers row: Student ID, Name, Subject1, Grade, Subject2, Grade, ..., Grade counts, Total Score, Agg, Pstn
       const headers = [
         "Student ID",
+        "Class",
         "Name",
         ...coreSubjects.flatMap((subject: any) => [subject?.shortName?.toUpperCase(), "Grade"]),
         ...electiveSubjects.flatMap((subject: any) => [subject?.shortName?.toUpperCase(), "Grade"]),
@@ -426,12 +434,14 @@ export default function ExamOrderOfMerits({
 
         return [
           student?.student?.studentId?.toUpperCase() || "",
+          `${student?.student?.class?.form} ${student?.student?.class?.name}`.toUpperCase(),
           student?.student?.name?.trim().toUpperCase() || "",
           ...coreCells,
           ...electiveCells,
           ...gradeCounts,
           student?.overallScore || 0,
-          getBest6Aggregate(student?.examTestScores),
+          getAggregate(student?.examTestScores),
+          // getBest6Aggregate(student?.examTestScores),
           student?.position || 0
         ];
       });
@@ -494,8 +504,10 @@ export default function ExamOrderOfMerits({
     XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
     if (filterBy === "subjects") {
       XLSX.writeFile(wb, `${selectedExam?.name}_${selectedSubject?.name}.xlsx`);
-    } else {
+    } else if (filterBy === "class") {
       XLSX.writeFile(wb, `${selectedExam?.name}_${selectedClass?.name}.xlsx`);
+    } else {
+      XLSX.writeFile(wb, `${selectedExam?.name}.xlsx`);
     }
   };
 
@@ -549,11 +561,12 @@ export default function ExamOrderOfMerits({
                   setFetchedStudents([]);
                 }}
               >
+                <MenuItem value={"yearGroup"}>yearGroup</MenuItem>
                 <MenuItem value={"class"}>class</MenuItem>
                 <MenuItem value={"subjects"}>subjects</MenuItem>
               </Select>
             </Grid>
-            {filterBy === "subjects" ? (
+            {filterBy === "subjects" && (
               <Grid item xs={12} sm={6} md={3}>
                 <Typography variant="body1" gutterBottom>
                   Select subject
@@ -572,7 +585,9 @@ export default function ExamOrderOfMerits({
                   )}
                 />
               </Grid>
-            ) : (
+            )}
+
+            {filterBy === "class" && (
               <Grid item xs={12} sm={6} md={3}>
                 <Typography variant="body1" gutterBottom>
                   Select class
@@ -597,7 +612,7 @@ export default function ExamOrderOfMerits({
               <Button
                 variant="contained"
                 onClick={fetchTestScores}
-                disabled={selectedSubject === null && selectedClass === null}
+                disabled={selectedSubject === null && selectedClass === null && filterBy != "yearGroup"}
               >
                 Submit
               </Button>
@@ -636,7 +651,7 @@ export default function ExamOrderOfMerits({
               onClose={handleDownloadClose}
             >
               {/* {filterBy === "subjects" && ( */}
-              <MenuItem onClick={handleExcelClick}>Data (EXCEL)</MenuItem>
+              <MenuItem disabled={students?.length === 0} onClick={handleExcelClick}>Data (EXCEL)</MenuItem>
               {/* )} */}
             </Menu>
           </Box>
@@ -664,6 +679,7 @@ export default function ExamOrderOfMerits({
                 <TableHead>
                   <TableRow>
                     <StyledTableCell>S/N</StyledTableCell>
+                    <StyledTableCell>Class</StyledTableCell>
                     <StyledTableCell>
                       Name{" "}
                       <Tooltip
@@ -686,7 +702,7 @@ export default function ExamOrderOfMerits({
 
                     {filterBy === "subjects" ? (
                       <>
-                        <StyledTableCell>Class</StyledTableCell>
+
                         <StyledTableCell align="center">Score</StyledTableCell>
                         <StyledTableCell align="center">Grade</StyledTableCell>
                       </>
@@ -717,13 +733,13 @@ export default function ExamOrderOfMerits({
                           {student?.student?.studentId?.toUpperCase()}
                         </StyledTableCell>
                         <StyledTableCell>
+                          {`${student?.student?.class?.form} ${student?.student?.class?.name}`.toUpperCase()}
+                        </StyledTableCell>
+                        <StyledTableCell>
                           {`${student?.student?.name}`.trim().toUpperCase()}
                         </StyledTableCell>
                         {filterBy === "subjects" ? (
                           <>
-                            <StyledTableCell>
-                              {`${student?.student?.class?.form} ${student?.student?.class?.name}`.toUpperCase()}
-                            </StyledTableCell>
                             <StyledTableCell align="center">
                               {student?.totalScore}
                             </StyledTableCell>
@@ -748,7 +764,8 @@ export default function ExamOrderOfMerits({
                               {student?.overallScore}
                             </StyledTableCell>
                             <StyledTableCell align="center">
-                              {getBest6Aggregate(student?.examTestScores)}
+                              {student?.bestAgg}
+                              {/* {getAggregate(student?.examTestScores)} */}
                             </StyledTableCell>
                           </>
                         )}

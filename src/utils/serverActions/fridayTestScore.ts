@@ -6,7 +6,7 @@ import FridayTestScore, { IFridayTestScore } from "@/models/FridayTestScore";
 import Student from "@/models/Student";
 import { AssessmentModesType } from "@/types/commonTypes";
 import { assessmentModes, USER_PERMISSIONS } from "../common";
-import { getRemarksAndGrade } from "../services/utils";
+import { getAggregate, getBest6Aggregate, getRemarksAndGrade } from "../services/utils";
 import { getCurrentServerUser } from "../services/serverUserAuth";
 
 export const registerStudentsToSubject = async ({
@@ -664,7 +664,15 @@ export const getRankedTestScoresForAClass = async ({
               },
             },
 
-            overallScore: { $sum: "$totalScore" },
+            overallScore: {
+              $sum: {
+                $cond: [
+                  { $eq: ["$subjectDetails.isNoneScoring", true] },
+                  0,
+                  "$totalScore",
+                ],
+              },
+            },
 
             subjectsInClassAccumulator: {
               $addToSet: {
@@ -800,6 +808,7 @@ export const getRankedTestScoresForAClass = async ({
         subjectsInClassMap.set(String(s._id), JSON.parse(JSON.stringify(s)));
       });
       delete r.subjectsInClassAccumulator;
+      r.bestAgg = getAggregate(r.examTestScores);
     });
 
     const subjectsInClassArray = Array.from(subjectsInClassMap.values());
@@ -813,6 +822,313 @@ export const getRankedTestScoresForAClass = async ({
     };
   } catch (err: any) {
     console.error("Error in getRankedTestScoresForAClass:", err);
+    return { status: "error", message: err?.message || "An error occurred" };
+  }
+};
+
+
+export const getRankedTestScoresForAYearGroup = async ({
+  fridayTestBatchId,
+  yearGroup,
+}: {
+  fridayTestBatchId: string;
+  yearGroup: string;
+}) => {
+  try {
+    await getCurrentServerUser(USER_PERMISSIONS.ORDER_OF_MERIT_VIEW)
+
+    await connectDB();
+
+    const batchObjectId = new mongoose.Types.ObjectId(fridayTestBatchId);
+
+    const results = await FridayTestScore.aggregate(
+      [
+        // ======================
+        // FAST FILTER (INDEX)
+        // ======================
+        {
+          $match: {
+            fridayTestBatchId: batchObjectId,
+            isDeleted: false,
+            isSuspended: false,
+          },
+        },
+
+        // ======================
+        // STUDENT JOIN
+        // ======================
+        {
+          $lookup: {
+            from: "students",
+            localField: "student",
+            foreignField: "_id",
+            as: "studentDetails",
+          },
+        },
+        { $unwind: "$studentDetails" },
+
+        // ======================
+        // CLASS JOIN (FROM STUDENT)
+        // ======================
+        {
+          $lookup: {
+            from: "classes",
+            localField: "studentDetails.classId",
+            foreignField: "_id",
+            as: "classDetails",
+          },
+        },
+        { $unwind: "$classDetails" },
+
+        // ======================
+        // FILTER BY CLASS NAME + YEAR GROUP
+        // ======================
+        {
+          $match: {
+            "studentDetails.yearGroup": yearGroup,
+          },
+        },
+
+        // ======================
+        // SUBJECT JOIN
+        // ======================
+        {
+          $lookup: {
+            from: "subjects",
+            localField: "subject",
+            foreignField: "_id",
+            as: "subjectDetails",
+          },
+        },
+        { $unwind: "$subjectDetails" },
+
+        // ======================
+        // GROUP PER STUDENT
+        // ======================
+        {
+          $group: {
+            _id: "$studentDetails._id",
+
+            studentDetails: { $first: "$studentDetails" },
+            classDetails: { $first: "$classDetails" },
+
+            examTestScores: {
+              $push: {
+                _id: "$_id",
+                totalScore: "$totalScore",
+                grade: "$grade",
+                remarks: "$remarks",
+                marks: "$marks",
+                classScore: "$classScore",
+                projectScore: "$projectScore",
+                groupWorkScore: "$groupWorkScore",
+                presentationScore: "$presentationScore",
+                assignmentScore: "$assignmentScore",
+                subjectDetails: {
+                  _id: "$subjectDetails._id",
+                  name: "$subjectDetails.name",
+                  shortName: "$subjectDetails.shortName",
+                  type: "$subjectDetails.type",
+                  isNoneScoring: "$subjectDetails.isNoneScoring",
+                  isNewCurriculum: "$subjectDetails.isNewCurriculum",
+                },
+              },
+            },
+
+            overallScore: {
+              $sum: {
+                $cond: [
+                  { $eq: ["$subjectDetails.isNoneScoring", true] },
+                  0,
+                  "$totalScore",
+                ],
+              },
+            },
+
+            subjectsInClassAccumulator: {
+              $addToSet: {
+                _id: "$subjectDetails._id",
+                name: "$subjectDetails.name",
+                shortName: "$subjectDetails.shortName",
+                type: "$subjectDetails.type",
+                isNoneScoring: "$subjectDetails.isNoneScoring",
+                isNewCurriculum: "$subjectDetails.isNewCurriculum",
+              },
+            },
+          },
+        },
+
+        // ======================
+        // SORT BY OVERALL SCORE
+        // ======================
+        { $sort: { overallScore: -1 } },
+
+        // ======================
+        // GROUP BY SCORE (TIES)
+        // ======================
+        {
+          $group: {
+            _id: "$overallScore",
+            students: { $push: "$$ROOT" },
+            count: { $sum: 1 },
+          },
+        },
+
+        { $sort: { _id: -1 } },
+
+        // ======================
+        // BUILD COMPETITION RANKS
+        // ======================
+        {
+          $group: {
+            _id: null,
+            groups: { $push: "$$ROOT" },
+          },
+        },
+
+        {
+          $project: {
+            ranked: {
+              $reduce: {
+                input: "$groups",
+                initialValue: { offset: 0, result: [] },
+                in: {
+                  offset: {
+                    $add: ["$$value.offset", "$$this.count"],
+                  },
+                  result: {
+                    $concatArrays: [
+                      "$$value.result",
+                      {
+                        $map: {
+                          input: "$$this.students",
+                          as: "student",
+                          in: {
+                            $mergeObjects: [
+                              "$$student",
+                              {
+                                position: {
+                                  $add: ["$$value.offset", 1],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      },
+                    ],
+                  },
+                },
+              },
+            },
+          },
+        },
+
+        { $unwind: "$ranked.result" },
+        { $replaceRoot: { newRoot: "$ranked.result" } },
+
+        // ======================
+        // FINAL SHAPE
+        // ======================
+        {
+          $project: {
+            _id: { $toString: "$_id" },
+            overallScore: 1,
+            position: 1,
+
+            student: {
+              _id: { $toString: "$studentDetails._id" },
+              studentId: "$studentDetails.studentId",
+              ssId: "$studentDetails.ssId",
+              yearGroup: "$studentDetails.yearGroup",
+              name: {
+                $concat: [
+                  "$studentDetails.firstName",
+                  " ",
+                  "$studentDetails.lastName",
+                ],
+              },
+              parentPhoneNumber: "$studentDetails.parentPhoneNumber",
+              class: {
+                _id: { $toString: "$classDetails._id" },
+                name: "$classDetails.name",
+                yearGroup: "$classDetails.yearGroup",
+                form: "$classDetails.form",
+              },
+            },
+
+            examTestScores: 1,
+            subjectsInClassAccumulator: 1,
+          },
+        },
+
+        // ======================
+        // FINAL ORDER
+        // ======================
+        { $sort: { position: 1 } },
+      ],
+      { allowDiskUse: true },
+    );
+
+    // ======================
+    // EXTRACT SUBJECTS IN CLASS
+    // ======================
+    const subjectsInClassMap = new Map<string, any>();
+
+    // 1. Post-process to calculate bestAgg and sort order priority
+    results.forEach((r) => {
+      r.subjectsInClassAccumulator.forEach((s:any) => {
+        subjectsInClassMap.set(String(s._id), JSON.parse(JSON.stringify(s)));
+      });
+      delete r.subjectsInClassAccumulator;
+
+      const agg = getAggregate(JSON.parse(JSON.stringify(r.examTestScores)) );
+      r.bestAgg = agg;
+
+      // Map bestAgg string to a numeric priority (lower = better)
+      if (agg === "8As") r.sortPriority = 1;
+      else if (agg === "7As") r.sortPriority = 2;
+      else if (agg === "6As") r.sortPriority = 3;
+      else if (agg === "***" || agg === null || agg === undefined) r.sortPriority = 999;
+      else {
+        const num = parseInt(String(agg), 10);
+        r.sortPriority = isNaN(num) ? 998 : 3 + num; // Numeric aggregates (7 to 54)
+      }
+    });
+
+    // 2. Multi-level Sort: bestAgg priority (ASC), overallScore (DESC)
+    results.sort((a, b) => {
+      if (a.sortPriority !== b.sortPriority) {
+        return a.sortPriority - b.sortPriority;
+      }
+      return b.overallScore - a.overallScore;
+    });
+
+    // 3. Compute Competition Ranking (1, 2, 2, 4...)
+    for (let i = 0; i < results.length; i++) {
+      if (
+        i > 0 &&
+        results[i].sortPriority === results[i - 1].sortPriority &&
+        results[i].overallScore === results[i - 1].overallScore
+      ) {
+        results[i].position = results[i - 1].position;
+      } else {
+        results[i].position = i + 1;
+      }
+      delete results[i].sortPriority; // Clean up temporary field
+    }
+
+
+    const subjectsInClassArray = Array.from(subjectsInClassMap.values());
+
+    return {
+      status: "success",
+      data: {
+        students: JSON.parse(JSON.stringify(results)),
+        subjectsInClass: subjectsInClassArray,
+      },
+    };
+  } catch (err: any) {
+    console.error("Error in getRankedTestScoresForAYearGroup:", err);
     return { status: "error", message: err?.message || "An error occurred" };
   }
 };
