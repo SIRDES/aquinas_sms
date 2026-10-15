@@ -1580,30 +1580,18 @@ export const updateMultipleStudentMarksWithCassRefID = async ({
   assessmentMode: AssessmentModesType;
   students: {
     cassRefID: string;
-    // classScore?: number;
-    // projectWork?: number;
-    // groupWork?: number;
-    // totalScore?: number;
     assessmentScore: number;
     overallScore: number;
-    // grade: string;
-    // remarks: string;
   }[];
 }) => {
   try {
     await getCurrentServerUser(USER_PERMISSIONS.EXAMS_UPLOAD_SCORE)
     await connectDB();
-    // Update student marks in FridayTestScore
-    // console.log("students>>>>>>>>>>>>>>", students)
-    // console.log("assessmentMode>>>>>>>>>>>>>>", assessmentMode)
-    // console.log("subjectId>>>>>>>>>>>>>>", subjectId)
-    // console.log("batchId>>>>>>>>>>>>>>", batchId)
 
     const assessmentModeDetails = assessmentModes.find(
       (mode) => mode.value === assessmentMode,
     );
 
-    // console.log("assessmentModeDetails>>>>>>>>>>>>>>", assessmentModeDetails)
 
     if (!assessmentModeDetails) {
       return { success: false, message: "Invalid assessment mode" };
@@ -1647,20 +1635,6 @@ export const updateMultipleStudentMarksWithCassRefID = async ({
       const studentMarks = students.find(
         (record) => record.cassRefID === studentRecord?.cassRefID,
       );
-
-
-      // marks: number;
-      // classScore ?: number;
-      // individualClassScore ?: number;
-      // midSemScore ?: number;
-      // practicalScore ?: number;
-      // projectScore ?: number;
-      // presentationScore ?: number;
-      // assignmentScore ?: number;
-      // groupWorkScore ?: number;
-      // totalScore ?: number;
-      // grade: string;
-      // remarks: string;
 
       const assessmentScore = studentMarks?.assessmentScore || 0;
       const overallScore = studentMarks?.overallScore || 1;
@@ -1716,23 +1690,6 @@ export const updateMultipleStudentMarksWithCassRefID = async ({
       };
     });
 
-
-    // updates students FridayTestScore
-
-
-
-    // match a student with his cassRefID
-    // const studentsWithId = students.map((student) => {
-    //   const studentRecord = studentsRecord.find(
-    //     (record) => record.cassRefID === student.cassRefID,
-    //   );
-    //   return {
-    //     ...student,
-    //     _studentID: studentRecord?._id,
-    //   };
-    // });
-
-    // console.log("studentsFridayTestScoreWithCassRefIDAndMarks>>>>>>>>>>>>>>", studentsFridayTestScoreWithCassRefIDAndMarks)
 
     const updatesOps = studentsFridayTestScoreWithCassRefIDAndMarks.map((student) => {
 

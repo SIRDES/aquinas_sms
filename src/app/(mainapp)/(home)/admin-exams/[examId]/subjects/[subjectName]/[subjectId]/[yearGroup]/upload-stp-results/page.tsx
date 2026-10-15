@@ -161,7 +161,7 @@ export default function AdminExamsUploadResults({
     try {
       // console.log("rowstoadd>>>>>>>>>>>>>>", rowsToAdd)
       const studentsMarks = rowsToAdd.map((student: any) => {
-        if (!student?.["CassRefID"]) {
+        if (!student?.["CassRefID"] && !student?.["AssRefID"]) {
           throw new Error("CassRefID is required");
         }
 
