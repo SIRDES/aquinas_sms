@@ -50,6 +50,7 @@ import { showAlert } from "@/components/Alerts";
 import { getAllSubjects } from "@/utils/serverActions/subject";
 import { generalScienceSubjectId, getAggregate, getBest6Aggregate } from "@/utils/services/utils";
 import { getRankedTestScoresForAYearGroup } from "@/utils/serverActions/fridayTestScore";
+import ActionStatusAlert from "@/components/ActionStatusAlert";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   padding: "9px 8px",
@@ -103,6 +104,10 @@ export default function ExamOrderOfMerits({
   const [selectedSubject, setSelectedSubject] = useState<any>(null);
   const [classes, setClasses] = useState<Array<any>>([]);
   const [subjectsInClass, setSubjectsInClass] = useState<Array<any>>([]);
+  const [actionStatus, setActionStatus] = useState({
+    open: false,
+    message: "",
+  });
   // const handleChangePage = (event: unknown, newPage: number) => {
   //   setPage(newPage);
   // };
@@ -150,8 +155,8 @@ export default function ExamOrderOfMerits({
       });
       return;
     }
-
-    setLoading(true);
+    setActionStatus({ open: true, message: "Fetching scores..." });
+    // setLoading(true);
     setFetchedStudents([]);
     setStudents([]);
     setSubjectsInClass([]);
@@ -185,7 +190,8 @@ export default function ExamOrderOfMerits({
         });
         return;
       }
-      console.log("res data", response.data);
+      setActionStatus({ open: true, message: "Preparing scores..." });
+      // console.log("res data", response.data);
       setStudents(
         filterBy === "subjects"
           ? response?.data || []
@@ -207,7 +213,8 @@ export default function ExamOrderOfMerits({
         text: error.message || error.data || "An error occurred",
       });
     } finally {
-      setLoading(false);
+      // setLoading(false);
+      setActionStatus({ open: false, message: "" });
     }
   };
 
@@ -515,6 +522,10 @@ export default function ExamOrderOfMerits({
   return (
     <>
       <LoadingAlert open={loading} />
+      <ActionStatusAlert
+        open={actionStatus.open}
+        message={actionStatus.message}
+      />
       <Box>
         <Typography
           variant="h5"

@@ -148,7 +148,7 @@ function UploadStpResultsCSVPreview(props: any) {
                             >
 
                               <StyledTableCell>
-                                {row?.["CassRefID"]}
+                                {row?.["CassRefID"] || row?.["AssRefID"]}
                               </StyledTableCell>
                               <StyledTableCell>
                                 {row?.["Name"]}

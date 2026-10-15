@@ -166,7 +166,7 @@ export default function AdminExamsUploadResults({
         }
 
         return {
-          cassRefID: student?.["CassRefID"] as string,
+          cassRefID: student?.["CassRefID"] as string || student?.["AssRefID"] as string,
           assessmentScore: student?.["Score"] || 0,
           overallScore: student?.["OverallScore"] || 0,
         };

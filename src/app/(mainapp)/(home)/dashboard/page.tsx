@@ -45,6 +45,7 @@ export default function Dashboard() {
   const [loadingSubjects, setLoadingSubjects] = useState(false);
   const [loading, setLoading] = useState(false);
 
+
   useEffect(() => {
     const fetchStudentsData = async () => {
       setLoadingStudents(true);
@@ -58,6 +59,7 @@ export default function Dashboard() {
           });
           return;
         }
+        console.log(res?.data?.form2Students);
         setNumberOfStudents(res?.data);
       } catch (error: any) {
         showAlert({
@@ -256,6 +258,53 @@ export default function Dashboard() {
             </Grid>
           </Grid>
         </Grid>
+
+        {/* number of students per class per year group */}
+        {/* form one chart */}
+        {/* <Box>
+          <BarChart
+            xAxis={[
+              { scaleType: "band", data: form1Data.map((student: any) => student.name) },
+            ]}
+            yAxis={[{ scaleType: "linear", max: 100 }]}
+            series={[
+              { data: form1Data.map((student: any) => student.score) },
+            ]}
+            width={500}
+            height={300}
+          />
+        </Box> */}
+
+        {/* form two chart */}
+        {/* <Box>
+          <BarChart
+            xAxis={[
+              { scaleType: "band", data: form2Data.map((student: any) => student.name) },
+            ]}
+            yAxis={[{ scaleType: "linear", max: 100 }]}
+            series={[
+              { data: form2Data.map((student: any) => student.score) },
+            ]}
+            width={500}
+            height={300}
+          />
+        </Box> */}
+
+        {/* form three chart */}
+        {/* <Box>
+          <BarChart
+            xAxis={[
+              { scaleType: "band", data: form3Data.map((student: any) => student.name) },
+            ]}
+            yAxis={[{ scaleType: "linear", max: 100 }]}
+            series={[
+              { data: form3Data.map((student: any) => student.score) },
+            ]}
+            width={500}
+            height={300}
+          />
+        </Box> */}
+
 
         {/* students per subjects table*/}
 

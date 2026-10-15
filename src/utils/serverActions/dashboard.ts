@@ -22,25 +22,83 @@ export const getNumberOfStudent = async () => {
     const form2ClassIds = classes.filter((c) => c.form === "2").map((c) => c._id);
     const form3ClassIds = classes.filter((c) => c.form === "3").map((c) => c._id);
 
-    const [numOfForm1Student, numOfForm2Student, numOfForm3Student] = await Promise.all([
-      Student.countDocuments({
-        classId: { $in: form1ClassIds },
-        isDeleted: { $ne: true },
-      }),
-      Student.countDocuments({
-        classId: { $in: form2ClassIds },
-        isDeleted: { $ne: true },
-      }),
-      Student.countDocuments({
-        classId: { $in: form3ClassIds },
-        isDeleted: { $ne: true },
-      }),
+    const [form1Students, form2Students, form3Students] = await Promise.all([
+      Student.aggregate([
+        {
+          $match: {
+            classId: { $in: form1ClassIds },
+            isDeleted: { $ne: true },
+          },
+        },
+        {
+          $lookup: {
+            from: "classes",
+            localField: "classId",
+            foreignField: "_id",
+            as: "classDetails",
+          },
+        },
+        {
+          $project: {
+            password: 0,
+          },
+        },
+      ]),
+      Student.aggregate([
+        {
+          $match: {
+            classId: { $in: form2ClassIds },
+            isDeleted: { $ne: true },
+          },
+        },
+        {
+          $lookup: {
+            from: "classes",
+            localField: "classId",
+            foreignField: "_id",
+            as: "classDetails",
+          },
+        },
+        {
+          $project: {
+            password: 0,
+          },
+        },
+      ]),
+      Student.aggregate([
+        {
+          $match: {
+            classId: { $in: form3ClassIds },
+            isDeleted: { $ne: true },
+          },
+        },
+        {
+          $lookup: {
+            from: "classes",
+            localField: "classId",
+            foreignField: "_id",
+            as: "classDetails",
+          },
+        },
+        {
+          $project: {
+            password: 0,
+          },
+        },
+      ]),
     ]);
+
+    const numOfForm1Student = form1Students.length;
+    const numOfForm2Student = form2Students.length;
+    const numOfForm3Student = form3Students.length;
     const totalNumberOfStudents = numOfForm1Student + numOfForm2Student + numOfForm3Student;
 
     return {
       success: true,
       data: {
+        form1Students: JSON.parse(JSON.stringify(form1Students)),
+        form2Students: JSON.parse(JSON.stringify(form2Students)),
+        form3Students: JSON.parse(JSON.stringify(form3Students)),
         numOfForm1Student,
         numOfForm2Student,
         numOfForm3Student,
@@ -147,30 +205,3 @@ export const convertAllSubjectNamesToUppercase = async () => {
   }
 };
 
-
-// export const updateParentPhoneNumbers = async () => {
-//   try {
-//     await connectDB();
-//     const bulkOps = form1List.map((student: any) => ({
-//       updateOne: {
-//         filter: { cassRefID: student.CassRefID },
-//         update: {
-//           $set: {
-//             parentPhoneNumber: student.parentPhoneNumber === "N/A" ? "" : `+233${student.parentPhoneNumber.substring(1)}`
-//           }
-//         },
-//       },
-//     }));
-
-//     const result = await Student.bulkWrite(bulkOps);
-
-//     return {
-//       success: true,
-//       message: "Parent phone numbers updated successfully",
-//       data: JSON.parse(JSON.stringify(result)),
-//     };
-//   } catch (err: any) {
-//     console.log(err);
-//     return { success: false, message: err?.message || "An error occurred" };
-//   }
-// };
