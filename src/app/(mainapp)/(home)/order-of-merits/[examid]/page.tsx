@@ -44,12 +44,11 @@ import XLSX from "xlsx-js-style";
 import { getAllClasses } from "@/utils/serverActions/classes";
 import {
   getRankedFridayTestScoreForASubject,
-  getRankedTestScoresForAClass,
+  getRankedTestScoresForAYearGroupOrAClass,
 } from "@/utils/serverActions/fridayTestScore";
 import { showAlert } from "@/components/Alerts";
 import { getAllSubjects } from "@/utils/serverActions/subject";
 import { generalScienceSubjectId, getAggregate, getBest6Aggregate } from "@/utils/services/utils";
-import { getRankedTestScoresForAYearGroup } from "@/utils/serverActions/fridayTestScore";
 import ActionStatusAlert from "@/components/ActionStatusAlert";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -170,13 +169,13 @@ export default function ExamOrderOfMerits({
           yearGroup: selectedExam?.yearGroup,
         });
       } else if (filterBy === 'class') {
-        response = await getRankedTestScoresForAClass({
+        response = await getRankedTestScoresForAYearGroupOrAClass({
           className: selectedClass?.name,
           fridayTestBatchId: selectedExam?._id,
           yearGroup: selectedExam?.yearGroup,
         });
       } else {
-        response = await getRankedTestScoresForAYearGroup({
+        response = await getRankedTestScoresForAYearGroupOrAClass({
           fridayTestBatchId: selectedExam?._id,
           yearGroup: selectedExam?.yearGroup,
         });
