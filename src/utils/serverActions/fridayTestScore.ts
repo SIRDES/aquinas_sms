@@ -1737,58 +1737,53 @@ export const updateMultipleStudentMarksWithCassRefID = async ({
 };
 
 
-// export const deleteAScore = async (id: string) => {
-//   try {
-//     await connectDB();
-//     // console.log("student>>>>>>>>>>>", student);
-//     // Deletet test scores which matches studentId,subjectId and fridayTestBatchId
-//     const existingRecord = await FridayTestScore.findByIdAndDelete(id);
-
-//     if (!existingRecord) {
-//       return { success: false, message: "Score not found" };
-//     }
-
-//     return {
-//       success: true,
-//       message: "Score deleted successfully",
-//       // data: existingRecord,
-//     };
-//   } catch (err: any) {
-//     console.error(err);
-//     return { success: false, message: err?.message || "An error occurred" };
-//   }
-// };
-
-export const deleteStudentPrevRegisterdSubject = async ({
-  studentId,
-  subjectId,
-}: // fridayTestBatchId,
-  {
-    studentId: string;
-    subjectId: string;
-    // fridayTestBatchId: string;
-  }) => {
+export const deleteTestScore = async (id: string) => {
   try {
+    await getCurrentServerUser(USER_PERMISSIONS.EXAMS_DELETE_SCORE)
     await connectDB();
-    const existingRecord = await FridayTestScore.deleteMany({
-      student: new mongoose.Types.ObjectId(studentId),
-      subject: new mongoose.Types.ObjectId(subjectId),
-    });
+    const existingRecord = await FridayTestScore.findByIdAndDelete(id);
 
     if (!existingRecord) {
-      return { success: false, message: "Record not found" };
+      return { success: false, message: "Score not found" };
     }
 
     return {
       success: true,
-      message: "Subject deleted successfully",
-      // data: existingRecord,
+      message: "Score deleted successfully",
     };
   } catch (err: any) {
     console.error(err);
     return { success: false, message: err?.message || "An error occurred" };
   }
 };
+
+// export const deleteStudentPrevRegisterdSubject = async ({
+//   studentId,
+//   subjectId,
+// }: {
+//   studentId: string;
+//   subjectId: string;
+// }) => {
+//   try {
+//     await connectDB();
+//     const existingRecord = await FridayTestScore.deleteMany({
+//       student: new mongoose.Types.ObjectId(studentId),
+//       subject: new mongoose.Types.ObjectId(subjectId),
+//     });
+
+//     if (!existingRecord) {
+//       return { success: false, message: "Record not found" };
+//     }
+
+//     return {
+//       success: true,
+//       message: "Subject deleted successfully",
+//     };
+//   } catch (err: any) {
+//     console.error(err);
+//     return { success: false, message: err?.message || "An error occurred" };
+//   }
+// };
 // export const replaceFridayTestScoreSubjectSpecific = async () => {
 //   try {
 //     await connectDB();

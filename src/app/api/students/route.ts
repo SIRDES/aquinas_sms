@@ -208,7 +208,14 @@ export const GET = async (request: NextRequest) => {
       $sort: { _id: -1 },
     });
 
+    // pipeline.push({
+    //   $project: {
+    //     password: 0,
+    //   },
+    // });
+
     // ✅ Use it in aggregate call
+    
     const students = await Student.aggregate(pipeline);
 
     return NextResponse.json({

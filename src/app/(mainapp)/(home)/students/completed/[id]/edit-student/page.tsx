@@ -33,7 +33,7 @@ import { getAllNewCurriculumSubjects, getAllSubjects } from "@/utils/serverActio
 
 import axios from "axios";
 import { getAllClasses } from "@/utils/serverActions/classes";
-import { deleteStudentPrevRegisterdSubject } from "@/utils/serverActions/fridayTestScore";
+// import { deleteStudentPrevRegisterdSubject } from "@/utils/serverActions/fridayTestScore";
 import { showAlert } from "@/components/Alerts";
 
 const schema = object().shape({
@@ -324,17 +324,17 @@ export default function EditStudent({
         subjects: subjectsId,
       });
 
-      if (electivesToDelete.length > 0) {
-        await Promise.all([
-          ...electivesToDelete.map(async (subject) => {
-            deleteStudentPrevRegisterdSubject({
-              studentId: id,
-              subjectId: subject._id,
-              // fridayTestBatchId: fetchedBatches[0]?._id,
-            });
-          }),
-        ]);
-      }
+      // if (electivesToDelete.length > 0) {
+      //   await Promise.all([
+      //     ...electivesToDelete.map(async (subject) => {
+      //       deleteStudentPrevRegisterdSubject({
+      //         studentId: id,
+      //         subjectId: subject._id,
+      //         // fridayTestBatchId: fetchedBatches[0]?._id,
+      //       });
+      //     }),
+      //   ]);
+      // }
       showAlert({
         title: "Success",
         text: "Student details updated successfully",
@@ -416,7 +416,7 @@ export default function EditStudent({
               <Box>
                 <Typography gutterBottom>
                   Last name{" "}
-                 
+
                 </Typography>
                 <TextField
                   fullWidth

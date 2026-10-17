@@ -35,7 +35,7 @@ const studentSchema = new mongoose.Schema<IStudent>(
     parentEmail: { type: String, default: null },
     firstName: { type: String, required: true, trim: true, uppercase: true },
     lastName: { type: String, default: "", trim: true, uppercase: true },
-    password: { type: String, trim: true, required: true },
+    password: { type: String, trim: true, required: true, select: false },
     yearGroup: { type: String, trim: true },
     yearOfAdmission: { type: String, trim: true },
     parentPhoneNumber: { type: String, default: null },
@@ -77,12 +77,28 @@ const studentSchema = new mongoose.Schema<IStudent>(
   },
   {
     timestamps: true,
+    toJSON: {
+      transform(_doc, ret) {
+        delete ret.password;
+        return ret;
+      },
+    },
+    toObject: {
+      transform(_doc, ret) {
+        delete ret.password;
+        return ret;
+      },
+    },
   }
 );
 
 studentSchema.index({ classId: 1 });
 
 studentSchema.index({ subjects: 1, yearGroup: 1 });
+
+studentSchema.pre("aggregate", function () {
+  this.pipeline().unshift({ $project: { password: 0 } });
+});
 
 studentSchema.pre("save", async function (next) {
   try {

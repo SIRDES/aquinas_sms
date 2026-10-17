@@ -217,7 +217,7 @@ export const getBest6Aggregate = (exams: Array<any>) => {
 
 export const getAggregate = (exams: Array<any>) => {
   if (!exams || exams?.length === 0 || exams?.length < 6) {
-    return "***2";
+    return "***";
   }
   const electives: any[] = [];
   const core: any[] = [];
@@ -243,7 +243,7 @@ export const getAggregate = (exams: Array<any>) => {
     (core.length === 4 && electives.length === 2);
 
   if (!isValid) {
-    return "***I";
+    return "***";
   }
 
   let sortedExams: any[] = [];

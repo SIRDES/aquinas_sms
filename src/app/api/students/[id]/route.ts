@@ -54,6 +54,11 @@ export const GET = async (request: NextRequest, context: any) => {
           as: "subjectInfo",
         },
       },
+      // {
+      //   $project: {
+      //     password: 0,
+      //   },
+      // },
     ]);
 
     if (student?.length === 0) {

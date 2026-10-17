@@ -68,6 +68,7 @@ import ConfirmationDialog from "@/components/ConfirmationDialog";
 import ActionStatusAlert from "@/components/ActionStatusAlert";
 import axios from "axios";
 import {
+  deleteTestScore,
   getStudentsTestScoreForABatch,
   updateStudentMarks,
 } from "@/utils/serverActions/fridayTestScore";
@@ -152,6 +153,8 @@ export default function Page({
   const [selectedBatchExams, setSelectedExams] = useState<any>(null);
   const [studentData, setStudentData] = useState<any>({});
   const [openConfirmSendSMS, setOpenConfirmSendSMS] = useState(false);
+  const [openConfirmDeleteTestScore, setOpenConfirmDeleteTestScore] = useState(false);
+  const [selectedTestScoreToDelete, setSelectedTestScoreToDelete] = useState<any>(null);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);
   const [openNotifyParent, setOpenNotifyParent] = useState(false);
   const [openConfirmNotify, setOpenConfirmNotify] = useState(false);
@@ -183,7 +186,7 @@ export default function Page({
     setElectiveSubjects([]);
     try {
       const res = await axios.get(`/api/students/${id}`);
-      console.log("api/students res", res.data);
+      // console.log("api/students res", res.data);
       if (!res?.data?.data) {
         showAlert({
           title: "Error",
@@ -609,6 +612,42 @@ export default function Page({
     }
   };
 
+  const handleOpenDeleteTestScoreDialog = (testScore: any) => {
+    setSelectedTestScoreToDelete(testScore);
+    setOpenConfirmDeleteTestScore(true);
+  };
+
+  const handleDeleteTestScore = async () => {
+    setOpenConfirmDeleteTestScore(false);
+    setLoading(true);
+    try {
+      const response = await deleteTestScore(selectedTestScoreToDelete?._id);
+      if (!response.success) {
+        showAlert({
+          title: "Error",
+          severity: "error",
+          text: response.message || "An error occurred",
+        });
+        return;
+      }
+
+      await getTestScores();
+      showAlert({
+        title: "Success",
+        severity: "success",
+        text: response.message,
+      });
+    } catch (error: any) {
+      showAlert({
+        title: "Error",
+        severity: "error",
+        text: error.message || "An error occurred",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSaveAsWithPrint = async () => {
     const blob = await pdf(
       <StudentReportCard
@@ -627,6 +666,7 @@ export default function Page({
       `${studentData?.firstName?.toUpperCase()} ${studentData?.lastName?.toUpperCase()}_report.pdf`,
     );
   };
+
 
   const handleDelete = async () => {
     try {
@@ -690,6 +730,13 @@ export default function Page({
       <ActionStatusAlert
         open={actionStatus.open}
         message={actionStatus.message}
+      />
+      <ConfirmationDialog
+        open={openConfirmDeleteTestScore}
+        setOpen={setOpenConfirmDeleteTestScore}
+        message={`Are you sure you want to delete ${selectedTestScoreToDelete?.subject?.name} test score?`}
+        title="Delete Test Score"
+        handleConfirmation={handleDeleteTestScore}
       />
       <ConfirmationDialog
         open={openConfirmSendSMS}
@@ -1144,28 +1191,31 @@ export default function Page({
                 </Box>
               </Box>
               <Paper
-                sx={{ width: { md: "65%", xs: "100%" }, overflow: "hidden" }}
+                sx={{ width: { md: "80%", xs: "100%" }, overflow: "hidden" }}
               >
                 <TableContainer sx={{ maxHeight: 500 }}>
-                  <Table aria-label="results table">
+                  <Table aria-label="results table" stickyHeader>
                     <TableHead>
                       <TableRow>
                         <StyledTableCell>SUBJECT</StyledTableCell>
 
                         {selectedBatchExams?.isSemester === true ? (
                           <>
-                            <StyledTableCell>CLASS SCORE</StyledTableCell>
-                            <StyledTableCell>EXAM SCORE</StyledTableCell>
-                            <StyledTableCell>TOTAL</StyledTableCell>
+                            <StyledTableCell align="center">CLASS SCORE</StyledTableCell>
+                            <StyledTableCell align="center">EXAM SCORE</StyledTableCell>
+                            <StyledTableCell align="center">TOTAL</StyledTableCell>
                           </>
                         ) : (
-                          <StyledTableCell>SCORE</StyledTableCell>
+                          <StyledTableCell align="center">SCORE</StyledTableCell>
                         )}
                         <StyledTableCell align="center">GRADE</StyledTableCell>
-                        <StyledTableCell align="center">
+                        <StyledTableCell>
                           REMARKS
                         </StyledTableCell>
-                        {/* <StyledTableCell align="center"></StyledTableCell> */}
+                        <PermissionGuard requiredPermission={USER_PERMISSIONS.EXAMS_DELETE_SCORE}>
+
+                          <StyledTableCell align="center"></StyledTableCell>
+                        </PermissionGuard>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -1180,7 +1230,7 @@ export default function Page({
                               {subject?.score}
                             </StyledTableCell> */}
                             {selectedBatchExams?.isSemester === true && (
-                              <StyledTableCell>
+                              <StyledTableCell align="center">
                                 <InputBase
                                   type="number"
                                   value={subject?.classScore}
@@ -1217,7 +1267,7 @@ export default function Page({
                                 />
                               </StyledTableCell>
                             )}
-                            <StyledTableCell>
+                            <StyledTableCell align="center">
                               <InputBase
                                 type="number"
                                 value={subject?.marks}
@@ -1277,6 +1327,19 @@ export default function Page({
                             <StyledTableCell>
                               {subject?.remarks?.toUpperCase()}
                             </StyledTableCell>
+                            <PermissionGuard requiredPermission={USER_PERMISSIONS.EXAMS_DELETE_SCORE}>
+                              <StyledTableCell>
+                                <Tooltip title="delete score" arrow placement="top" disableInteractive>
+                                  <IconButton
+                                    onClick={() =>
+                                      handleOpenDeleteTestScoreDialog(subject)
+                                    }
+                                  >
+                                    <ClearIcon sx={{ fontSize: "16px" }} />
+                                  </IconButton>
+                                </Tooltip>
+                              </StyledTableCell>
+                            </PermissionGuard>
                             {/* <StyledTableCell>
                               {editResult.show &&
                                 editResult?.subject?.name === subject?.name ? (

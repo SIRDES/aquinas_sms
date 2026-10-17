@@ -33,7 +33,7 @@ import { getAllNewCurriculumSubjects, getAllSubjects } from "@/utils/serverActio
 
 import axios from "axios";
 import { getAllClasses } from "@/utils/serverActions/classes";
-import { deleteStudentPrevRegisterdSubject } from "@/utils/serverActions/fridayTestScore";
+// import { deleteStudentPrevRegisterdSubject } from "@/utils/serverActions/fridayTestScore";
 import { showAlert } from "@/components/Alerts";
 
 const schema = object().shape({
