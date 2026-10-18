@@ -23,9 +23,28 @@ import { useEffect, useState } from "react";
 import { SnackbarType } from "@/types/commonTypes";
 import axios from "axios";
 import LoadingAlert from "@/components/LoadingAlert";
-// import ProgressAlert from "@/components/ProgressAlert";
 import { showAlert } from "@/components/Alerts";
 import { convertAllSubjectNamesToUppercase, getNumberOfStudent, getNumberOfStudentBySubject } from "@/utils/serverActions/dashboard";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ChartOptions,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 const StyledCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
@@ -59,7 +78,7 @@ export default function Dashboard() {
           });
           return;
         }
-        console.log(res?.data?.form2Students);
+        // console.log(res?.data);
         setNumberOfStudents(res?.data);
       } catch (error: any) {
         showAlert({
@@ -100,6 +119,80 @@ export default function Dashboard() {
     };
     fetchSubjectsData();
   }, [selectedForm]);
+
+  const form1Data = ((numberOfStudents?.form1 || []) as Array<{
+    className: string;
+    numberOfStudents: number;
+  }>).filter((c) => c.numberOfStudents > 0);
+  const form2Data = ((numberOfStudents?.form2 || []) as Array<{
+    className: string;
+    numberOfStudents: number;
+  }>).filter((c) => c.numberOfStudents > 0);
+  const form3Data = ((numberOfStudents?.form3 || []) as Array<{
+    className: string;
+    numberOfStudents: number;
+  }>).filter((c) => c.numberOfStudents > 0);
+
+  const createChartData = (
+    data: Array<{ className: string; numberOfStudents: number }>,
+    label: string,
+    bgColor: string,
+    borderColor: string
+  ) => ({
+    labels: data.map((item) => item.className),
+    datasets: [
+      {
+        label,
+        data: data.map((item) => item.numberOfStudents),
+        backgroundColor: bgColor,
+        borderColor: borderColor,
+        borderWidth: 1.5,
+        borderRadius: 4,
+      },
+    ],
+  });
+
+  const chartOptions: ChartOptions<"bar"> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: (context: any) => ` Students: ${context.parsed.y}`,
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+        ticks: {
+          autoSkip: false,
+          maxRotation: 45,
+          minRotation: 35,
+          font: {
+            size: 11,
+          },
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          precision: 0,
+          font: {
+            size: 11,
+          },
+        },
+        grid: {
+          color: "rgba(0, 0, 0, 0.06)",
+        },
+      },
+    },
+  };
 
   return (
     <>
@@ -259,58 +352,90 @@ export default function Dashboard() {
           </Grid>
         </Grid>
 
-        {/* number of students per class per year group */}
-        {/* form one chart */}
-        {/* <Box>
-          <BarChart
-            xAxis={[
-              { scaleType: "band", data: form1Data.map((student: any) => student.name) },
-            ]}
-            yAxis={[{ scaleType: "linear", max: 100 }]}
-            series={[
-              { data: form1Data.map((student: any) => student.score) },
-            ]}
-            width={500}
-            height={300}
-          />
-        </Box> */}
+        {/* Number of students per class per form charts */}
+        <Grid container spacing={2} mb={2}>
+          {/* Form 1 Chart */}
+          <Grid item xs={12} lg={4}>
+            <Card sx={{ p: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: 700, mb: 2 }}>
+                Form 1 - Students per Class
+              </Typography>
+              <Box sx={{ height: 300, width: "100%" }}>
+                {loadingStudents ? (
+                  <Skeleton variant="rectangular" width="100%" height={300} sx={{ borderRadius: 1 }} />
+                ) : form1Data.length === 0 ? (
+                  <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                    <Typography variant="body2" color="text.secondary">
+                      No student data available
+                    </Typography>
+                  </Box>
+                ) : (
+                  <Bar
+                    data={createChartData(form1Data, "Form 1", "rgba(1, 0, 163, 0.8)", "#0100a3")}
+                    options={chartOptions}
+                  />
+                )}
+              </Box>
+            </Card>
+          </Grid>
 
-        {/* form two chart */}
-        {/* <Box>
-          <BarChart
-            xAxis={[
-              { scaleType: "band", data: form2Data.map((student: any) => student.name) },
-            ]}
-            yAxis={[{ scaleType: "linear", max: 100 }]}
-            series={[
-              { data: form2Data.map((student: any) => student.score) },
-            ]}
-            width={500}
-            height={300}
-          />
-        </Box> */}
+          {/* Form 2 Chart */}
+          <Grid item xs={12} lg={4}>
+            <Card sx={{ p: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: 700, mb: 2 }}>
+                Form 2 - Students per Class
+              </Typography>
+              <Box sx={{ height: 300, width: "100%" }}>
+                {loadingStudents ? (
+                  <Skeleton variant="rectangular" width="100%" height={300} sx={{ borderRadius: 1 }} />
+                ) : form2Data.length === 0 ? (
+                  <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                    <Typography variant="body2" color="text.secondary">
+                      No student data available
+                    </Typography>
+                  </Box>
+                ) : (
+                  <Bar
+                    data={createChartData(form2Data, "Form 2", "rgba(70, 152, 202, 0.8)", "#4698CA")}
+                    options={chartOptions}
+                  />
+                )}
+              </Box>
+            </Card>
+          </Grid>
 
-        {/* form three chart */}
-        {/* <Box>
-          <BarChart
-            xAxis={[
-              { scaleType: "band", data: form3Data.map((student: any) => student.name) },
-            ]}
-            yAxis={[{ scaleType: "linear", max: 100 }]}
-            series={[
-              { data: form3Data.map((student: any) => student.score) },
-            ]}
-            width={500}
-            height={300}
-          />
-        </Box> */}
+          {/* Form 3 Chart */}
+          <Grid item xs={12} lg={4}>
+            <Card sx={{ p: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: 700, mb: 2 }}>
+                Form 3 - Students per Class
+              </Typography>
+              <Box sx={{ height: 300, width: "100%" }}>
+                {loadingStudents ? (
+                  <Skeleton variant="rectangular" width="100%" height={300} sx={{ borderRadius: 1 }} />
+                ) : form3Data.length === 0 ? (
+                  <Box display="flex" justifyContent="center" alignItems="center" height="100%">
+                    <Typography variant="body2" color="text.secondary">
+                      No student data available
+                    </Typography>
+                  </Box>
+                ) : (
+                  <Bar
+                    data={createChartData(form3Data, "Form 3", "rgba(17, 184, 164, 0.8)", "#11B8A4")}
+                    options={chartOptions}
+                  />
+                )}
+              </Box>
+            </Card>
+          </Grid>
+        </Grid>
 
 
         {/* students per subjects table*/}
 
         <Grid container spacing={2} mt={1}>
           <Grid item xs={12} md={6}>
-            <Card sx={{ p: 1, pt: 3 }}>
+            <Card sx={{ p: 1, pt: 3, maxWidth: "600px" }}>
               <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
                 <Typography variant="body1" sx={{ fontWeight: 700, fontSize: "18px" }}>Students per Subject</Typography>
                 <FormControl size="small" sx={{ minWidth: 120 }}>

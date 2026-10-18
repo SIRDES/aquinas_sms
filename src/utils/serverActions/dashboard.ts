@@ -17,10 +17,14 @@ export const getNumberOfStudent = async () => {
     await connectDB();
 
     // Fetch all classes that are not deleted
-    const classes = await Class.find({ isDeleted: { $ne: true } }).select("_id form");
-    const form1ClassIds = classes.filter((c) => c.form === "1").map((c) => c._id);
-    const form2ClassIds = classes.filter((c) => c.form === "2").map((c) => c._id);
-    const form3ClassIds = classes.filter((c) => c.form === "3").map((c) => c._id);
+    const classes = await Class.find({ isDeleted: { $ne: true } }).select("_id form name");
+    const form1Classes = classes.filter((c) => c.form === "1");
+    const form2Classes = classes.filter((c) => c.form === "2");
+    const form3Classes = classes.filter((c) => c.form === "3");
+
+    const form1ClassIds = form1Classes.map((c) => c._id);
+    const form2ClassIds = form2Classes.map((c) => c._id);
+    const form3ClassIds = form3Classes.map((c) => c._id);
 
     const [form1Students, form2Students, form3Students] = await Promise.all([
       Student.aggregate([
@@ -88,6 +92,40 @@ export const getNumberOfStudent = async () => {
       ]),
     ]);
 
+    const getStudentsPerClass = (formClasses: any[], students: any[]) => {
+      const counts = new Map<string, number>();
+
+      students.forEach((student: any) => {
+        const cId = student.classId?.toString();
+        if (cId) {
+          counts.set(cId, (counts.get(cId) || 0) + 1);
+        }
+      });
+
+      const list: Array<{ className: string; numberOfStudents: number }> = formClasses.map((c) => ({
+        className: c.name,
+        numberOfStudents: counts.get(c._id.toString()) || 0,
+      }));
+
+      students.forEach((student: any) => {
+        const cId = student.classId?.toString();
+        const cName = student.classDetails?.[0]?.name;
+        if (cName && !list.some((item) => item.className === cName)) {
+          list.push({
+            className: cName,
+            numberOfStudents: counts.get(cId) || 0,
+          });
+        }
+      });
+
+      list.sort((a, b) => a.className.localeCompare(b.className));
+      return list;
+    };
+
+    const form1 = getStudentsPerClass(form1Classes, form1Students);
+    const form2 = getStudentsPerClass(form2Classes, form2Students);
+    const form3 = getStudentsPerClass(form3Classes, form3Students);
+
     const numOfForm1Student = form1Students.length;
     const numOfForm2Student = form2Students.length;
     const numOfForm3Student = form3Students.length;
@@ -96,9 +134,12 @@ export const getNumberOfStudent = async () => {
     return {
       success: true,
       data: {
-        form1Students: JSON.parse(JSON.stringify(form1Students)),
-        form2Students: JSON.parse(JSON.stringify(form2Students)),
-        form3Students: JSON.parse(JSON.stringify(form3Students)),
+        form1,
+        form2,
+        form3,
+        // form1Students: form1,
+        // form2Students: form2,
+        // form3Students: form3,
         numOfForm1Student,
         numOfForm2Student,
         numOfForm3Student,

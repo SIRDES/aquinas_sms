@@ -115,7 +115,7 @@ export default function Login() {
         >
           {COMPANY_NAME}
         </Typography>
-        <Box sx={{ mx: "auto", width: { xs: "100%", sm: "80%", md: "40%" } }}>
+        <Box sx={{ mx: "auto", width: { xs: "100%", sm: "80%", md: "40%" }, maxWidth: "500px" }}>
           <Card
             component={"form"}
             onSubmit={handleSubmit(Submit)}
@@ -138,7 +138,7 @@ export default function Login() {
               textAlign={"center"}
               color={theme.palette.primary.main}
               sx={{ fontWeight: 700 }}
-              // gutterBottom
+            // gutterBottom
             >
               SIGN IN {userType === ELECTION_USER_TYPE && "AS A NOMINEE"}
             </Typography>
