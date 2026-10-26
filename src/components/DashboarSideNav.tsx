@@ -206,7 +206,7 @@ export default function DashboardSideNav({
   return (
     <>
       <LoadingAlert open={loading} />
-      <MobileNavMenu navLists={navLists} userType={userType} />
+      <MobileNavMenu navLists={allowedNavItems} userType={userType} />
       <Box
         sx={{
           //  position:"relative",
