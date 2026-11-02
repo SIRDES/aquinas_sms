@@ -41,12 +41,8 @@ import {
 } from "@/utils/serverActions/attendanceHoliday";
 import { formatDate } from "@/utils/services/utils";
 import LoadingAlert from "@/components/LoadingAlert";
-
-interface IHolidayForm {
-  description: string;
-  date: string;
-  duration: string;
-}
+import AddHolidayModal from "../AddHolidayModal";
+import EditHolidayModal from "../EditHolidayModal";
 
 const AttendanceSettings: React.FC = () => {
   const theme = useTheme();
@@ -64,24 +60,13 @@ const AttendanceSettings: React.FC = () => {
   const [debouncedSearchText] = useDebounce(searchText, 1000);
 
   // Modal states
-  const [openAddEditModal, setOpenAddEditModal] = useState(false);
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
   const [currentHoliday, setCurrentHoliday] = useState<any | null>(null);
-  const [isEditMode, setIsEditMode] = useState(false);
+  const [addHolidayModalOpen, setAddHolidayModalOpen] = useState(false);
+  const [editHolidayModalOpen, setEditHolidayModalOpen] = useState(false);
 
-  // Form states
-  const [formData, setFormData] = useState<IHolidayForm>({
-    description: "",
-    date: new Date().toISOString().split("T")[0],
-    duration: "full_day",
-  });
-
-  const resetForm = () => {
-    setFormData({
-      description: "",
-      date: new Date().toISOString().split("T")[0],
-      duration: "full_day",
-    });
+  const handleCloseAddHolidayModal = () => {
+    setAddHolidayModalOpen(false);
   };
 
   const fetchHolidaysData = async ({
@@ -148,31 +133,15 @@ const AttendanceSettings: React.FC = () => {
     setRowsPerPage(value);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   // Add modal
   const handleAddClick = () => {
-    setIsEditMode(false);
-    resetForm();
-    setOpenAddEditModal(true);
+    setAddHolidayModalOpen(true);
   };
 
   // Edit modal
   const handleEditClick = (holiday: any) => {
     setCurrentHoliday(holiday);
-    setIsEditMode(true);
-    setFormData({
-      description: holiday.description,
-      date: new Date(holiday.date).toISOString().split("T")[0],
-      duration: holiday.duration || "full_day",
-    });
-    setOpenAddEditModal(true);
+    setEditHolidayModalOpen(true);
   };
 
   // Delete modal
@@ -218,53 +187,32 @@ const AttendanceSettings: React.FC = () => {
     }
   };
 
-  // Form submit (Create or Update)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setOpenAddEditModal(false);
-    try {
-      let res;
-      if (isEditMode && currentHoliday) {
-        res = await updateAttendanceHoliday(currentHoliday._id, formData);
-      } else {
-        res = await createAttendanceHoliday(formData);
-      }
-
-      if (res.success) {
-        showAlert({
-          title: "Success",
-          text: res.message || (isEditMode ? "Holiday updated successfully" : "Holiday created successfully"),
-          severity: "success",
-        });
-        setOpenAddEditModal(false);
-        resetForm();
-        await fetchHolidaysData({
-          searchStr: debouncedSearchText,
-          pageIndex: isEditMode ? page : 1,
-          limit: rowsPerPage,
-        });
-      } else {
-        showAlert({
-          title: "Error",
-          text: res.message || "An error occurred",
-          severity: "error",
-        });
-      }
-    } catch (error: any) {
-      showAlert({
-        title: "Error",
-        text: error.message || "An error occurred",
-        severity: "error",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <Box>
       <LoadingAlert open={loading} />
+      <AddHolidayModal
+        open={addHolidayModalOpen}
+        onClose={handleCloseAddHolidayModal}
+        onSuccess={() =>
+          fetchHolidaysData({
+            searchStr: debouncedSearchText,
+            pageIndex: page,
+            limit: rowsPerPage,
+          })
+        }
+      />
+      <EditHolidayModal
+        open={editHolidayModalOpen}
+        onClose={() => setEditHolidayModalOpen(false)}
+        holiday={currentHoliday}
+        onSuccess={() =>
+          fetchHolidaysData({
+            searchStr: debouncedSearchText,
+            pageIndex: page,
+            limit: rowsPerPage,
+          })
+        }
+      />
       <Box
         sx={{
           display: "flex",
@@ -274,7 +222,11 @@ const AttendanceSettings: React.FC = () => {
         }}
       >
         <Typography variant="h6">Attendance Holidays</Typography>
-        <PermissionGuard requiredPermission={USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_CREATE}>
+        <PermissionGuard
+          requiredPermission={
+            USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_CREATE
+          }
+        >
           <Button
             variant="contained"
             color="primary"
@@ -334,14 +286,30 @@ const AttendanceSettings: React.FC = () => {
                         : "Full Day"}
                   </TableCell>
                   <TableCell>
-                    <PermissionGuard requiredPermission={USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_UPDATE}>
-                      <IconButton onClick={() => handleEditClick(holiday)} color="primary" size="small">
+                    <PermissionGuard
+                      requiredPermission={
+                        USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_UPDATE
+                      }
+                    >
+                      <IconButton
+                        onClick={() => handleEditClick(holiday)}
+                        color="primary"
+                        size="small"
+                      >
                         <Edit fontSize="small" />
                       </IconButton>
                     </PermissionGuard>
 
-                    <PermissionGuard requiredPermission={USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_DELETE}>
-                      <IconButton onClick={() => handleDeleteClick(holiday)} color="error" size="small">
+                    <PermissionGuard
+                      requiredPermission={
+                        USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_DELETE
+                      }
+                    >
+                      <IconButton
+                        onClick={() => handleDeleteClick(holiday)}
+                        color="error"
+                        size="small"
+                      >
                         <Delete fontSize="small" />
                       </IconButton>
                     </PermissionGuard>
@@ -481,74 +449,29 @@ const AttendanceSettings: React.FC = () => {
         </Box>
       )}
 
-      {/* Add / Edit Dialog */}
-      <Dialog open={openAddEditModal} onClose={() => setOpenAddEditModal(false)} maxWidth="sm" fullWidth>
-        <form onSubmit={handleSubmit}>
-          <DialogTitle sx={{ fontWeight: "bold" }}>
-            {isEditMode ? "Edit Holiday" : "Add New Holiday"}
-          </DialogTitle>
-          <DialogContent dividers>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 3, pt: 1 }}>
-              <TextField
-                label="Description"
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                required
-                fullWidth
-                autoFocus
-              />
-              <TextField
-                label="Date"
-                name="date"
-                type="date"
-                value={formData.date}
-                onChange={handleInputChange}
-                required
-                fullWidth
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-              <TextField
-                select
-                label="Duration"
-                name="duration"
-                value={formData.duration}
-                onChange={handleInputChange as any}
-                required
-                fullWidth
-              >
-                <MenuItem value="full_day">Full Day</MenuItem>
-                <MenuItem value="morning">Morning Only</MenuItem>
-                <MenuItem value="afternoon">Afternoon Only</MenuItem>
-              </TextField>
-            </Box>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={() => setOpenAddEditModal(false)} color="inherit">
-              Cancel
-            </Button>
-            <Button type="submit" color="primary" variant="contained">
-              {isEditMode ? "Update" : "Create"}
-            </Button>
-          </DialogActions>
-        </form>
-      </Dialog>
-
       {/* Delete Dialog */}
-      <Dialog open={openDeleteDialog} onClose={() => setOpenDeleteDialog(false)}>
+      <Dialog
+        open={openDeleteDialog}
+        onClose={() => setOpenDeleteDialog(false)}
+      >
         <DialogTitle sx={{ fontWeight: "bold" }}>Confirm Delete</DialogTitle>
         <DialogContent dividers>
           <Typography>
-            Are you sure you want to delete the holiday "{currentHoliday?.description?.toUpperCase()}"? This action cannot be undone.
+            Are you sure you want to delete the holiday "
+            {currentHoliday?.description?.toUpperCase()}"? This action cannot be
+            undone.
           </Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpenDeleteDialog(false)} color="inherit">
             Cancel
           </Button>
-          <Button onClick={confirmDelete} color="error" variant="contained" autoFocus>
+          <Button
+            onClick={confirmDelete}
+            color="error"
+            variant="contained"
+            autoFocus
+          >
             Delete
           </Button>
         </DialogActions>

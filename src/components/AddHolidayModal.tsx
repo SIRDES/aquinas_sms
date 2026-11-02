@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -18,7 +18,7 @@ import {
   Typography,
   Autocomplete,
   CircularProgress,
-} from '@mui/material';
+} from "@mui/material";
 import { showAlert } from "@/components/Alerts";
 import { createAttendanceHoliday } from "@/utils/serverActions/attendanceHoliday";
 import { searchStudentsByForm } from "@/utils/serverActions/student";
@@ -38,20 +38,30 @@ interface StudentOption {
 interface AddHolidayModalProps {
   open: boolean;
   onClose: () => void;
-  // onSuccess: () => void;
+  onSuccess?: () => void;
 }
 
-const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
+const AddHolidayModal: React.FC<AddHolidayModalProps> = ({
+  open,
+  onClose,
+  onSuccess,
+}) => {
   const [holidayDate, setHolidayDate] = useState("");
   const [holidayDescription, setHolidayDescription] = useState("");
-  const [holidayDuration, setHolidayDuration] = useState<"full_day" | "morning" | "afternoon">("full_day");
-  const [holidayIsFor, setHolidayIsFor] = useState<"all_students" | "some_students" | "year_group">("all_students");
+  const [holidayDuration, setHolidayDuration] = useState<
+    "full_day" | "morning" | "afternoon"
+  >("full_day");
+  const [holidayIsFor, setHolidayIsFor] = useState<
+    "all_students" | "some_students" | "year_group"
+  >("all_students");
   const [yearGroups, setYearGroups] = useState<string[]>([]);
   const [selectedForm, setSelectedForm] = useState<string>("");
   const [inputValue, setInputValue] = useState("");
   const [options, setOptions] = useState<StudentOption[]>([]);
   const [searching, setSearching] = useState(false);
-  const [selectedStudentsList, setSelectedStudentsList] = useState<StudentOption[]>([]);
+  const [selectedStudentsList, setSelectedStudentsList] = useState<
+    StudentOption[]
+  >([]);
   const [loading, setLoading] = useState(false);
 
   // Debounced search for students when form is selected and input >= 3 chars
@@ -136,7 +146,10 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
         duration: holidayDuration,
         holidayIsFor: holidayIsFor,
         yearGroups: holidayIsFor === "year_group" ? yearGroups : [],
-        students: holidayIsFor === "some_students" ? selectedStudentsList.map((s) => s._id) : [],
+        students:
+          holidayIsFor === "some_students"
+            ? selectedStudentsList.map((s) => s._id)
+            : [],
       });
 
       if (!response.success) {
@@ -155,8 +168,10 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
         severity: "success",
       });
 
-      // handleClose();
-      // onSuccess();
+      if (onSuccess) {
+        onSuccess();
+      }
+      handleClose();
     } catch (error: any) {
       showAlert({
         title: "error",
@@ -171,10 +186,19 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
-      <DialogTitle sx={{ fontWeight: 700, color: "#00204a" }}>Add a Holiday/Permission</DialogTitle>
-      <form onSubmit={(e) => { e.preventDefault(); handleSaveHoliday(); }}>
+      <DialogTitle sx={{ fontWeight: 700, color: "#00204a" }}>
+        Add a Holiday/Permission
+      </DialogTitle>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSaveHoliday();
+        }}
+      >
         <DialogContent dividers>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5, mt: 1 }}>
+          <Box
+            sx={{ display: "flex", flexDirection: "column", gap: 2.5, mt: 1 }}
+          >
             <TextField
               label="Description"
               variant="outlined"
@@ -202,7 +226,11 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
               variant="outlined"
               fullWidth
               value={holidayDuration}
-              onChange={(e) => setHolidayDuration(e.target.value as "full_day" | "morning" | "afternoon")}
+              onChange={(e) =>
+                setHolidayDuration(
+                  e.target.value as "full_day" | "morning" | "afternoon",
+                )
+              }
               required
               disabled={loading}
             >
@@ -218,7 +246,10 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
               fullWidth
               value={holidayIsFor}
               onChange={(e) => {
-                const val = e.target.value as "all_students" | "some_students" | "year_group";
+                const val = e.target.value as
+                  | "all_students"
+                  | "some_students"
+                  | "year_group";
                 setHolidayIsFor(val);
                 if (val !== "year_group") {
                   setYearGroups([]);
@@ -240,14 +271,18 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
 
             {holidayIsFor === "year_group" && (
               <FormControl fullWidth margin="none" required disabled={loading}>
-                <InputLabel id="year-group-multiple-label">Year Group</InputLabel>
+                <InputLabel id="year-group-multiple-label">
+                  Year Group
+                </InputLabel>
                 <Select
                   labelId="year-group-multiple-label"
                   multiple
                   value={yearGroups}
                   onChange={(e) => {
                     const value = e.target.value;
-                    setYearGroups(typeof value === "string" ? value.split(",") : value);
+                    setYearGroups(
+                      typeof value === "string" ? value.split(",") : value,
+                    );
                   }}
                   input={<OutlinedInput label="Year Group" />}
                   renderValue={(selected) => selected.join(", ")}
@@ -289,7 +324,8 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
 
                 <Autocomplete
                   options={options.filter(
-                    (opt) => !selectedStudentsList.some((s) => s._id === opt._id)
+                    (opt) =>
+                      !selectedStudentsList.some((s) => s._id === opt._id),
                   )}
                   getOptionLabel={(option) =>
                     typeof option === "string"
@@ -306,7 +342,11 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
                   }}
                   onChange={(event, newValue) => {
                     if (newValue && typeof newValue !== "string") {
-                      if (!selectedStudentsList.some((s) => s._id === newValue._id)) {
+                      if (
+                        !selectedStudentsList.some(
+                          (s) => s._id === newValue._id,
+                        )
+                      ) {
                         setSelectedStudentsList((prev) => [...prev, newValue]);
                       }
                       setInputValue("");
@@ -338,7 +378,9 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
                         ...params.InputProps,
                         endAdornment: (
                           <>
-                            {searching ? <CircularProgress color="inherit" size={20} /> : null}
+                            {searching ? (
+                              <CircularProgress color="inherit" size={20} />
+                            ) : null}
                             {params.InputProps.endAdornment}
                           </>
                         ),
@@ -352,7 +394,8 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
                           {option.firstName} {option.lastName || ""}
                         </Typography>
                         <Typography variant="caption" color="text.secondary">
-                          ID: {option.studentId} &bull; Class: {option.classDetails?.name || "N/A"}
+                          ID: {option.studentId} &bull; Class:{" "}
+                          {option.classDetails?.name || "N/A"}
                         </Typography>
                       </Box>
                     </li>
@@ -360,8 +403,13 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
                 />
 
                 {selectedStudentsList.length > 0 && (
-                  <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                    <Typography variant="caption" sx={{ fontWeight: 600, color: "text.secondary" }}>
+                  <Box
+                    sx={{ display: "flex", flexDirection: "column", gap: 1 }}
+                  >
+                    <Typography
+                      variant="caption"
+                      sx={{ fontWeight: 600, color: "text.secondary" }}
+                    >
                       Selected Students ({selectedStudentsList.length}):
                     </Typography>
                     <Box
@@ -383,7 +431,7 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
                           label={`${student.firstName} ${student.lastName || ""} (${student.studentId})`}
                           onDelete={() => {
                             setSelectedStudentsList((prev) =>
-                              prev.filter((s) => s._id !== student._id)
+                              prev.filter((s) => s._id !== student._id),
                             );
                           }}
                           color="primary"
@@ -399,8 +447,24 @@ const AddHolidayModal: React.FC<AddHolidayModalProps> = ({ open, onClose }) => {
           </Box>
         </DialogContent>
         <DialogActions sx={{ p: 2, pt: 1 }}>
-          <Button onClick={handleClose} color="inherit" sx={{ fontWeight: 600 }} disabled={loading}>Cancel</Button>
-          <Button type="submit" variant="contained" disabled={loading} sx={{ backgroundColor: "#0f172a", "&:hover": { backgroundColor: "#1e293b" }, fontWeight: 600 }}>
+          <Button
+            onClick={handleClose}
+            color="inherit"
+            sx={{ fontWeight: 600 }}
+            disabled={loading}
+          >
+            Cancel
+          </Button>
+          <Button
+            type="submit"
+            variant="contained"
+            disabled={loading}
+            sx={{
+              backgroundColor: "#0f172a",
+              "&:hover": { backgroundColor: "#1e293b" },
+              fontWeight: 600,
+            }}
+          >
             {loading ? "Saving..." : "Save Holiday"}
           </Button>
         </DialogActions>
