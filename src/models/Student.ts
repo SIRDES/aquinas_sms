@@ -18,6 +18,7 @@ export type IStudent = mongoose.Document & {
   studentId: string;
   ssId?: string;
   cassRefID?: string;
+  profileImage?: string;
   yearOfAdmission: string;
   yearGroup: string; // for promotion
   pushNotificationAllowed?: boolean;
@@ -46,6 +47,7 @@ const studentSchema = new mongoose.Schema<IStudent>(
     subjects: { type: [Types.ObjectId], ref: "Subject", default: [] },
     ssId: { type: String, default: null, index: true },
     cassRefID: { type: String, default: null, index: true },
+    profileImage: { type: String, default: null },
     classId: { type: mongoose.Schema.Types.ObjectId, ref: "Class", required: true },
     studentId: { type: String, required: true, unique: true, index: true, trim: true, uppercase: true },
     deviceToken: {

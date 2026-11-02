@@ -404,3 +404,83 @@ export const getStudentById = async (studentId: string) => {
 //     return { success: false, message: err?.message || "An error occurred" };
 //   }
 // };
+
+export const searchStudentsByForm = async ({
+  form,
+  searchTerm,
+}: {
+  form: string;
+  searchTerm: string;
+}) => {
+  try {
+
+    if (!form || !searchTerm || searchTerm.trim().length < 3) {
+      return { success: true, data: [] };
+    }
+
+    const term = searchTerm.trim();
+    const regex = new RegExp(term, "i");
+    await connectDB();
+    const students = await Student.aggregate([
+      {
+        $match: {
+          isDeleted: { $ne: true },
+        },
+      },
+      {
+        $lookup: {
+          from: "classes",
+          localField: "classId",
+          foreignField: "_id",
+          as: "classDetails",
+        },
+      },
+      { $unwind: "$classDetails" },
+      {
+        $match: {
+          "classDetails.form": String(form),
+          $or: [
+            { firstName: { $regex: regex } },
+            { lastName: { $regex: regex } },
+            { studentId: { $regex: regex } },
+            {
+              $expr: {
+                $regexMatch: {
+                  input: { $concat: ["$firstName", " ", { $ifNull: ["$lastName", ""] }] },
+                  regex: term,
+                  options: "i",
+                },
+              },
+            },
+          ],
+        },
+      },
+      { $limit: 25 },
+      {
+        $project: {
+          _id: { $toString: "$_id" },
+          firstName: 1,
+          lastName: 1,
+          studentId: 1,
+          classId: { $toString: "$classId" },
+          "classDetails._id": { $toString: "$classDetails._id" },
+          "classDetails.name": 1,
+          "classDetails.form": 1,
+        },
+      },
+    ]);
+
+    return {
+      success: true,
+      data: JSON.parse(JSON.stringify(students)),
+    };
+  } catch (error: any) {
+    console.error("Error searching students:", error);
+    return {
+      success: false,
+      message: error?.message || "Failed to search students",
+      data: [],
+    };
+  }
+};
+

@@ -7,6 +7,13 @@ export const yearOfAdmissions = [
     new Date().getFullYear() - 3,
 ];
 
+export const yearGroups = [
+    new Date().getFullYear(),
+    new Date().getFullYear() + 1,
+    new Date().getFullYear() + 2,
+    new Date().getFullYear() + 3,
+];
+
 export const assessmentModes: { name: string, value: AssessmentModesType, percent: number }[] = [
     {
         name: "Individual Class Assessments (e.g., Classwork, Quizzes, Homework)",

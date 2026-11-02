@@ -51,11 +51,23 @@ export type StudentType = {
   studentId: string;
   areaOfResidence: string;
   parentLastName: string;
+  cassRefID?: string;
+  profileImage?: string;
+  classInfo?: {
+    form: string;
+    name: string;
+    programmeInfo?: {
+      name: string;
+    };
+  };
 };
 
-
-export type AssessmentModesType = "individual" | "midSem" | "practical" | "groupWork" | "supervised"
-
+export type AssessmentModesType =
+  | "individual"
+  | "midSem"
+  | "practical"
+  | "groupWork"
+  | "supervised";
 
 export interface TimeLogType {
   day: number;

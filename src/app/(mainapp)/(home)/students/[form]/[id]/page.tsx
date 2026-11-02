@@ -27,7 +27,9 @@ import {
   tableCellClasses,
   useTheme,
   Chip,
+  Slider,
 } from "@mui/material";
+import Cropper from "react-easy-crop";
 import React, {
   LegacyRef,
   forwardRef,
@@ -62,6 +64,8 @@ import Tooltip from "@mui/material/Tooltip";
 
 import EditIcon from "@mui/icons-material/Edit";
 import BookIcon from "@mui/icons-material/Book";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import UploadFileIcon from "@mui/icons-material/UploadFile";
 import { useReactToPrint } from "react-to-print";
 import Image from "next/image";
 import ConfirmationDialog from "@/components/ConfirmationDialog";
@@ -78,43 +82,8 @@ import StudentReportCard from "@/components/StudentReportCard";
 import { showAlert } from "@/components/Alerts";
 import PermissionGuard from "@/components/PermissionGuard";
 import { USER_PERMISSIONS } from "@/utils/common";
-const GradeTableCell = styled(TableCell)(({ theme }) => ({
-  padding: "3px 8px",
-  [`&.${tableCellClasses.head}`]: {
-    // backgroundColor: theme.palette.primary.main,
-    // color: theme.palette.common.white,
-    fontSize: 10,
-    fontWeight: "bold",
-    border: "1px solid black",
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 10,
-    border: "1px solid black",
-  },
-}));
+import { uploadProfileImage } from "@/utils/serverActions/uploadProfileImage";
 
-const ResultsTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
-
-const ResultsTableCell = styled(TableCell)(({ theme }) => ({
-  padding: "9px 8px",
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    fontSize: 14,
-    fontWeight: "bold",
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   padding: "9px 8px",
   [`&.${tableCellClasses.head}`]: {
@@ -179,6 +148,20 @@ export default function Page({
   );
   const [testScores, setTestScores] = useState<Array<any>>([]);
   const [paymentToken, setPaymentToken] = useState<string | null>(null);
+  const [imageMenuAnchorEl, setImageMenuAnchorEl] = useState<null | HTMLElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const cameraInputRef = useRef<HTMLInputElement>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  // Cropping states
+  const [cropDialogOpen, setCropDialogOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [crop, setCrop] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState<any>(null);
+  // Camera capture states
+  const [cameraDialogOpen, setCameraDialogOpen] = useState(false);
+  const [cameraStream, setCameraStream] = useState<MediaStream | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const fetchStudentsData = async () => {
     setLoading(true);
     setStudentData({});
@@ -275,6 +258,162 @@ export default function Page({
   };
   const handleActionClose = () => {
     setActionAnchorEl(null);
+  };
+
+  const handleImageMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setImageMenuAnchorEl(event.currentTarget);
+  };
+
+  const handleImageMenuClose = () => {
+    setImageMenuAnchorEl(null);
+  };
+
+  const handleChooseFromDevice = () => {
+    handleImageMenuClose();
+    fileInputRef.current?.click();
+  };
+
+  const handleTakePicture = () => {
+    // Open custom camera dialog for capturing photo
+    handleImageMenuClose();
+    setCameraDialogOpen(true);
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      // Open crop dialog with selected image
+      setImageSrc(imageUrl);
+      setCropDialogOpen(true);
+    }
+  };
+
+  // Start camera when dialog opens
+  const startCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+      setCameraStream(stream);
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
+    } catch (err) {
+      console.error('Error accessing camera:', err);
+      showAlert({ title: 'Error', severity: 'error', text: 'Unable to access camera.' });
+    }
+  };
+
+  // Stop camera when dialog closes
+  const stopCamera = () => {
+    if (cameraStream) {
+      cameraStream.getTracks().forEach((track) => track.stop());
+      setCameraStream(null);
+    }
+  };
+
+  // Capture photo from video stream
+  const handleCapture = () => {
+    if (!videoRef.current) return;
+    const video = videoRef.current;
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const capturedUrl = URL.createObjectURL(blob);
+          setImageSrc(capturedUrl);
+          setCropDialogOpen(true);
+          setCameraDialogOpen(false);
+          stopCamera();
+        }
+      }, 'image/jpeg');
+    }
+  };
+
+  // Effect to manage camera lifecycle
+  useEffect(() => {
+    if (cameraDialogOpen) {
+      startCamera();
+    } else {
+      stopCamera();
+    }
+    return () => {
+      stopCamera();
+    };
+  }, [cameraDialogOpen]);
+  const onCropComplete = (_croppedArea: any, croppedAreaPixels: any) => {
+    setCroppedAreaPixels(croppedAreaPixels);
+  };
+
+  const getCroppedImg = async (imageSrc: string, pixelCrop: any) => {
+    const image = await createImage(imageSrc);
+    const canvas = document.createElement('canvas');
+    canvas.width = pixelCrop.width;
+    canvas.height = pixelCrop.height;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return '';
+    ctx.drawImage(
+      image,
+      pixelCrop.x,
+      pixelCrop.y,
+      pixelCrop.width,
+      pixelCrop.height,
+      0,
+      0,
+      pixelCrop.width,
+      pixelCrop.height,
+    );
+    return new Promise<string>((resolve) => {
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const croppedUrl = URL.createObjectURL(blob);
+          resolve(croppedUrl);
+        } else {
+          resolve('');
+        }
+      }, 'image/jpeg');
+    });
+  };
+
+  const createImage = (url: string): Promise<HTMLImageElement> => {
+    return new Promise((resolve, reject) => {
+      const img = new window.Image();
+      img.addEventListener('load', () => resolve(img));
+      img.addEventListener('error', (err) => reject(err));
+      img.setAttribute('crossOrigin', 'anonymous'); // needed to avoid CORS issues on CodeSandbox
+      img.src = url;
+    });
+  };
+
+  const handleCropConfirm = async () => {
+    if (!imageSrc || !croppedAreaPixels) return;
+    const croppedImage = await getCroppedImg(imageSrc, croppedAreaPixels);
+    setPreviewImage(croppedImage);
+    setCropDialogOpen(false);
+    // Clean up original object URL
+    URL.revokeObjectURL(imageSrc);
+    setImageSrc(null);
+
+    // Upload cropped image to Cloudflare R2
+    try {
+      setActionStatus({ open: true, message: "Uploading profile image..." });
+      const response = await fetch(croppedImage);
+      const blob = await response.blob();
+      const file = new File([blob], `profile_${id}.jpg`, { type: 'image/jpeg' });
+      const result = await uploadProfileImage({ studentId: id, file });
+      if (result.success) {
+        showAlert({ title: 'Success', severity: 'success', text: 'Profile image updated successfully' });
+      } else {
+        showAlert({ title: 'Error', severity: 'error', text: result.message || 'Failed to upload image' });
+      }
+    } catch (error: any) {
+      showAlert({ title: 'Error', severity: 'error', text: error.message || 'Failed to upload image' });
+    } finally {
+      setActionStatus({ open: false, message: "" });
+    }
   };
 
   const handleSendSMS = async () => {
@@ -806,209 +945,273 @@ export default function Page({
         >
           {Object.keys(studentData).length !== 0 && (
             <>
-              <Grid container spacing={2}>
-                {/* student id */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    gap: "5px",
-                  }}
-                >
-                  <Typography variant="body1">ID:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.studentId?.toUpperCase()}
-                  </Typography>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    gap: "5px",
-                  }}
-                >
-                  <Typography variant="body1">CassRefID:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.cassRefID}
-                  </Typography>
-                </Grid>
-
-                {/* student name */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{ display: "flex", gap: "10px" }}
-                >
-                  <Typography variant="body1">Name:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.firstName?.toUpperCase()}{" "}
-                    {studentData?.lastName?.toUpperCase()}
-                  </Typography>
-                </Grid>
-
-                {/* Gender */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{ display: "flex", gap: "10px" }}
-                >
-                  <Typography variant="body1">Gender:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.gender?.toUpperCase()}
-                  </Typography>
-                </Grid>
-                {/* On scholarship */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    gap: "5px",
-                  }}
-                >
-                  <Typography variant="body1">Class</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {`${studentData?.classInfo?.form} ${studentData?.classInfo?.name}`?.toUpperCase()}
-                  </Typography>
-                </Grid>
-
-                {/* Programme */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{ display: "flex", gap: "10px" }}
-                >
-                  <Typography variant="body1">Programme:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.classInfo?.programmeInfo?.name?.toUpperCase()}
-                  </Typography>
-                </Grid>
-
-                {/* Amount Paid */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    gap: "5px",
-                  }}
-                >
-                  <Typography variant="body1">Year of admission:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.yearOfAdmission}
-                  </Typography>
-                </Grid>
-
-
-                <Grid item xs={12}>
-                  <Typography variant="body1" fontWeight={700}>
-                    Parent/Guardian Details
-                  </Typography>
-                </Grid>
-                {/* parent's name */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    gap: "5px",
-                  }}
-                >
-                  <Typography variant="body1">Name:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.parentFirstName?.toUpperCase()}{" "}
-                    {studentData?.parentLastName?.toUpperCase()}
-                  </Typography>
-                </Grid>
-
-                {/* Email */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{ display: "flex", gap: "10px" }}
-                >
-                  <Typography variant="body1">Email:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {studentData?.parentEmail?.toLowerCase()}
-                  </Typography>
-                </Grid>
-                {/* phone number */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  sx={{ display: "flex", gap: "10px" }}
-                >
-                  <Typography variant="body1">Phone number:</Typography>
-                  <Typography variant="body1" fontWeight={700}>
-                    {formatPhoneNumberIntl(
-                      studentData?.parentPhoneNumber || "",
-                    )}
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant="body1" fontWeight={700}>
-                  Subjects
-                </Typography>
-              </Grid>
-              {/* subjects */}
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={12}
+              <Paper
+                elevation={0}
+                sx={{
+                  p: { xs: 2, sm: 3 },
+                  mb: 3,
+                  borderRadius: "12px",
+                  border: "1px solid #e2e8f0",
+                  backgroundColor: "#ffffff",
+                  boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.05)",
+                }}
               >
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: "10px", mt: 1 }}>
-                  {studentData?.subjectInfo && studentData.subjectInfo.length > 0 ? (
-                    studentData.subjectInfo.map((subject: any) => (
-                      <Chip
-                        key={subject?._id || subject?.name}
-                        // icon={<BookIcon sx={{ fontSize: "0.9rem !important" }} />}
-                        label={subject?.name?.toUpperCase()}
-                        variant="outlined"
-                        size="small"
+                <Grid container spacing={3} alignItems="flex-start">
+                  {/* Profile Image & Quick Identity */}
+                  <Grid item xs={12} sm={4} md={3} lg={2.5}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        textAlign: "center",
+                        p: 1,
+                        borderRadius: "10px",
+                        backgroundColor: "#f8fafc",
+                        border: "1px solid #e2e8f0",
+                      }}
+                    >
+                      <Box
                         sx={{
-                          borderRadius: "16px",
-                          // fontWeight: 600,
-                          // fontSize: "0.75rem",
-                          px: 0.5,
-                          py: 1.5,
-                          // color: "primary.main",
-                          borderColor: "primary.light",
-                          // backgroundColor: "rgba(44, 120, 115, 0.04)",
-                          // transition: "all 0.2s ease",
+                          position: "relative",
+                          width: { xs: 120, sm: 140, md: 150 },
+                          height: { xs: 120, sm: 140, md: 150 },
+                          mb: 1.5,
                         }}
+                      >
+                        <Box
+                          sx={{
+                            width: "100%",
+                            height: "100%",
+                            borderRadius: "12px",
+                            overflow: "hidden",
+                            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+                            border: "3px solid #ffffff",
+                            position: "relative",
+                          }}
+                        >
+                          <Image
+                            src={previewImage || studentData?.profileImage || "/images/default-avatar.svg"}
+                            alt={`${studentData?.firstName || "Student"} ${studentData?.lastName || ""}`}
+                            fill
+                            sizes="(max-width: 600px) 120px, 150px"
+                            style={{ objectFit: "cover" }}
+                            priority
+                          />
+                        </Box>
+                        {/* Pencil icon at top right */}
+                        <Tooltip title="Update profile photo">
+                          <IconButton
+                            size="small"
+                            onClick={handleImageMenuOpen}
+                            sx={{
+                              position: "absolute",
+                              top: -6,
+                              right: -6,
+                              backgroundColor: "#ffffff",
+                              color: "primary.main",
+                              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                              border: "1px solid #e2e8f0",
+                              width: 30,
+                              height: 30,
+                              zIndex: 2,
+                              "&:hover": {
+                                backgroundColor: "#f1f5f9",
+                              },
+                            }}
+                          >
+                            <EditIcon sx={{ fontSize: "16px" }} />
+                          </IconButton>
+                        </Tooltip>
+                      </Box>
+
+                      {/* Hidden file inputs for choosing file & camera capture */}
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        accept="image/*"
+                        style={{ display: "none" }}
+                        onChange={handleFileChange}
                       />
-                    ))
-                  ) : (
-                    <Typography variant="body2" sx={{ color: "text.secondary", fontStyle: "italic" }}>
-                      No subjects assigned
-                    </Typography>
-                  )}
+                      <input
+                        ref={cameraInputRef}
+                        type="file"
+                        accept="image/*"
+                        capture="user"
+                        style={{ display: "none" }}
+                        onChange={handleFileChange}
+                      />
+
+                      {/* Profile image edit menu */}
+                      <Menu
+                        id="profile-image-menu"
+                        anchorEl={imageMenuAnchorEl}
+                        open={Boolean(imageMenuAnchorEl)}
+                        onClose={handleImageMenuClose}
+                        anchorOrigin={{
+                          vertical: "bottom",
+                          horizontal: "right",
+                        }}
+                        transformOrigin={{
+                          vertical: "top",
+                          horizontal: "right",
+                        }}
+                        slotProps={{
+                          paper: {
+                            sx: {
+                              boxShadow: "0 4px 14px rgba(0,0,0,0.12)",
+                              borderRadius: "8px",
+                              minWidth: 180,
+                            },
+                          },
+                        }}
+                      >
+                        <MenuItem onClick={handleTakePicture} sx={{ fontSize: "13px", gap: 1.5, py: 1 }}>
+                          <CameraAltIcon sx={{ fontSize: "18px", color: "primary.main" }} />
+                          Take a picture
+                        </MenuItem>
+                        <MenuItem onClick={handleChooseFromDevice} sx={{ fontSize: "13px", gap: 1.5, py: 1 }}>
+                          <UploadFileIcon sx={{ fontSize: "18px", color: "primary.main" }} />
+                          Choose from device
+                        </MenuItem>
+                      </Menu>
+                      <Typography variant="subtitle1" fontWeight={700} sx={{ lineHeight: 1.3, mb: 0.5 }}>
+                        {studentData?.firstName?.toUpperCase()?.trim()} {studentData?.lastName?.toUpperCase()?.trim()}
+                      </Typography>
+                      <Chip
+                        label={`${studentData?.classInfo?.form || ""} ${studentData?.classInfo?.name || ""}`.trim().toUpperCase() || "STUDENT"}
+                        size="small"
+                        color="primary"
+                        sx={{ fontWeight: 600, fontSize: "0.75rem", mb: 0.5 }}
+                      />
+                    </Box>
+                  </Grid>
+
+                  {/* Detailed Student & Academic Info + Parent Info */}
+                  <Grid item xs={12} sm={8} md={9} lg={9.5}>
+                    {/* Student Details section */}
+                    <Box mb={2.5}>
+                      <Typography
+                        variant="subtitle2"
+                        sx={{
+                          fontWeight: 700,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.5px",
+                          color: "primary.main",
+                          mb: 1.5,
+                        }}
+                      >
+                        Academic & Personal Information
+                      </Typography>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Student ID</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.studentId?.toUpperCase() || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">CASS Reference ID</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.cassRefID || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Gender</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.gender?.toUpperCase() || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Class</Typography>
+                          <Typography variant="body2" fontWeight={700}>{`${studentData?.classInfo?.form || ""} ${studentData?.classInfo?.name || ""}`.trim().toUpperCase() || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Programme</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.classInfo?.programmeInfo?.name?.toUpperCase() || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Year of Admission</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.yearOfAdmission || "N/A"}</Typography>
+                        </Grid>
+                      </Grid>
+                    </Box>
+
+                    <Divider sx={{ my: 2 }} />
+
+                    {/* Parent/Guardian Details */}
+                    <Box>
+                      <Typography
+                        variant="subtitle2"
+                        sx={{
+                          fontWeight: 700,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.5px",
+                          color: "primary.main",
+                          mb: 1.5,
+                        }}
+                      >
+                        Parent / Guardian Details
+                      </Typography>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Parent Name</Typography>
+                          <Typography variant="body2" fontWeight={700}>
+                            {studentData?.parentFirstName || studentData?.parentLastName
+                              ? `${studentData?.parentFirstName || ""} ${studentData?.parentLastName || ""}`.trim().toUpperCase()
+                              : "N/A"}
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Email</Typography>
+                          <Typography variant="body2" fontWeight={700}>{studentData?.parentEmail?.toLowerCase() || "N/A"}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                          <Typography variant="caption" color="text.secondary" display="block">Phone Number</Typography>
+                          <Typography variant="body2" fontWeight={700}>
+                            {studentData?.parentPhoneNumber
+                              ? formatPhoneNumberIntl(studentData.parentPhoneNumber)
+                              : "N/A"}
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Box>
+                  </Grid>
+                </Grid>
+
+                {/* Subjects Section */}
+                <Divider sx={{ my: 2.5 }} />
+                <Box>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.5px",
+                      color: "primary.main",
+                      mb: 1,
+                    }}
+                  >
+                    Enrolled Subjects
+                  </Typography>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 1 }}>
+                    {studentData?.subjectInfo && studentData.subjectInfo.length > 0 ? (
+                      studentData.subjectInfo.map((subject: any) => (
+                        <Chip
+                          key={subject?._id || subject?.name}
+                          label={subject?.name?.toUpperCase()}
+                          variant="outlined"
+                          size="small"
+                          sx={{
+                            borderRadius: "16px",
+                            borderColor: "primary.light",
+                            px: 0.5,
+                            py: 1.5,
+                          }}
+                        />
+                      ))
+                    ) : (
+                      <Typography variant="body2" sx={{ color: "text.secondary", fontStyle: "italic" }}>
+                        No subjects assigned
+                      </Typography>
+                    )}
+                  </Box>
                 </Box>
-              </Grid>
+              </Paper>
               <Divider sx={{ my: 2 }} />
               <Box
                 display={"flex"}
@@ -1018,11 +1221,6 @@ export default function Page({
                 alignItems={"flex-end"}
               >
                 <Box display="flex" alignItems="center" gap={2}>
-                  {/* <Typography variant="body1" fontWeight={700}>
-                    Results for
-                  </Typography> */}
-
-
                   <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_VIEW_EXAMS_REPORTS}>
                     <FormControl size="small" sx={{ minWidth: 400 }}>
                       <Select
@@ -1431,6 +1629,60 @@ export default function Page({
           </Button>
         </DialogActions>
       </Dialog>
+      {/* Camera Capture Dialog */}
+      <Dialog open={cameraDialogOpen} onClose={() => setCameraDialogOpen(false)} maxWidth="sm" fullWidth>
+        <DialogTitle>Take a Picture</DialogTitle>
+        <DialogContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Box sx={{ width: '100%', maxWidth: 400, position: 'relative' }}>
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              muted
+              style={{ width: '100%', borderRadius: '8px', backgroundColor: '#000' }}
+            />
+          </Box>
+          <Box sx={{ mt: 2, display: 'flex', gap: 2 }}>
+            <Button variant="outlined" onClick={() => setCameraDialogOpen(false)}>Cancel</Button>
+            <Button variant="contained" onClick={handleCapture}>Capture</Button>
+          </Box>
+        </DialogContent>
+      </Dialog>
+
+      {/* Crop Dialog */}
+      <Dialog open={cropDialogOpen} onClose={() => setCropDialogOpen(false)} maxWidth="sm" fullWidth>
+        <DialogTitle>Crop Image</DialogTitle>
+        <DialogContent sx={{ position: 'relative', height: 300 }}>
+          {imageSrc && (
+            <Cropper
+              image={imageSrc}
+              crop={crop}
+              zoom={zoom}
+              aspect={1}
+              onCropChange={setCrop}
+              onZoomChange={setZoom}
+              onCropComplete={onCropComplete}
+            />
+          )}
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="body2" gutterBottom>Zoom</Typography>
+            <Slider
+              value={zoom}
+              min={1}
+              max={3}
+              step={0.1}
+              aria-labelledby="Zoom"
+              onChange={(_, value) => setZoom(value as number)}
+            />
+          </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setCropDialogOpen(false)}>Cancel</Button>
+          <Button onClick={handleCropConfirm} variant="contained" color="primary">
+            Crop
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       {/* Confirm Notification Dialog */}
       <Dialog
@@ -1439,8 +1691,7 @@ export default function Page({
       >
         <DialogTitle>Confirm Send Notification</DialogTitle>
         <DialogContent>
-          <Typography>
-            Are you sure you want to send this notification to the parent?
+          <Typography>            Are you sure you want to send this notification to the parent?
           </Typography>
           <Box mt={2} p={2} bgcolor="#f5f5f5" borderRadius={1}>
             <Typography variant="body2" whiteSpace="pre-line">

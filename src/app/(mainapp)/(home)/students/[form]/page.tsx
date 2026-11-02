@@ -59,6 +59,7 @@ import * as XLSX from "xlsx";
 import { CustomizedSelect } from "@/components/CustomizedSelect";
 import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
+import JSZip from "jszip";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import axios from "axios";
@@ -69,7 +70,9 @@ import MultipleStudentsReportCard from "@/components/MultipleStudentsReportCard"
 import ActionStatusAlert from "@/components/ActionStatusAlert";
 import ConfirmationDialog from "@/components/ConfirmationDialog";
 import { showAlert } from "@/components/Alerts";
-import PermissionGuard, { useHasPermission } from "@/components/PermissionGuard";
+import PermissionGuard, {
+  useHasPermission,
+} from "@/components/PermissionGuard";
 import { USER_PERMISSIONS } from "@/utils/common";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -91,9 +94,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   // hide last border
   "&:last-child td, &:last-child th": {
     border: 0,
-  }
+  },
 }));
-
 
 export default function Students({
   params,
@@ -105,7 +107,9 @@ export default function Students({
   const { form } = use(params);
   const { selectedBatch, fetchedBatches } = useBatchesContext();
 
-  const canViewDetails = useHasPermission(USER_PERMISSIONS.STUDENT_VIEW_DETAILS);
+  const canViewDetails = useHasPermission(
+    USER_PERMISSIONS.STUDENT_VIEW_DETAILS,
+  );
 
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(1000);
@@ -178,7 +182,6 @@ export default function Students({
         severity: "error",
         text: error.message || error.data || "An error occurred",
       });
-
     } finally {
       setLoading(false);
     }
@@ -205,7 +208,7 @@ export default function Students({
       const response = await getAllClasses(form);
       if (!response.data) return;
       setClasses(response.data);
-    } catch (error: any) { }
+    } catch (error: any) {}
   };
   useEffect(() => {
     fetchClasses();
@@ -304,9 +307,10 @@ export default function Students({
         _id: student?._id,
         CassRefID: student?.cassRefID,
         // ID: student?.studentId?.split("/")[1],
-        "StudentID": student?.studentId?.toUpperCase(),
-        Name: `${student?.firstName} ${student?.middleName ? student?.middleName : ""
-          } ${student?.lastName}`.toUpperCase(),
+        StudentID: student?.studentId?.toUpperCase(),
+        Name: `${student?.firstName} ${
+          student?.middleName ? student?.middleName : ""
+        } ${student?.lastName}`.toUpperCase(),
         // Gender: student?.gender,
         Class:
           `${student?.classInfo?.form} ${student?.classInfo?.name}`.toUpperCase(),
@@ -314,7 +318,7 @@ export default function Students({
         // "Parent name": `${student?.parentFirstName} ${student?.parentMiddleName ? student?.parentMiddleName : ""
         //   } ${student?.parentLastName}`.toUpperCase(),
         // "Parent Email": student?.parentEmail,
-        "ParentContact": student?.parentPhoneNumber
+        ParentContact: student?.parentPhoneNumber
           ? `0${student?.parentPhoneNumber?.trim()?.slice(-9)}`
           : "",
       })),
@@ -330,11 +334,81 @@ export default function Students({
     XLSX.writeFile(wb, `form_${form}_data.xlsx`);
   };
 
+  const handleImagesZipClick = async () => {
+    handleDownloadClose();
+    setLoading(true);
+
+    try {
+      const zip = new JSZip();
+      const defaultAvatarUrl = "/images/default-avatar.svg";
+
+      // Fetch default avatar once
+      const defaultAvatarResponse = await fetch(defaultAvatarUrl);
+      const defaultAvatarBlob = await defaultAvatarResponse.blob();
+      const defaultAvatarArrayBuffer = await defaultAvatarBlob.arrayBuffer();
+
+      for (const student of students) {
+        const baseFileName = `${`${student?.firstName ? student?.firstName : ""} ${
+          student?.lastName ? student?.lastName : ""
+        }`
+          .trim()
+          .toUpperCase()}_${student?.cassRefID}`;
+
+        if (student?.profileImage) {
+          try {
+            const response = await fetch(student.profileImage);
+            const blob = await response.blob();
+          
+            // Determine file extension from content type
+            const contentType = blob.type;
+            let extension = "png";
+
+            if (contentType === "image/jpeg" || contentType === "image/jpg") {
+              extension = "jpg";
+            } else if (contentType === "image/svg+xml") {
+              extension = "svg";
+            } else if (contentType === "image/webp") {
+              extension = "webp";
+            }
+
+            const arrayBuffer = await blob.arrayBuffer();
+            zip.file(`${baseFileName}.${extension}`, arrayBuffer);
+          } catch (error) {
+            console.error(
+              `Failed to fetch image for ${student?.firstName}:`,
+              error,
+            );
+            // Use default avatar if fetch fails
+            zip.file(`${baseFileName}.svg`, defaultAvatarArrayBuffer);
+          }
+        } else {
+          // Use default avatar for students without profile image
+          zip.file(`${baseFileName}.svg`, defaultAvatarArrayBuffer);
+        }
+      }
+
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, `form_${form}_images.zip`);
+    } catch (error: any) {
+      console.error("Error creating zip file:", error);
+      showAlert({
+        title: "Error",
+        severity: "error",
+        text: error.message || "Failed to download images",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSaveAsWithPrint = async (students: Array<any>) => {
     const blob = await pdf(
       <MultipleStudentsReportCard students={students} />,
     ).toBlob();
-    saveAs(blob, `${fetchedBatches.filter((f: any) => f?.form === form)?.[0]?.name?.toUpperCase()}_report.pdf`);
+    saveAs(
+      blob,
+      `${fetchedBatches.filter((f: any) => f?.form === form)?.[0]?.name?.toUpperCase()}_report.pdf`,
+    );
   };
 
   const handleOpenConfirmationDialog: ({
@@ -373,7 +447,6 @@ export default function Students({
         severity: "error",
         text: error.message || error.data || "An error occurred",
       });
-
     } finally {
       setActionStatus({ open: false, message: "" });
     }
@@ -402,7 +475,7 @@ export default function Students({
           gutterBottom
           // mb={2}
           px={{ xs: 1, sm: 2, md: 3 }}
-        // pt={3}
+          // pt={3}
         >
           Students
         </Typography>
@@ -461,7 +534,16 @@ export default function Students({
             </Grid>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={1.5} sx={{ display: "flex", justifyContent: { xs: "flex-start", md: "flex-end" } }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={1.5}
+            sx={{
+              display: "flex",
+              justifyContent: { xs: "flex-start", md: "flex-end" },
+            }}
+          >
             <Button
               variant="contained"
               onClick={handleDownloadBtnClick}
@@ -489,12 +571,19 @@ export default function Students({
               open={Boolean(downloadAnchorEl)}
               onClose={handleDownloadClose}
             >
-              <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_CREATE}>
-                <MenuItem component={Link} href={`/students/${form}/add-student`}>
+              <PermissionGuard
+                requiredPermission={USER_PERMISSIONS.STUDENT_CREATE}
+              >
+                <MenuItem
+                  component={Link}
+                  href={`/students/${form}/add-student`}
+                >
                   Add Single
                 </MenuItem>
               </PermissionGuard>
-              <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_CREATE}>
+              <PermissionGuard
+                requiredPermission={USER_PERMISSIONS.STUDENT_CREATE}
+              >
                 <MenuItem
                   component={Link}
                   href={`/students/${form}/add-multiple-students`}
@@ -502,14 +591,23 @@ export default function Students({
                   Add Multiple
                 </MenuItem>
               </PermissionGuard>
-              <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_DETAILS_DOWNLOAD}>
-                <MenuItem
-                  onClick={handleExcelClick}
-                >
-                  Data (EXCEL)
+              <PermissionGuard
+                requiredPermission={USER_PERMISSIONS.STUDENT_DETAILS_DOWNLOAD}
+              >
+                <MenuItem onClick={handleExcelClick}>Data (EXCEL)</MenuItem>
+              </PermissionGuard>
+              <PermissionGuard
+                requiredPermission={USER_PERMISSIONS.STUDENT_DETAILS_DOWNLOAD}
+              >
+                <MenuItem onClick={handleImagesZipClick}>
+                  Images (.zip)
                 </MenuItem>
               </PermissionGuard>
-              <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_EXAMS_REPORT_DOWNLOAD}>
+              <PermissionGuard
+                requiredPermission={
+                  USER_PERMISSIONS.STUDENT_EXAMS_REPORT_DOWNLOAD
+                }
+              >
                 <MenuItem
                   onClick={() => {
                     handleDownloadClose();
@@ -541,12 +639,12 @@ export default function Students({
           >
             <Table
               stickyHeader
-
               sx={{ minWidth: 650 }}
               aria-label="students table"
             >
               <TableHead>
                 <TableRow>
+                  <StyledTableCell>Profile</StyledTableCell>
                   <StyledTableCell>
                     S/N{" "}
                     <Tooltip
@@ -587,12 +685,47 @@ export default function Students({
                           }}
                         >
                           <StyledTableCell>
+                            {student?.profileImage ? (
+                              <Image
+                                src={student.profileImage}
+                                alt={`${student?.firstName} ${student?.lastName}`}
+                                width={32}
+                                height={32}
+                                style={{
+                                  borderRadius: "50%",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            ) : (
+                              <Box
+                                sx={{
+                                  width: 32,
+                                  height: 32,
+                                  borderRadius: "50%",
+                                  backgroundColor: theme.palette.grey[300],
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  fontSize: 12,
+                                  fontWeight: "bold",
+                                  color: theme.palette.grey[600],
+                                }}
+                              >
+                                {student?.firstName?.[0]?.toUpperCase() || "?"}
+                              </Box>
+                            )}
+                          </StyledTableCell>
+                          <StyledTableCell>
                             {student?.studentId?.toUpperCase()}
                           </StyledTableCell>
-                          <StyledTableCell>{student?.cassRefID}</StyledTableCell>
+
                           <StyledTableCell>
-                            {`${student?.firstName ? student?.firstName : ""} ${student?.lastName ? student?.lastName : ""
-                              }`
+                            {student?.cassRefID}
+                          </StyledTableCell>
+                          <StyledTableCell>
+                            {`${student?.firstName ? student?.firstName : ""} ${
+                              student?.lastName ? student?.lastName : ""
+                            }`
                               .trim()
                               .toUpperCase()}
                           </StyledTableCell>

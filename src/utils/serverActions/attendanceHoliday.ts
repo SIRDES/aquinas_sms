@@ -7,7 +7,10 @@ import { USER_PERMISSIONS } from "../common";
 type AttendanceHolidayType = {
     date: string;
     description: string;
-    duration?: string;
+    duration?: 'morning' | 'afternoon' | 'full_day';
+    holidayIsFor: 'all_students' | 'some_students' | 'year_group';
+    students?: string[];
+    yearGroups?: string[];
 }
 
 export const createAttendanceHoliday = async (attendanceHoliday: AttendanceHolidayType) => {
@@ -15,9 +18,19 @@ export const createAttendanceHoliday = async (attendanceHoliday: AttendanceHolid
 
         await getCurrentServerUser(USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_CREATE)
 
-        if (!attendanceHoliday.date || !attendanceHoliday.description) {
-            return { error: "Date and description are required" };
+        if (!attendanceHoliday.date || !attendanceHoliday.description || !attendanceHoliday.holidayIsFor) {
+            return { success: false, message: "Date, description and holidayIsFor are required", error: "Date, description and holidayIsFor are required" };
         }
+
+        if (attendanceHoliday.holidayIsFor === 'some_students' && (!attendanceHoliday.students || attendanceHoliday.students.length === 0)) {
+            return { success: false, message: "Students are required for some_students", error: "Students are required for some_students" };
+        }
+
+        if (attendanceHoliday.holidayIsFor === 'year_group' && (!attendanceHoliday.yearGroups || attendanceHoliday.yearGroups.length === 0)) {
+            return { success: false, message: "Year groups are required for year_group", error: "Year groups are required for year_group" };
+        }
+
+
         const holidayDate = new Date(attendanceHoliday.date);
         // Normalize the date to midnight UTC to ensure uniqueness per day
         // holidayDate.setUTCHours(0, 0, 0, 0);
@@ -26,6 +39,9 @@ export const createAttendanceHoliday = async (attendanceHoliday: AttendanceHolid
             date: holidayDate,
             description: attendanceHoliday.description,
             duration: attendanceHoliday.duration || "full_day",
+            holidayIsFor: attendanceHoliday.holidayIsFor,
+            students: attendanceHoliday.students || [],
+            yearGroups: attendanceHoliday.yearGroups || [],
         }
         await connectDB();
 
@@ -96,9 +112,18 @@ export const updateAttendanceHoliday = async (id: string, attendanceHoliday: Att
     try {
         await getCurrentServerUser(USER_PERMISSIONS.SETTINGS_ATTENDANCE_HOLIDAY_UPDATE)
 
-        if (!attendanceHoliday.date || !attendanceHoliday.description) {
-            return { error: "Date and description are required" };
+        if (!attendanceHoliday.date || !attendanceHoliday.description || !attendanceHoliday.holidayIsFor) {
+            return { success: false, message: "Date, description and holidayIsFor are required", error: "Date, description and holidayIsFor are required" };
         }
+
+        if (attendanceHoliday.holidayIsFor === 'some_students' && (!attendanceHoliday.students || attendanceHoliday.students.length === 0)) {
+            return { success: false, message: "Students are required for some_students", error: "Students are required for some_students" };
+        }
+
+        if (attendanceHoliday.holidayIsFor === 'year_group' && (!attendanceHoliday.yearGroups || attendanceHoliday.yearGroups.length === 0)) {
+            return { success: false, message: "Year groups are required for year_group", error: "Year groups are required for year_group" };
+        }
+        
         const holidayDate = new Date(attendanceHoliday.date);
         // Normalize the date to midnight UTC to ensure uniqueness per day
         // holidayDate.setUTCHours(0, 0, 0, 0);
@@ -107,6 +132,9 @@ export const updateAttendanceHoliday = async (id: string, attendanceHoliday: Att
             date: holidayDate,
             description: attendanceHoliday.description,
             duration: attendanceHoliday.duration || "full_day",
+            holidayIsFor: attendanceHoliday.holidayIsFor,
+            students: attendanceHoliday.students || [],
+            yearGroups: attendanceHoliday.yearGroups || [],
         }
         await connectDB();
 
