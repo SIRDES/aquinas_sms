@@ -27,8 +27,8 @@ const sendSms = async (body: SmsPayload) => {
     sender: SMS_SENDER,
     message: body.message,
     recipients: body.recipients,
-    callback_url: `https://cb93-154-161-24-201.ngrok-free.app/api/sms-callback`,
-    // callback_url: `${process.env.NEXT_PUBLIC_ARKESEL_SMS_CALLBACK_BASE_URL}/api/sms-callback`,
+    // callback_url: `https://cb93-154-161-24-201.ngrok-free.app/api/sms-callback`,
+    callback_url: `${process.env.NEXT_PUBLIC_ARKESEL_SMS_CALLBACK_BASE_URL}/api/sms-callback`,
   };
 
   const config: AxiosRequestConfig = {
