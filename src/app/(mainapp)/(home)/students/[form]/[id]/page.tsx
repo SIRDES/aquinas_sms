@@ -1652,7 +1652,7 @@ export default function Page({
       {/* Crop Dialog */}
       <Dialog open={cropDialogOpen} onClose={() => setCropDialogOpen(false)} maxWidth="sm" fullWidth>
         <DialogTitle>Crop Image</DialogTitle>
-        <DialogContent sx={{ position: 'relative', height: 300 }}>
+        <DialogContent sx={{ position: 'relative', height: 250 }}>
           {imageSrc && (
             <Cropper
               image={imageSrc}
