@@ -1374,6 +1374,16 @@ export default function Page({
                         Notify Parent - Results Ready
                       </MenuItem>
                     </PermissionGuard>
+                    <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_RESET_PASSWORD}>
+                      <MenuItem
+                        sx={{ fontSize: "12px", color: "error.main" }}
+                        onClick={() => {
+                          router.push(`/students/${form}/${id}/reset-password`);
+                        }}
+                      >
+                        Reset Password
+                      </MenuItem>
+                    </PermissionGuard>
                     <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_DELETE}>
                       <MenuItem
                         sx={{ fontSize: "12px", color: "error.main" }}

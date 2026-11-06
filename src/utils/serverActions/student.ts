@@ -8,6 +8,7 @@ import { contactNumbers } from "@/utils/services/utils";
 import form1List from "@/utils/classList/form1List.json";
 import { getCurrentServerUser } from "../services/serverUserAuth";
 import { USER_PERMISSIONS } from "../common";
+import User from "@/models/User";
 
 // export const getAllStudents = async () => {
 //   try {
@@ -484,3 +485,44 @@ export const searchStudentsByForm = async ({
   }
 };
 
+
+
+export const resetStudentPassword = async ({ adminPassword, studentId, password }: { studentId: string, password: string, adminPassword: string }) => {
+  try {
+    const currentuser = await getCurrentServerUser(USER_PERMISSIONS.STUDENT_RESET_PASSWORD);
+
+    if (password.trim().length < 6) {
+      return { success: false, message: "Password must be at least 6 characters long" };
+    }
+
+    await connectDB();
+    // verify to check if the requester is an admin
+    const admin = await User.findById(currentuser.user._id).lean();
+    if (!admin) {
+      return { success: false, message: "Admin not found" };
+    }
+
+    const adminInstance = new User(admin);
+
+    const isPasswordValid = await adminInstance.comparePassword(adminPassword);
+
+    if (!isPasswordValid) {
+      return { success: false, message: "Invalid admin password" };
+    }
+
+    const student = await Student.findById(studentId);
+    if (!student) {
+      return { success: false, message: "Student not found" };
+    }
+
+
+    student.password = password;
+    await student.save();
+
+
+    return { success: true, message: "Student password reset successfully" };
+  } catch (err: any) {
+    console.log(err);
+    return { success: false, message: err?.message || "An error occurred" };
+  }
+}

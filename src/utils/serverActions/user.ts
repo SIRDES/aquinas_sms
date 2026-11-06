@@ -204,47 +204,6 @@ export const activateDeactivateStaffAccount = async (id: string, data: { isSuspe
 };
 
 
-// change password
-export const changePassword = async ({ oldPassword, password }: { password: string, oldPassword: string }) => {
-  try {
-    const currentuser = await getCurrentServerUserWithoutPermission()
-    await connectDB();
-    // const currentuser = await getCurrentUser();
-
-    const currentUser = await User.findById(currentuser.user._id).lean();
-    if (!currentUser) {
-      return { success: false, message: "User not found" };
-    }
-
-    const userInstance = new User(currentUser);
-
-    const isPasswordValid = await userInstance.comparePassword(oldPassword);
-
-    if (!isPasswordValid) {
-      return { success: false, message: "Wrong Old password" };
-    }
-
-    // hash the password using bcrypt
-    const saltRounds = parseInt(process.env.BCRYPT_SALT as string, 10) || 10;
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-
-    const updatedUser = await User.findByIdAndUpdate(
-      currentuser?.user?._id,
-      {
-        password: hashedPassword,
-      },
-      { new: true } // Return the updated document
-    );
-    if (!updatedUser) {
-      return { success: false, message: "User not found" };
-    }
-    return { success: true, data: JSON.parse(JSON.stringify(updatedUser)), message: "Password changed successfully" };
-  } catch (err: any) {
-    console.log(err);
-    return { success: false, message: err?.message || "An error occurred" };
-  }
-}
-
 
 // reset a user password by an admin. Verify the admin password first
 export const resetUserPassword = async ({ adminPassword, userId, password }: { userId: string, password: string, adminPassword: string }) => {
@@ -275,7 +234,7 @@ export const resetUserPassword = async ({ adminPassword, userId, password }: { u
       },
       { new: true } // Return the updated document
     );
-    console.log("updatedUser>>>>>>>>>>>", updatedUser)
+    // console.log("updatedUser>>>>>>>>>>>", updatedUser)
     if (!updatedUser) {
       return { success: false, message: "User not found" };
     }
