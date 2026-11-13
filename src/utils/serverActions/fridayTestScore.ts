@@ -110,6 +110,76 @@ export const registerStudentsToSubject = async ({
   }
 };
 
+
+export const registerAStudentSubjectsToAllFridayBatches = async ({
+  studentId,
+  fridayTestBatchId,
+}: {
+  studentId: string;
+  fridayTestBatchId: string;
+}) => {
+  try {
+    const currentUser = await getCurrentServerUser(USER_PERMISSIONS.EXAMS_UPLOAD_SCORE);
+    await connectDB();
+
+    const studentObjectId = new mongoose.Types.ObjectId(studentId);
+    const fridayTestBatchObjectId = new mongoose.Types.ObjectId(fridayTestBatchId);
+
+    const student = await Student.findById(studentObjectId).select("subjects").lean();
+    if (!student || !student.subjects || student.subjects.length === 0) {
+      return { success: true, message: "No subjects found for this student.", count: 0 };
+    }
+
+    const existingScores = await FridayTestScore.find({
+      student: studentObjectId,
+      fridayTestBatchId: fridayTestBatchObjectId,
+      subject: { $in: student.subjects },
+    }).select("subject").lean();
+
+    const existingSubjectIdSet = new Set(
+      existingScores.map((score: any) => score.subject.toString())
+    );
+
+    const newSubjectsToRegister = student.subjects.filter(
+      (subId: any) => !existingSubjectIdSet.has(subId.toString())
+    );
+
+    if (newSubjectsToRegister.length === 0) {
+      return { success: true, message: "All student subjects already have scores registered.", count: 0 };
+    }
+
+    const newScores = newSubjectsToRegister.map((subjectId: any) => ({
+      student: studentObjectId,
+      subject: subjectId,
+      fridayTestBatchId: fridayTestBatchObjectId,
+      grade: "ic",
+      remarks: "incomplete",
+      marks: 0,
+      classScore: 0,
+      projectScore: 0,
+      groupWorkScore: 0,
+      totalScore: 0,
+      individualClassScore: 0,
+      midSemScore: 0,
+      practicalScore: 0,
+      presentationScore: 0,
+      assignmentScore: 0,
+    }));
+
+    await FridayTestScore.insertMany(newScores);
+
+    return {
+      success: true,
+      message: `${newScores.length} subject score(s) registered successfully for student`,
+      count: newScores.length,
+    };
+  } catch (err: any) {
+    console.error(err);
+    return { success: false, message: err?.message || "An error occurred" };
+  }
+};
+
+
 export const getAllFridayTestScoreForABatch = async ({
   fridayTestBatchId,
 }: {

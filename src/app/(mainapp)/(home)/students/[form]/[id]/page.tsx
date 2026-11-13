@@ -74,6 +74,7 @@ import axios from "axios";
 import {
   deleteTestScore,
   getStudentsTestScoreForABatch,
+  registerAStudentSubjectsToAllFridayBatches,
   updateStudentMarks,
 } from "@/utils/serverActions/fridayTestScore";
 import { sendSms } from "@/utils/services/sms";
@@ -863,6 +864,31 @@ export default function Page({
     }
   };
 
+  const handleRegisterAStudentSubjectsToAllFridayBatches = async () => {
+    try {
+      setActionStatus({ open: true, message: "Registering student subjects..." });
+
+      const response = await registerAStudentSubjectsToAllFridayBatches({ studentId: studentData?._id, fridayTestBatchId: selectedBatchExams?._id });
+      showAlert({
+        title: "Success",
+        text: response?.message || "An error occurred",
+        severity: "success",
+      });
+
+      await getTestScores();
+
+    } catch (error: any) {
+      // console.log("error", error);
+      showAlert({
+        title: "Error",
+        text: error.message || "Something went wrong",
+        severity: "error",
+      });
+    } finally {
+      setActionStatus({ open: false, message: "" });
+    }
+  };
+
   return (
     <>
       <LoadingAlert open={loading} />
@@ -1303,6 +1329,17 @@ export default function Page({
                     </PermissionGuard>
 
 
+                    <PermissionGuard requiredPermission={USER_PERMISSIONS.EXAMS_UPLOAD_SCORE}>
+                      <MenuItem
+                        sx={{ fontSize: "12px" }}
+                        onClick={() => {
+                          handleActionClose();
+                          handleRegisterAStudentSubjectsToAllFridayBatches();
+                        }}
+                      >
+                        Register subjects for this exams
+                      </MenuItem>
+                    </PermissionGuard>
                     <PermissionGuard requiredPermission={USER_PERMISSIONS.STUDENT_EXAMS_REPORT_SEND_TO_PARENT}>
                       <MenuItem
                         sx={{ fontSize: "12px" }}
