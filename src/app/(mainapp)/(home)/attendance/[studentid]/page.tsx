@@ -144,7 +144,7 @@ export default function StudentAttendancePage({
     setLoading(true);
     try {
       const response = await getStudentAttendanceLogsByStudentId({ studentId: studentid, filterBy: filterBy, startDate: fromDate, endDate: toDate });
-      console.log('attendance', response);
+      // console.log('attendance', response);
 
       if (!response.success) {
         showAlert({
@@ -437,7 +437,7 @@ export default function StudentAttendancePage({
             <Card sx={{ p: 2, borderRadius: 2, height: "100%", }}>
               <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", }}>
 
-                <Typography variant="overline" color="text.secondary" fontWeight={600}>HOLIDAYS</Typography>
+                <Typography variant="overline" color="text.secondary" fontWeight={600}>HOLIDAYS/PERMISSIONS</Typography>
                 {fetchedHolidays.length > 0 && (
                   <Typography variant="body2" sx={{ color: "#4caf50", fontWeight: 700, cursor: "pointer", "&:hover": { textDecoration: "underline" } }} onClick={() => setViewHolidaysModalOpen(true)}>
                     VIEW

@@ -171,6 +171,7 @@ export const getStudentAttendanceLogsByClassId = async ({
         await getCurrentServerUser(USER_PERMISSIONS.ATTENDANCE_VIEW_DASHBOARD)
 
         await connectDB();
+        const studentDetails = await Student.findOne({ classId: new mongoose.Types.ObjectId(classId) }).select("yearGroup").lean();
 
         let query: any = {};
 
@@ -218,6 +219,25 @@ export const getStudentAttendanceLogsByClassId = async ({
         }
 
         // console.log("query", query);
+
+        const holidayConditions: any[] = [
+            { holidayIsFor: "all_students" },
+        ];
+
+        if (studentDetails?.yearGroup) {
+            holidayConditions.push({
+                holidayIsFor: "year_group",
+                yearGroups: studentDetails.yearGroup,
+            });
+        }
+
+        const holidayQuery: any = {
+            $or: holidayConditions,
+        };
+
+        if (query.date) {
+            holidayQuery.date = query.date;
+        }
 
         const [studentAttendanceLogs, attendanceHolidays] = await Promise.all([
             Student.aggregate([
@@ -275,7 +295,7 @@ export const getStudentAttendanceLogsByClassId = async ({
                     }
                 }
             ]),
-            AttendanceHoliday.find(query.date ? { date: query.date } : {}).lean()
+            AttendanceHoliday.find(holidayQuery).lean()
         ]);
 
         // console.log("studentAttendanceLogs", JSON.parse(JSON.stringify(studentAttendanceLogs)));
@@ -317,6 +337,7 @@ export const getStudentAttendanceLogsByStudentId = async ({
         await getCurrentServerUser(USER_PERMISSIONS.ATTENDANCE_VIEW_STUDENT_ATTENDANCE_RECORDS)
 
         await connectDB();
+        const studentDetails = await Student.findById(studentId).select("_id yearGroup").lean();
 
         let query: any = { studentId: new mongoose.Types.ObjectId(studentId) };
         let totalExpectedDays = 0;
@@ -361,9 +382,29 @@ export const getStudentAttendanceLogsByStudentId = async ({
             };
         }
 
+        const holidayConditions: any[] = [
+            { holidayIsFor: "all_students" },
+            { holidayIsFor: "some_students", students: new mongoose.Types.ObjectId(studentId) },
+        ];
+
+        if (studentDetails?.yearGroup) {
+            holidayConditions.push({
+                holidayIsFor: "year_group",
+                yearGroups: studentDetails.yearGroup,
+            });
+        }
+
+        const holidayQuery: any = {
+            $or: holidayConditions,
+        };
+
+        if (query.date) {
+            holidayQuery.date = query.date;
+        }
+
         const [studentAttendanceLogs, attendanceHolidays] = await Promise.all([
             StudentAttendanceLog.find(query).sort({ date: -1 }).lean(),
-            AttendanceHoliday.find(query.date ? { date: query.date } : {}).lean()
+            AttendanceHoliday.find(holidayQuery).lean()
         ]);
 
         const fullDayHolidays = attendanceHolidays.filter((h: any) => !h.duration || h.duration === "full_day").length;

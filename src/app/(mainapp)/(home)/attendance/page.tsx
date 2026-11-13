@@ -258,7 +258,7 @@ export default function AttendancePage() {
     setFetchedAttendanceData(null)
     try {
       const response = await getStudentAttendanceLogsByClassId({ classId: classFilter, filterBy: filterBy, startDate: fromDate, endDate: toDate });
-      console.log('attendance', response);
+      // console.log('attendance', response);
 
       if (!response.success) {
         showAlert({

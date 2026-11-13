@@ -22,7 +22,7 @@ interface ViewHolidaysModalProps {
 const ViewHolidaysModal: React.FC<ViewHolidaysModalProps> = ({ open, onClose, fetchedHolidays }) => {
   return (
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-      <DialogTitle sx={{ fontWeight: 700, color: "#00204a" }}>Attendance Holidays</DialogTitle>
+      <DialogTitle sx={{ fontWeight: 700, color: "#00204a" }}>Attendance Holidays/Permissions</DialogTitle>
       <DialogContent dividers>
         {fetchedHolidays && fetchedHolidays.length > 0 ? (
           <Table size="small">
@@ -42,8 +42,8 @@ const ViewHolidaysModal: React.FC<ViewHolidaysModalProps> = ({ open, onClose, fe
                     {holiday.duration === "morning"
                       ? "Morning Only"
                       : holiday.duration === "afternoon"
-                      ? "Afternoon Only"
-                      : "Full Day"}
+                        ? "Afternoon Only"
+                        : "Full Day"}
                   </TableCell>
                 </TableRow>
               ))}
