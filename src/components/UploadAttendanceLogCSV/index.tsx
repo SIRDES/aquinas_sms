@@ -176,7 +176,7 @@ function UploadAttendanceLogCSV({ disabledUploadBtn, setRowsToAdd, handleAddMult
                                             const hour = parseInt(hourMatch[1], 10);
                                             if (hour < 12 && !morningTime) {
                                                 morningTime = t;
-                                            } else if (hour >= 12 && !afternoonTime) {
+                                            } else if (hour >= 12) {
                                                 afternoonTime = t;
                                             }
                                         }

@@ -27,33 +27,11 @@ import { StudentAttendanceLogType } from "@/types/commonTypes";
 import { CustomizedSelect } from "@/components/CustomizedSelect";
 
 import { useBatchesContext } from "@/context/BatchesContext";
-// import { DevTool } from "@hookform/devtools";
-import "react-phone-number-input/style.css";
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-
-import { getAllNewCurriculumSubjects, getAllSubjects } from "@/utils/serverActions/subject";
-import { addClasses, getAllClasses } from "@/utils/serverActions/classes";
-import axios from "axios";
 
 import { showAlert } from "@/components/Alerts";
 
 import UploadAttendanceLogCSV from "@/components/UploadAttendanceLogCSV";
 import { addMultipleStudentAttendanceLogs } from "@/utils/serverActions/studentAttendanceLog";
-
-// const schema = object().shape({
-//     classId: string().required("Class is required"),
-//     yearOfAdmission: string().required("Year of admission is required"),
-//     selectedElectiveSubjects: array<{
-//         _id: number;
-//         name: string;
-//         type: string;
-//     }>().required("Elective subjects are required"),
-//     // coreSubjects: array<{ _id: number; name: string; type: string }>().required(
-//     //     "Core subjects are required"
-//     // ),
-// });
-
-// type FormData = InferType<typeof schema>;
 
 export default function AddStudent({
     params,
@@ -63,131 +41,11 @@ export default function AddStudent({
     const theme = useTheme();
     const router = useRouter();
     const [rowsToAdd, setRowsToAdd] = useState<StudentAttendanceLogType[]>([]);
-    // const { selectedBatch, batches, fetchedBatches } = useBatchesContext();
     const [loading, setLoading] = useState(false);
 
     const [classForm, setClassForm] = useState<string>("2");
     const [attendanceYear, setAttendanceYear] = useState<string>(" ");
     const [attendanceMonth, setAttendanceMonth] = useState<string>(" ");
-
-    // const [snackbar, setSnackbar] = useState<SnackbarType>({
-    //     open: false,
-    //     message: "",
-    //     severity: undefined,
-    // });
-    // const [fetchedSubjects, setFetchedSubjects] = useState<any>(null);
-    // const [loadingSubjectsState, setLoadingSubjectsState] = useState<
-    //     null | string
-    // >();
-    // const [coreSubjects, setCoreSubjects] = useState<
-    //     Array<{ _id: string; name: string; type?: string }>
-    // >([]);
-    // const [electiveSubjects, setElectiveSubjects] = useState<
-    //     Array<{ _id: string; name: string; type?: string }>
-    // >([]);
-    // const [selectElectivesId, setSelectedElectivesId] = useState<Array<string>>(
-    //     []
-    // );
-    // const [fetchedProgrammes, setFetchedProgrammes] = useState<any>(null);
-
-    // const form = useForm({
-    //     resolver: yupResolver(schema),
-    //     mode: "all",
-    // });
-
-    // const {
-    //     register,
-    //     watch,
-    //     reset,
-    //     handleSubmit,
-    //     formState: { errors, isDirty, isValid },
-    //     // control,
-    //     setValue,
-    // } = form;
-
-    // const fetchClasses = async () => {
-    //     setLoadingProgrammesState("Loading...");
-    //     setFetchedProgrammes([]);
-    //     try {
-    //         const response = await getAllClasses(classForm);
-    //         if (!response.data) return;
-
-    //         setFetchedProgrammes(response.data);
-    //         setLoadingProgrammesState(null);
-    //     } catch (error: any) {
-    //         setLoadingProgrammesState(
-    //             error.message || error.data || "An error occurred"
-    //         );
-    //     }
-    // };
-    // useEffect(() => {
-    //     fetchClasses();
-    // }, []);
-    // const fetchSubjects = async () => {
-    //     setLoadingSubjectsState("Loading...");
-    //     setFetchedSubjects([]);
-    //     try {
-    //         const response = await getAllNewCurriculumSubjects();
-    //         if (response.status === "error") return;
-    //         setFetchedSubjects(response?.data || []);
-    //         setElectiveSubjects(response?.data || []);
-    //         setLoadingSubjectsState(null);
-    //     } catch (error: any) {
-    //         setLoadingSubjectsState(
-    //             error.message || error.data || "An error occurred"
-    //         );
-    //     }
-    // };
-    // useEffect(() => {
-    //     fetchSubjects();
-    // }, []);
-
-
-    // const yearOfAdmissions = [
-    //     new Date().getFullYear(),
-    //     new Date().getFullYear() - 1,
-    //     new Date().getFullYear() - 2,
-    //     new Date().getFullYear() - 3,
-    // ];
-    // useEffect(() => {
-    //     setCoreSubjects([]);
-    //     setElectiveSubjects([]);
-
-    //     fetchedSubjects?.length > 0 &&
-    //         fetchedSubjects.map((subject: any) => {
-    //             if (subject.type === "core") {
-    //                 setCoreSubjects((prev) => [...prev, subject]);
-    //             } else {
-    //                 setElectiveSubjects((prev) => [...prev, subject]);
-    //             }
-    //         });
-    // }, [fetchedSubjects]);
-
-    // useEffect(() => {
-    //     setValue("coreSubjects", coreSubjects, {
-    //         shouldDirty: true,
-    //         shouldTouch: true,
-    //         shouldValidate: true,
-    //     });
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [coreSubjects]);
-    // const handleElectiveSubjectChange = (
-    //     event: SyntheticEvent<Element, Event>,
-    //     value: Array<{ _id: string; name: string; type: string }>,
-    //     reason: AutocompleteChangeReason,
-    //     details?: AutocompleteChangeDetails<any> | undefined
-    // ) => {
-    //     const list: Array<string> = [];
-    //     value.forEach((subject: any) => {
-    //         list.push(subject._id);
-    //     });
-    //     setSelectedElectivesId(list);
-    //     setValue("selectedElectiveSubjects", value, {
-    //         shouldDirty: true,
-    //         shouldTouch: true,
-    //         shouldValidate: true,
-    //     });
-    // };
 
     const handleAddMultipleStudents = async () => {
         if (!attendanceMonth || !attendanceYear || !classForm) {

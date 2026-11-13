@@ -101,18 +101,6 @@ function UploadAttendanceLogCSVPreview(props: any) {
                                 <CloseIcon />
                             </IconButton>
                         </Grid>
-                        {/* {drugExistErrors && (
-                            <Grid item container xs={12}>
-                                {drugExistErrors.map((error) => (
-                                    <Typography key={error} sx={{ color: "#ff1744" }}>
-                                        {error}
-                                        <span style={{ color: "#000", fontSize: "20px" }}>
-                                            ;{" "}
-                                        </span>{" "}
-                                    </Typography>
-                                ))}
-                            </Grid>
-                        )} */}
 
                         {/* Preview Table */}
                         <Paper sx={{ width: "100%", overflow: "scroll", mb: 2 }}>
@@ -155,8 +143,8 @@ function UploadAttendanceLogCSVPreview(props: any) {
                                                             <Box sx={{ display: "block", fontSize: "12px" }}>
                                                                 {row?.name}
                                                             </Box>
-                                                            <Box sx={{ display: "block", fontSize: "12px" }}>
-                                                                {row?.no}
+                                                            <Box sx={{ display: "block", fontSize: "10px" }}>
+                                                                {row?.studentId}
                                                             </Box>
                                                         </StyledTableCell>
                                                         {headers && headers.map((header: any, headerIndex: number) => (
