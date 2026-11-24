@@ -66,9 +66,23 @@ export const adminNavLists = [
 
   {
     id: 7,
-    name: "Payments",
-    href: "/payments",
+    name: "Payment",
+    // href: "/payments",
     permission: USER_PERMISSIONS.EXAMS_PAYMENTS_VIEW_ALL,
+    children: [
+      {
+        id: 1,
+        name: "Payments",
+        href: "/payments",
+        permission: USER_PERMISSIONS.EXAMS_PAYMENTS_VIEW_ALL,
+      },
+      {
+        id: 2,
+        name: "Withdrawals",
+        href: "/payment-withdrawals",
+        permission: USER_PERMISSIONS.PAYMENTS_WITHDRAWALS_VIEW_ALL,
+      },
+    ]
   },
   // {
   //   id: 8,

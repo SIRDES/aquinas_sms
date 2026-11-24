@@ -57,7 +57,7 @@ export const userPermissions = [
     // friday test permissions
     "EXAMS:VIEW_ALL", "EXAMS:UPLOAD_SCORE", "EXAMS:DELETE_SCORE",
     // payment permissions
-    "EXAMS_PAYMENTS:VIEW_ALL",
+    "EXAMS_PAYMENTS:VIEW_ALL", "PAYMENTS_WITHDRAWALS:VIEW_ALL", "PAYMENTS_WITHDRAWALS:MAKE_WITHDRAWAL",
     // SMS Results permissions
     "SMS_RESULTS:VIEW", "SMS_RESULTS:RESEND",
 
